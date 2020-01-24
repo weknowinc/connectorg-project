@@ -1,0 +1,20 @@
+uuid: 63218464-9426-4cda-9fec-59d689bb229f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.office_entity.field_phone_number
+  module:
+    - owp_office
+id: office_entity.office_entity.field_phone_number
+field_name: field_phone_number
+entity_type: office_entity
+bundle: office_entity
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

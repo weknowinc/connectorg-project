@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains owp_office.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function owp_office_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the owp_office module.
+    case 'help.page.owp_office':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module to handle offices information') . '</p>';
+      return $output;
+
+    default:
+  }
+}
