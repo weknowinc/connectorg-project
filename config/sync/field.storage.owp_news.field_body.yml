@@ -1,0 +1,19 @@
+uuid: 2fef6140-b034-43d9-a6b4-947b80cbd08b
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_news
+    - text
+id: owp_news.field_body
+field_name: field_body
+entity_type: owp_news
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

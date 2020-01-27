@@ -1,0 +1,20 @@
+uuid: e7877a79-6ceb-4eb6-8a4d-29514c6186c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.owp_news.field_title
+  module:
+    - owp_news
+id: owp_news.owp_news.field_title
+field_name: field_title
+entity_type: owp_news
+bundle: owp_news
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,5 @@
+entity.owp_news.add_form:
+  route_name: entity.owp_news.add_form
+  title: 'Add News'
+  appears_on:
+    - entity.owp_news.collection

@@ -1,0 +1,20 @@
+uuid: 13e7ad43-f85e-4ec6-8093-554cd2d2cc2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_news
+    - owp_office
+id: owp_news.field_office
+field_name: field_office
+entity_type: owp_news
+type: entity_reference
+settings:
+  target_type: office_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

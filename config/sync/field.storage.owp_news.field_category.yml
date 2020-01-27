@@ -1,0 +1,20 @@
+uuid: de7695a2-bb39-41b6-b487-3c61b5f9d437
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_news
+    - taxonomy
+id: owp_news.field_category
+field_name: field_category
+entity_type: owp_news
+type: entity_reference
+settings:
+  target_type: taxonomy_vocabulary
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

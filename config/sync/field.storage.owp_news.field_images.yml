@@ -1,0 +1,30 @@
+uuid: 4f2b274d-e428-4036-ac8e-0092b7fc8096
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - owp_news
+id: owp_news.field_images
+field_name: field_images
+entity_type: owp_news
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
