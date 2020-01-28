@@ -8,7 +8,6 @@ dependencies:
     - field.field.news_entity.news_entity.field_images
     - field.field.news_entity.news_entity.field_office
     - field.field.news_entity.news_entity.field_tags
-    - field.field.news_entity.news_entity.field_title
     - image.style.thumbnail
   module:
     - image
@@ -65,14 +64,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
-  field_title:
+  name:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   status:
     type: boolean_checkbox
     weight: 6
@@ -81,5 +80,4 @@ content:
       display_label: true
     third_party_settings: {  }
 hidden:
-  name: true
   user_id: true
