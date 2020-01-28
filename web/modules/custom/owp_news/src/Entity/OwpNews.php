@@ -46,11 +46,11 @@ use Drupal\user\UserInterface;
  *     "published" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/owp_news/{owp_news}",
- *     "add-form" = "/admin/structure/owp_news/add",
- *     "edit-form" = "/admin/structure/owp_news/{owp_news}/edit",
- *     "delete-form" = "/admin/structure/owp_news/{owp_news}/delete",
- *     "collection" = "/admin/structure/owp_news",
+ *     "canonical" = "/admin/structure/owp_entity/owp_news/{owp_news}",
+ *     "add-form" = "/admin/structure/owp_entity/owp_news/add",
+ *     "edit-form" = "/admin/structure/owp_entity/owp_news/{owp_news}/edit",
+ *     "delete-form" = "/admin/structure/owp_entity/owp_news/{owp_news}/delete",
+ *     "collection" = "/admin/structure/owp_entity/owp_news",
  *   },
  *   field_ui_base_route = "owp_news.settings"
  * )
