@@ -21,6 +21,7 @@ module:
   link: 0
   node: 0
   options: 0
+  owp_news: 0
   owp_office: 0
   path: 0
   path_alias: 0

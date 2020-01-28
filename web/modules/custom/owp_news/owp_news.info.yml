@@ -1,0 +1,5 @@
+name: 'owp_news'
+type: module
+description: 'News Intranet'
+core: 8.x
+package: 'OneWorkPlace'

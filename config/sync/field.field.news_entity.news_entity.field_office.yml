@@ -1,0 +1,26 @@
+uuid: bf761600-9b90-4697-9ca8-6ee72121fa0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.news_entity.field_office
+  module:
+    - owp_news
+id: news_entity.news_entity.field_office
+field_name: field_office
+entity_type: news_entity
+bundle: news_entity
+label: Office
+description: 'Related to this office'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:office_entity'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: true
+field_type: entity_reference

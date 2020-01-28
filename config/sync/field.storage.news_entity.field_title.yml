@@ -1,0 +1,21 @@
+uuid: 2826ecd3-7add-4563-8439-bdca4e647465
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_news
+id: news_entity.field_title
+field_name: field_title
+entity_type: news_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
