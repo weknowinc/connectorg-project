@@ -1,5 +1,0 @@
-name: 'News'
-type: module
-description: 'Module to handle news in an intranet'
-core: 8.x
-package: 'owp_news'

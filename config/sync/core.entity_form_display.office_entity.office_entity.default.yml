@@ -31,7 +31,7 @@ content:
     type: address_default
     region: content
   field_phone_number:
-    weight: 3
+    weight: 5
     settings:
       size: 60
       placeholder: ''
