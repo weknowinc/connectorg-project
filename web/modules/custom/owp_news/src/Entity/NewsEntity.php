@@ -166,9 +166,9 @@ class NewsEntity extends ContentEntityBase implements NewsEntityInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The name of the News entity.'))
+    $fields['title'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Title'))
+      ->setDescription(t('The title of the article.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
