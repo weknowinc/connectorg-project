@@ -23,6 +23,7 @@ module:
   options: 0
   owp_news: 0
   owp_office: 0
+  owp_tool: 0
   path: 0
   path_alias: 0
   quickedit: 0
