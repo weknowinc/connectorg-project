@@ -69,6 +69,11 @@
                 "web-root": "web/"
             }
         },
+        "patches": {
+            "drupal/core": {
+                "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],

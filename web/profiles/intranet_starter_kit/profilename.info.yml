@@ -16,31 +16,45 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
-  - history
+  - address
+  - block
   - block_content
   - breakpoint
+  - ckeditor
   - color
-  - config
   - comment
-  - contextual
+  - config
   - contact
-  - quickedit
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
+  - contextual
   - dblog
-  - search
-  - shortcut
-  - toolbar
+  - editor
+  - field
   - field_ui
   - file
+  - filter
+  - help
+  - history
+  - image
+  - link
+  - node
+  - options
+  - owp_news
+  - owp_office
+  - owp_tool
+  - path
+  - path_alias
+  - quickedit
   - rdf
-  - views
+  - search
+  - shortcut
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - update
+  - user
   - views_ui
-  - editor
-  - ckeditor
+  - views
 
 dependencies:
   - node
