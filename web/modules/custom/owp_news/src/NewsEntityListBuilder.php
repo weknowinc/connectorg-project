@@ -17,8 +17,8 @@ class NewsEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('News ID');
-    $header['name'] = $this->t('Name');
+    $header['id'] = $this->t('ID');
+    $header['title'] = $this->t('Title');
     return $header + parent::buildHeader();
   }
 
@@ -28,7 +28,7 @@ class NewsEntityListBuilder extends EntityListBuilder {
   public function buildRow(EntityInterface $entity) {
     /* @var \Drupal\owp_news\Entity\NewsEntity $entity */
     $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
+    $row['title'] = Link::createFromRoute(
       $entity->label(),
       'entity.news_entity.edit_form',
       ['news_entity' => $entity->id()]

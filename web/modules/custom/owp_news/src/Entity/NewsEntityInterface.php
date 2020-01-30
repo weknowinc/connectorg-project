@@ -19,23 +19,23 @@ interface NewsEntityInterface extends ContentEntityInterface, EntityChangedInter
    */
 
   /**
-   * Gets the News name.
+   * Gets the News title.
    *
    * @return string
-   *   Name of the News.
+   *   Title of the News.
    */
-  public function getName();
+  public function getTitle();
 
   /**
-   * Sets the News name.
+   * Sets the News title.
    *
-   * @param string $name
-   *   The News name.
+   * @param string $title
+   *   The News title.
    *
    * @return \Drupal\owp_news\Entity\NewsEntityInterface
    *   The called News entity.
    */
-  public function setName($name);
+  public function setTitle($title);
 
   /**
    * Gets the News creation timestamp.
