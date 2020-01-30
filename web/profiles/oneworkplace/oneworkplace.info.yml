@@ -1,5 +1,5 @@
 # The following three lines are required, our profile won’t work without them:
-name: oneworkplace_starter_kit
+name: oneworkplace
 type: profile
 core: 8.x
 
@@ -9,9 +9,9 @@ core: 8.x
 # to see the profile's description, so it makes sense to use only one of the
 # following parameters.
 
-description: oneworkplace profile 1.0 for intranet projects
+# description: Oneworkplace profile 1.0 for intranet projects
 distribution:
-  name: Oneworkplace profile
+  name: Oneworkplace
 
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
@@ -64,5 +64,4 @@ dependencies:
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
 themes:
-  - bartik
   - seven
