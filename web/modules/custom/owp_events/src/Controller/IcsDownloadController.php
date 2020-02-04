@@ -88,7 +88,7 @@ class IcsDownloadController extends ControllerBase
     $duration = $entity->get($fieldName)->getValue()[$delta]["duration"];
     $urlEvent = $entity->get("field_url")->getValue()[$delta]["uri"];
 
-    $host = $this->request->getParentRequest()->getHost();
+    $host = $this->request->getCurrentRequest()->getHost();
     $calendarService = new Calendar($host);
     $eventService = new Event();
 
