@@ -1,0 +1,6 @@
+owp_events.download_ics:
+  path: '/download/ics/{entityType}/{id}/{fieldName}/{delta}'
+  defaults:
+    _controller: '\Drupal\owp_events\Controller\IcsDownloadController::download'
+  requirements:
+    _access: 'TRUE'

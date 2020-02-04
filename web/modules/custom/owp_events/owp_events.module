@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains owp_events.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function owp_events_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the owp_events module.
+    case 'help.page.owp_events':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module to handle events') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function owp_events_theme() {
+  return [
+    'owp_events' => [
+      'render element' => 'children',
+    ],
+  ];
+}
