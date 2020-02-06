@@ -17,6 +17,7 @@ distribution:
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
   - address
+  - smart_date
   - block
   - block_content
   - breakpoint
@@ -41,6 +42,7 @@ install:
   - owp_news
   - owp_office
   - owp_tool
+  - owp_events
   - path
   - path_alias
   - quickedit
