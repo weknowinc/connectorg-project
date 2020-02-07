@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'add event entities'
+  - 'add news entities'
+  - 'administer block_content display'
+  - 'administer comment display'
+  - 'administer contact_message display'
+  - 'administer event_entity display'
+  - 'administer event_entity form display'
+  - 'administer news_entity display'
+  - 'administer news_entity form display'
+  - 'administer node display'
+  - 'administer office_entity display'
+  - 'administer tool_entity display'
+  - 'delete event entities'
+  - 'delete news entities'
+  - 'edit event entities'
+  - 'edit news entities'
+  - 'view own unpublished content'
+  - 'view published event entities'
+  - 'view published news entities'
+  - 'view published tool entities'
