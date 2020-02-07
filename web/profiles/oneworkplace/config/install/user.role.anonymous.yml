@@ -6,15 +6,4 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access administration pages'
-  - 'access comments'
   - 'access content'
-  - 'access contextual links'
-  - 'access shortcuts'
-  - 'access user profiles'
-  - 'cancel account'
-  - 'change own username'
-  - 'edit own comments'
-  - 'post comments'
-  - 'search content'
-  - 'select account cancellation method'
