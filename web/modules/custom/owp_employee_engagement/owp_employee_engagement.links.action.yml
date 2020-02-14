@@ -1,0 +1,5 @@
+entity.star_entity.add_form:
+  route_name: entity.star_entity.add_form
+  title: 'Add Star'
+  appears_on:
+    - entity.star_entity.collection

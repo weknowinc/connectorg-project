@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.star_entity.field_message
+  module:
+    - owp_employee_engagement
+    - text
+id: star_entity.star_entity.field_message
+field_name: field_message
+entity_type: star_entity
+bundle: star_entity
+label: Message
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

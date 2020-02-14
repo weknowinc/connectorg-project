@@ -1,0 +1,20 @@
+add star entities:
+  title: 'Create new Star entities'
+
+administer star entities:
+  title: 'Administer Star entities'
+  description: 'Allow to access the administration form to configure Star entities.'
+  restrict access: true
+
+delete star entities:
+  title: 'Delete Star entities'
+
+edit star entities:
+  title: 'Edit Star entities'
+
+view published star entities:
+  title: 'View published Star entities'
+
+view unpublished star entities:
+  title: 'View unpublished Star entities'
+
