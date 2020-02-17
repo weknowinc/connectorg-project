@@ -1,0 +1,5 @@
+name: 'owp_microsites'
+type: module
+description: 'Module to manage microsites'
+core: 8.x
+package: 'OneWorkPlace'

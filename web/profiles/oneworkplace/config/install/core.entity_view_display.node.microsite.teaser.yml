@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.microsite.body
+    - field.field.node.microsite.field_link
+    - field.field.node.microsite.field_link_m
+    - field.field.node.microsite.layout_builder__layout
+    - node.type.microsite
+  module:
+    - text
+    - user
+id: node.microsite.teaser
+targetEntityType: node
+bundle: microsite
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_link_m: true
+  layout_builder__layout: true
