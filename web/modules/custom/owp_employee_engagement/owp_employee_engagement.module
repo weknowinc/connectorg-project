@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains owp_employee_engagement.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function owp_employee_engagement_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the owp_employee_engagement module.
+    case 'help.page.owp_employee_engagement':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module created to manage employee engagement based on rewards') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function owp_employee_engagement_theme() {
+  return [
+    'owp_employee_engagement' => [
+      'render element' => 'children',
+    ],
+  ];
+}

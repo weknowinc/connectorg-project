@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.star_entity.field_employee
+  module:
+    - owp_employee_engagement
+id: star_entity.star_entity.field_employee
+field_name: field_employee
+entity_type: star_entity
+bundle: star_entity
+label: Employee
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        employee: employee
+        editor: '0'
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
