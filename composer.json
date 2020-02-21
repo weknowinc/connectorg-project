@@ -73,7 +73,8 @@
         },
         "patches": {
             "drupal/core": {
-                "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch"
+                "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
+                "The date plugin does not exist": "https://www.drupal.org/files/issues/2019-10-26/2325899-138_0.patch"
             }
         },
         "installer-paths": {
