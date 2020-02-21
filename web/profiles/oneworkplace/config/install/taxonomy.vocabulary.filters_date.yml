@@ -1,0 +1,8 @@
+uuid: e783f419-b79d-4556-bed9-5d70846cac84
+langcode: en
+status: true
+dependencies: {  }
+name: 'Filters Date'
+vid: filters_date
+description: ''
+weight: 0

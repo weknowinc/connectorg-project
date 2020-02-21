@@ -1,0 +1,20 @@
+uuid: 998e55f5-54a1-4536-bc9a-8eaccbf26979
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_microsites
+    - text
+id: microsite_entity.field_description
+field_name: field_description
+entity_type: microsite_entity
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

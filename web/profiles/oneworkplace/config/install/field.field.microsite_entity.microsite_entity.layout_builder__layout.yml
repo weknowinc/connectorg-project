@@ -1,0 +1,21 @@
+uuid: 5e1590a5-1654-4478-a244-038ba0103eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.microsite_entity.layout_builder__layout
+  module:
+    - layout_builder
+    - owp_microsites
+id: microsite_entity.microsite_entity.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: microsite_entity
+bundle: microsite_entity
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

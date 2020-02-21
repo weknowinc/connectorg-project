@@ -1,3 +1,4 @@
+uuid: 82affa9e-1f4f-4552-a7ec-3a39f661ffea
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
     - address
     - image
     - owp_office
+_core:
+  default_config_hash: tLatyv2XzuK6KvJ6OX8k0Y67lmlRKpiHDOK_oSSR74k
 id: office_entity.office_entity.default
 targetEntityType: office_entity
 bundle: office_entity

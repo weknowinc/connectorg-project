@@ -1,0 +1,19 @@
+uuid: 5c48f97d-5e74-4d17-8ff5-8eca7a778e2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - owp_microsites
+id: microsite_entity.field_path
+field_name: field_path
+entity_type: microsite_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
