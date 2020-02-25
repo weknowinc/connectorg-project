@@ -60,6 +60,7 @@ install:
   - views_ui
   - views
   - owp_employee_engagement
+  - owp_birthdays
 
 dependencies:
   - node

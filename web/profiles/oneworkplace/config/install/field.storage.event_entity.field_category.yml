@@ -1,9 +1,12 @@
+uuid: be29e00b-ed0b-48e5-9a37-29729e6600ef
 langcode: en
 status: true
 dependencies:
   module:
     - owp_events
     - taxonomy
+_core:
+  default_config_hash: Zs-h7E0mRXaRxFLpPPdCImu9wX15_8NmCrPfXqEHXb8
 id: event_entity.field_category
 field_name: field_category
 entity_type: event_entity

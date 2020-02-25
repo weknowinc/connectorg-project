@@ -9,3 +9,6 @@ admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
+_core:
+  default_config_hash: APr8znp3xA7DyYoLVPvsMSouisVYFhB4jlLEgX4aakQ
+uuid: 4744cf8e-83c5-4440-923f-a4a864f4cb2f

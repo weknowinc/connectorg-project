@@ -1,3 +1,4 @@
+uuid: 987501a8-1596-4eef-bf93-6a5554032eaf
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - owp_office
+_core:
+  default_config_hash: arIxMDKVeFqLim8t_my-yYnh-v8boDpuYKhTEZzyUIc
 id: office_entity.field_image
 field_name: field_image
 entity_type: office_entity

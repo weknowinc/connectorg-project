@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains owp_birthdays.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function owp_birthdays_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the owp_birthdays module.
+    case 'help.page.owp_birthdays':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module to handle all employees birthdays') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function owp_birthdays_theme() {
+  return [
+    'owp_birthdays' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,9 +1,12 @@
+uuid: 414093b7-2edf-42de-9eba-ce225eb78b1d
 langcode: en
 status: true
 dependencies:
   module:
     - owp_news
     - taxonomy
+_core:
+  default_config_hash: C6ZjA_ClfTKH31H0eSuVLmqGFKBuQig8rHhY4lewRb8
 id: news_entity.field_category
 field_name: field_category
 entity_type: news_entity
