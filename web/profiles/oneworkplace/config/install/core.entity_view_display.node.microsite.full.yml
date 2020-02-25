@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.microsite.body
+    - field.field.node.microsite.field_link
+    - field.field.node.microsite.field_link_m
+    - field.field.node.microsite.layout_builder__layout
+    - node.type.microsite
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Title
+        components:
+          8334af5c-60a7-4eca-95e0-6d1e184591fb:
+            uuid: 8334af5c-60a7-4eca-95e0-6d1e184591fb
+            region: content
+            configuration:
+              id: 'field_block:node:microsite:title'
+              label: Title
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.microsite.full
+targetEntityType: node
+bundle: microsite
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_link_m: true
+  layout_builder__layout: true
