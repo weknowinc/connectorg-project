@@ -1,3 +1,4 @@
+uuid: 191b8904-068f-498e-9f3d-25bbed5cc650
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.news_entity.field_tags
   module:
     - owp_news
+_core:
+  default_config_hash: 9wNVNN2_DTx6hDAxHhIVUoM_N7d6TT8n73mxN6AMqpY
 id: news_entity.news_entity.field_tags
 field_name: field_tags
 entity_type: news_entity

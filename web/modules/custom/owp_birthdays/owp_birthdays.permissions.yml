@@ -1,0 +1,20 @@
+add birthday entities:
+  title: 'Create new Birthday entities'
+
+administer birthday entities:
+  title: 'Administer Birthday entities'
+  description: 'Allow to access the administration form to configure Birthday entities.'
+  restrict access: true
+
+delete birthday entities:
+  title: 'Delete Birthday entities'
+
+edit birthday entities:
+  title: 'Edit Birthday entities'
+
+view published birthday entities:
+  title: 'View published Birthday entities'
+
+view unpublished birthday entities:
+  title: 'View unpublished Birthday entities'
+

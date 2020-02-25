@@ -1,3 +1,4 @@
+uuid: 56ddf380-89bb-4c3c-a1bc-0af871e6e3e3
 langcode: en
 status: true
 dependencies: {  }
@@ -6,8 +7,8 @@ label: Employee
 weight: 4
 is_admin: null
 permissions:
-  - 'access administration pages'
   - 'access comments'
+  - 'access content overview'
   - 'access contextual links'
   - 'access in-place editing'
   - 'access shortcuts'
@@ -16,6 +17,7 @@ permissions:
   - 'cancel account'
   - 'change own username'
   - 'edit own comments'
+  - 'link to any page'
   - 'post comments'
   - 'search content'
   - 'select account cancellation method'

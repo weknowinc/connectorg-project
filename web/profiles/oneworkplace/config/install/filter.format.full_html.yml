@@ -1,6 +1,9 @@
+uuid: 85e02be9-8d5a-4d83-a152-d2026f7eac7c
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: kEyFW5njCgrSVXZPfFqgr7k_CZVYk1b-qNkF9B9JxdM
 name: 'Full HTML'
 format: full_html
 weight: 0

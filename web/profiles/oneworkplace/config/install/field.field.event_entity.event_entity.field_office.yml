@@ -1,3 +1,4 @@
+uuid: 1028d14c-14c2-450b-8a1c-09f4fc00750e
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.event_entity.field_office
   module:
     - owp_events
+_core:
+  default_config_hash: Twb-mjroXhduy4UHtwsivRH_xBUkbQWpLxyd7J1EP5U
 id: event_entity.event_entity.field_office
 field_name: field_office
 entity_type: event_entity

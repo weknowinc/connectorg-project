@@ -1,3 +1,4 @@
+uuid: dfbca0eb-064c-4925-8d10-a4db8835329b
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
     - link
     - owp_tool
     - user
+_core:
+  default_config_hash: p45lUROaUfIVp3EMvtXQowEWe0m9jgQACAfVazuks-c
 id: tool_entity.tool_entity.default
 targetEntityType: tool_entity
 bundle: tool_entity
