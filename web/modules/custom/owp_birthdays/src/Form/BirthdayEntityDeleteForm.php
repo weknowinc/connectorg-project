@@ -6,10 +6,8 @@ use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
  * Provides a form for deleting Birthday entities.
- *
  * @ingroup owp_birthdays
  */
-class BirthdayEntityDeleteForm extends ContentEntityDeleteForm {
-
-
+class BirthdayEntityDeleteForm extends ContentEntityDeleteForm
+{
 }
