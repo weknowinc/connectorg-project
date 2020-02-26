@@ -1,12 +1,9 @@
-uuid: 2e902f8e-9c3b-4feb-8dec-fbc0ff409e2a
 langcode: en
 status: true
 dependencies:
   module:
     - owp_events
     - owp_office
-_core:
-  default_config_hash: vcAqDJ2NzpdFO0brkSIdcYOSiCz-ADI_U5-EVqdeprI
 id: event_entity.field_office
 field_name: field_office
 entity_type: event_entity

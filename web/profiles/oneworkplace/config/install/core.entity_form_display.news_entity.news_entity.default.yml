@@ -1,4 +1,3 @@
-uuid: c865f36b-3215-4d54-a7fb-0480f51270f4
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - image
     - owp_news
     - text
-_core:
-  default_config_hash: rfi3Kh0qHhPsKEPqESQVzE56Gci19FkQCTB2rlEMA4s
 id: news_entity.news_entity.default
 targetEntityType: news_entity
 bundle: news_entity

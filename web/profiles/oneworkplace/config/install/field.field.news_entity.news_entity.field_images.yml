@@ -1,4 +1,3 @@
-uuid: aa4fd6cb-5f81-46cb-9875-952518034dfa
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
   module:
     - image
     - owp_news
-_core:
-  default_config_hash: zUxZPUf5ieMTQuFzZ0mqJhH51ZP0pUUibs4W_j73pb0
 id: news_entity.news_entity.field_images
 field_name: field_images
 entity_type: news_entity

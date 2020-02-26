@@ -1,12 +1,9 @@
-uuid: af792ffa-ec96-4b3f-adb3-e6a16320af9e
 langcode: en
 status: true
 dependencies:
   module:
     - owp_events
     - smart_date
-_core:
-  default_config_hash: 5Alz23p2NbihJqHtmzuoe6VxEB_h8XFneHVmJrA_oms
 id: event_entity.field_date
 field_name: field_date
 entity_type: event_entity
