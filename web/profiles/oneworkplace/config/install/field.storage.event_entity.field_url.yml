@@ -1,12 +1,9 @@
-uuid: 16a78c1d-e8d1-40eb-8af9-d5d5826e481f
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - owp_events
-_core:
-  default_config_hash: CokTtdy1gvcPkU_kNbKG2a28MW8fpznaeVJrpUQ9aq0
 id: event_entity.field_url
 field_name: field_url
 entity_type: event_entity

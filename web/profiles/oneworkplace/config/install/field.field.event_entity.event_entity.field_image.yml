@@ -1,4 +1,3 @@
-uuid: 81e5b485-7dcf-4da6-9a4d-0e82e1438c06
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
   module:
     - image
     - owp_events
-_core:
-  default_config_hash: DNR0qjOt3-dpXdKhYG4QD4xHvqA35724nhXvQOVKf2A
 id: event_entity.event_entity.field_image
 field_name: field_image
 entity_type: event_entity

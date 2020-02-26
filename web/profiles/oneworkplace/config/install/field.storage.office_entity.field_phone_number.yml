@@ -1,11 +1,8 @@
-uuid: 0df390a6-0ce9-4c75-a976-765f6d39d8e9
 langcode: en
 status: true
 dependencies:
   module:
     - owp_office
-_core:
-  default_config_hash: _t7VUxohANMkaMfJUQGBcaAKd27mlmKFUhbn0kA7vNA
 id: office_entity.field_phone_number
 field_name: field_phone_number
 entity_type: office_entity

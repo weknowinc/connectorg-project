@@ -1,12 +1,9 @@
-uuid: 22fd2c03-2a23-41b7-87b0-39aca17780d5
 langcode: en
 status: true
 dependencies:
   module:
     - owp_news
     - text
-_core:
-  default_config_hash: RdLSVAbw4v45cjDcJ4oKvtAj-looMPjF0JakosXq3tc
 id: news_entity.field_body
 field_name: field_body
 entity_type: news_entity

@@ -1,9 +1,6 @@
-uuid: ed35c380-924b-4ce4-905e-ccdb87b5c41a
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 2lDQhtFdrpVyQoSHubwnSaBArvJXueMiiwcJniRBEyk
 id: date_only
 label: 'Date Only'
 date_format: 'D, M j Y'

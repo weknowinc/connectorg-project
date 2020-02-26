@@ -1,12 +1,9 @@
-uuid: 1a33eadf-a2a2-4b9e-9c6f-b3ac0d1490c0
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - owp_tool
-_core:
-  default_config_hash: VLeyiAmbSnnNfpow14J1jo0h-YHMIFSfSVxT5Uvbxsk
 id: tool_entity.field_link
 field_name: field_link
 entity_type: tool_entity

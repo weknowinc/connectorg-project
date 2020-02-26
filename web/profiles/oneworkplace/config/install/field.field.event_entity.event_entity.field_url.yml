@@ -1,4 +1,3 @@
-uuid: 968438e1-c435-416f-a287-b3af1594d730
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
   module:
     - link
     - owp_events
-_core:
-  default_config_hash: _ruoer6x7hYhfpkAWN7M69V8mPgydOBtDY_YJECimlE
 id: event_entity.event_entity.field_url
 field_name: field_url
 entity_type: event_entity

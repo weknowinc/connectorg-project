@@ -1,12 +1,9 @@
-uuid: 79fe210a-1ce8-429d-8ee6-c34eb54550af
 langcode: en
 status: true
 dependencies:
   module:
     - owp_news
     - owp_office
-_core:
-  default_config_hash: WZyuJCz_0htT6pPbjNisUZKAOCl6It3K6BkdPtdbllw
 id: news_entity.field_office
 field_name: field_office
 entity_type: news_entity

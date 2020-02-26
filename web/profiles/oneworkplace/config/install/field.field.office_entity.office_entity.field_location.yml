@@ -1,4 +1,3 @@
-uuid: 26ae487b-5930-4238-89fd-5e51cdad9b32
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
   module:
     - address
     - owp_office
-_core:
-  default_config_hash: 4s2Wqz1SGvLGOqkN43TYleKqkgU0kRs_Dx8FUOVqxFg
 id: office_entity.office_entity.field_location
 field_name: field_location
 entity_type: office_entity

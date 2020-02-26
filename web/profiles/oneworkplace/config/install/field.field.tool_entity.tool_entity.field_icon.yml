@@ -1,4 +1,3 @@
-uuid: 0b704040-a33a-4e6e-9600-04c5036b77d6
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
   module:
     - image
     - owp_tool
-_core:
-  default_config_hash: Y-HSoDhTzLcjYWYeM4wMK4vxQWeX52M6KeZVAbAMs2Y
 id: tool_entity.tool_entity.field_icon
 field_name: field_icon
 entity_type: tool_entity

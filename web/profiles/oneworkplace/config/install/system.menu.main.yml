@@ -1,9 +1,6 @@
-uuid: ed64ba23-b5d2-445e-b7c8-da3e081ebe55
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
 label: 'Main navigation'
 description: 'Site section links'
