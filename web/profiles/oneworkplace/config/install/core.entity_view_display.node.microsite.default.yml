@@ -1,0 +1,135 @@
+uuid: 0cd2204d-de1b-4a4f-a6db-92be9349dd49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.microsite.body
+    - field.field.node.microsite.field_link
+    - field.field.node.microsite.field_link_m
+    - field.field.node.microsite.layout_builder__layout
+    - node.type.microsite
+  module:
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9988725b-2cbe-4d4d-b191-0210c1aa938d:
+            uuid: 9988725b-2cbe-4d4d-b191-0210c1aa938d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:microsite:links'
+            additional: {  }
+            weight: 0
+          ae48a2d0-c596-4003-86c7-3966e72a599d:
+            uuid: ae48a2d0-c596-4003-86c7-3966e72a599d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:microsite:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          1687f133-8c48-4402-ac6b-8d85b807f30b:
+            uuid: 1687f133-8c48-4402-ac6b-8d85b807f30b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:microsite:field_link'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 2
+          cfdcbe17-40a4-4352-8f29-6b7655851522:
+            uuid: cfdcbe17-40a4-4352-8f29-6b7655851522
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:microsite:field_link_m'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+id: node.microsite.default
+targetEntityType: node
+bundle: microsite
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link_m:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true

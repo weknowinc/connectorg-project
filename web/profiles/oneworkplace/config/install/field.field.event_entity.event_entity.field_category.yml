@@ -1,3 +1,4 @@
+uuid: a17e4661-b8fc-4e28-b5f3-fa05f020ab3d
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.event_entity.field_category
   module:
     - owp_events
+_core:
+  default_config_hash: vVNy3ei3_PCsGKeRw85x-x8IDeaLN638cn82tbQ5Sxw
 id: event_entity.event_entity.field_category
 field_name: field_category
 entity_type: event_entity

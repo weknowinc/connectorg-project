@@ -1,0 +1,21 @@
+# Microsite routing definition
+microsite_entity.settings_tab:
+  route_name: microsite_entity.settings
+  title: 'Settings'
+  base_route: microsite_entity.settings
+
+entity.microsite_entity.canonical:
+  route_name: entity.microsite_entity.canonical
+  base_route: entity.microsite_entity.canonical
+  title: 'View'
+
+entity.microsite_entity.edit_form:
+  route_name: entity.microsite_entity.edit_form
+  base_route: entity.microsite_entity.canonical
+  title: 'Edit'
+
+entity.microsite_entity.delete_form:
+  route_name:  entity.microsite_entity.delete_form
+  base_route:  entity.microsite_entity.canonical
+  title: Delete
+  weight: 10

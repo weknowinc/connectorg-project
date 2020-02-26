@@ -1,3 +1,4 @@
+uuid: c9e99af1-1568-4393-a547-6bb7439c316e
 langcode: en
 status: true
 dependencies:
@@ -14,6 +15,8 @@ dependencies:
     - link
     - owp_events
     - smart_date
+_core:
+  default_config_hash: NPyA3qrlP_YOMSXsoWtESLGQuiPXGogUmwn4WDG8HKo
 id: event_entity.event_entity.default
 targetEntityType: event_entity
 bundle: event_entity

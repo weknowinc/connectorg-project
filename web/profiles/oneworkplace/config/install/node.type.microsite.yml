@@ -1,0 +1,11 @@
+uuid: 76e2370b-227a-4239-8c14-f83f662d7f51
+langcode: en
+status: true
+dependencies: {  }
+name: Microsite
+type: microsite
+description: 'Microsites created by the users'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

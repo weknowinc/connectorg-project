@@ -1,20 +1,14 @@
+uuid: 49e35076-2388-4d66-8a20-d89b5d160ec6
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 6wCiOVpmjP3VNty2AvDp6Ss6npOsvgRXD-EGUC_op2g
 id: anonymous
 label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access administration pages'
-  - 'access comments'
   - 'access content'
-  - 'access contextual links'
   - 'access shortcuts'
-  - 'access user profiles'
-  - 'cancel account'
-  - 'change own username'
-  - 'edit own comments'
-  - 'post comments'
   - 'search content'
-  - 'select account cancellation method'

@@ -27,6 +27,7 @@ install:
   - config
   - contact
   - contextual
+  - layout_builder
   - dblog
   - editor
   - field
@@ -40,6 +41,7 @@ install:
   - node
   - options
   - owp_news
+  - owp_microsites
   - owp_office
   - owp_tool
   - owp_events
@@ -57,6 +59,8 @@ install:
   - user
   - views_ui
   - views
+  - owp_employee_engagement
+  - owp_birthdays
 
 dependencies:
   - node

@@ -1,0 +1,23 @@
+uuid: f6576bd4-07af-4f13-8bc8-11f00ea4bd17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.microsite
+  module:
+    - text
+id: node.microsite.body
+field_name: body
+entity_type: node
+bundle: microsite
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

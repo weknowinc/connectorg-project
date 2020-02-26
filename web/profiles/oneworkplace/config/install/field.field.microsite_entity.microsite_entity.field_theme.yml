@@ -1,0 +1,21 @@
+uuid: bd76524a-3dcb-4c54-8f89-954c309d60ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.microsite_entity.field_theme
+  module:
+    - options
+    - owp_microsites
+id: microsite_entity.microsite_entity.field_theme
+field_name: field_theme
+entity_type: microsite_entity
+bundle: microsite_entity
+label: Theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,20 @@
+add microsite entities:
+  title: 'Create new Microsite entities'
+
+administer microsite entities:
+  title: 'Administer Microsite entities'
+  description: 'Allow to access the administration form to configure Microsite entities.'
+  restrict access: true
+
+delete microsite entities:
+  title: 'Delete Microsite entities'
+
+edit microsite entities:
+  title: 'Edit Microsite entities'
+
+view published microsite entities:
+  title: 'View published Microsite entities'
+
+view unpublished microsite entities:
+  title: 'View unpublished Microsite entities'
+
