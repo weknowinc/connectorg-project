@@ -24,6 +24,7 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/search_api": "^1.15",
         "drupal/smart_date": "^1.1",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "eluceo/ical": "^0.16.0",
