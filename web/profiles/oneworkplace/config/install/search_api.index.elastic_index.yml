@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.elastic
+  module:
+    - search_api
+    - owp_birthdays
+    - owp_events
+    - owp_microsites
+    - owp_news
+    - node
+    - owp_office
+    - owp_employee_engagement
+id: elastic_index
+name: 'Elastic Index'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:birthday_entity': {  }
+  'entity:event_entity':
+    languages:
+      default: true
+      selected: {  }
+  'entity:microsite_entity': {  }
+  'entity:news_entity':
+    languages:
+      default: true
+      selected: {  }
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:office_entity':
+    languages:
+      default: true
+      selected: {  }
+  'entity:star_entity': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: elastic
