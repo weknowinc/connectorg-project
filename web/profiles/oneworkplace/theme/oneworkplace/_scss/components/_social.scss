@@ -1,0 +1,42 @@
+ul.social .icon { font-size: 1em; border: none; }
+
+ul.social { 
+  list-style: none; 
+  margin-bottom: 0;
+  padding: 0; 
+  text-align: right;
+}
+
+// Small devices
+@media screen and (min-width:0px) and (max-width:640px) {
+  ul.social { 
+    text-align: center;
+  }   
+}
+
+
+ul.social li { display: inline; }
+ul.social li a {
+  background: #333;
+  color: #ccc;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  font-family: FontAwesome;
+  font-size: 16px;
+  padding-top: 2px;
+  border-radius: 10%;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+ul.social li a:hover {
+  color: #333;
+  background: #ccc;
+}

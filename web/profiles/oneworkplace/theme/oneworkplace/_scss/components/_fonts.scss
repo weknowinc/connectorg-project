@@ -1,0 +1,66 @@
+/* dosis-regular - latin-ext_latin */
+@font-face {
+font-family: 'Dosis';
+font-display: auto;
+font-style: normal;
+font-weight: 400;
+src: local('Dosis Regular'), local('Dosis-Regular'),
+      url('../fonts/dosis/dosis-v7-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/dosis/dosis-v7-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+font-family: 'Source Sans Pro';
+font-display: auto;
+font-style: normal;
+font-weight: 400;
+src: url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.eot'); /* IE9 Compat Modes */
+src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+      url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/sourcesanspro/source-sans-pro-v12-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* ubuntu-regular - latin-ext */
+@font-face {
+      font-family: 'Ubuntu';
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.eot'); /* IE9 Compat Modes */
+      src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+           url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+           url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+           url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+           url('../fonts/ubuntu/ubuntu-v14-latin-ext-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+    }
+
+/* oregano-regular - latin */
+@font-face {
+      font-family: 'Oregano';
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/oregano/oregano-v7-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local('Oregano'), local('Oregano-Regular'),
+           url('../fonts/oregano/oregano-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('../fonts/oregano/oregano-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+           url('../fonts/oregano/oregano-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+           url('../fonts/oregano/oregano-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+           url('../fonts/oregano/oregano-v7-latin-regular.svg#Oregano') format('svg'); /* Legacy iOS */
+    }
+    
+/* montserrat-regular - latin */
+@font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Montserrat Regular'), local('Montserrat-Regular'),
+           url('../fonts/montserrat/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('../fonts/montserrat/montserrat-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    

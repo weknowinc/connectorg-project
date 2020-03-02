@@ -1,0 +1,85 @@
+// Estilos Generales 
+
+.blanco, .negro, .naranjo, .papel, .arena {
+  padding: $padding-grande;
+  margin: 0;
+}
+
+
+// Blanco
+
+.blanco { background-color: #fff; }
+.blanco h2 { color: $gray-900; }
+
+
+// Naranjo 
+
+.naranjo {
+  background: #CE5937;
+  background: -moz-linear-gradient(left, #CE5937 0%, #C59237 100%);
+  background: -webkit-linear-gradient(left, #CE5937 0%, #C59237 100%);
+  background: linear-gradient(to right, #CE5937 0%, #C59237 100%);
+  color: #fff;
+}
+.naranjo h2 { 
+  color: #fff;
+  text-shadow: 1px 3px 1px rgba(204,204,204,0.48);
+  text-shadow: 0 1px 6px #081d30;
+}
+.naranjo a { 
+  color: #fff; 
+  text-decoration: underline;
+}
+.naranjo a:hover { 
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+.naranjo blockquote { color: #fff; }
+
+
+// Negro
+
+.negro {
+  background: #212121;
+  color: #f1f1f1;
+}
+.negro h2 { color: #f5f5f5; }
+
+
+// Papel 
+
+.papel { background: url(/themes/oneworkplace/images/papel.png); }
+
+
+// Arena
+
+.arena { background: url(/themes/oneworkplace/images/arena.png); }
+
+
+
+/* Revisar y borrar si corresponde - hay un estilo en la base de datos que apunta a este estilo. */
+.blanco-no-margins {
+  background-color: #fff;
+  color: #555;
+  margin-bottom: 0px;
+  padding: 10px 60px 10px 60px;
+}
+
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+
+
+  .blanco, .negro, .naranjo, .papel, .arena {
+    padding: $padding-medio;
+    margin: 0;
+  }
+
+  // Important: These elements control the mobile view space between vertical elements in the page. 
+  .paragraph--type--parthreecol .col-md-4 { 
+    margin-bottom: $vertical-space;
+  }
+
+
+
+}

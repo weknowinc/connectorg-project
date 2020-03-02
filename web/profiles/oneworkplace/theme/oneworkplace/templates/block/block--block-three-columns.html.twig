@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ title_suffix }}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        {{ content.field_b3colleft }}
+      </div>
+      <div class="col-md-4">
+        {{ content.field_b3colcenter }}
+      </div>
+      <div class="col-md-4">
+        {{ content.field_b3colright }}
+      </div>
+    </div>
+  </div>
+</div>

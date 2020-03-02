@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oneworkplace
+id: oneworkplace_messages
+theme: oneworkplace
+region: messages
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  provider: system
+  label_display: '0'
+visibility: {  }

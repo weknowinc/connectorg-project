@@ -1,0 +1,55 @@
+input, textarea {
+  background: rgba(155, 153, 153, 0.1);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: $gray-800;
+  padding: 9px;
+}
+
+.form-textarea {
+  background: rgba(155, 153, 153, 0.2);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: $gray-800;
+  margin: 0;
+  padding: 9px;
+  width: 100%;
+}
+
+.negro input, textarea {
+  background: $gray-300;
+  color: $gray-800;
+}
+
+.negro .form-textarea {
+  background: $gray-300;
+  color: $gray-800;
+}
+
+.negro input[type="submit"] {
+  background: rgb(5, 164, 238);
+  color: $gray-300;
+}
+
+.negro input[type="submit"]:hover {
+  background: rgb(240, 6, 6);
+  color: $gray-300;
+}
+
+.naranjo, .form-textarea {
+  background: $gray-100;
+  color: $gray-800;
+}
+
+.naranjo, input, textarea {
+  background: $gray-100;
+  color: $gray-800;
+}
+
+.naranjo label {
+  color: $gray-100;
+}
+
+.webform-layoutcontainer > .form-item input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]), .webform-layoutcontainer > .form-item textarea {
+  margin-bottom: .7em;
+}

@@ -1,0 +1,22 @@
+name: Oneworkplace Theme
+type: theme
+description: 'Oneworkplace Drupal 8 Responsive Theme.'
+core: '8.x'
+
+#Libraries
+libraries:
+  - oneworkplace/global
+
+#Regions
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  banner: 'Banner'
+  tabs: 'Tabs'
+  messages: 'Messages'
+  slider: 'Slider'
+  content: 'Content'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  footer: 'Footer'
+  auto_hidden_block: 'Auto hidden blocks'

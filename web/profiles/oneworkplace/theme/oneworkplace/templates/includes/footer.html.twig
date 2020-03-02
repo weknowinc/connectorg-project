@@ -1,0 +1,26 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="copyright">
+          <p>{{ site_name }} © Copyright {{ 'now'|date('Y') }}</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        {# <a href="https://www.drupal.org/u/oneworkplacemedia"><img class="logo" src="{{ base_path ~ directory }}/drupal.jpg" alt="Manufacturado con Drupal" /></a></p> #}
+          <ul class="social">
+            <li><a href="https://www.facebook.com/" class="icon fa-facebook" aria-label="Facebook"></a></li>
+            <li><a href="https://twitter.com/" class="icon fa-twitter" aria-label="Twitter"></a></li>
+            <li><a href="https://www.linkedin.com/company/" class="icon fa-linkedin" aria-label="Linkedin"></a></li>
+            <li>
+              {% if logged_in %}
+              <a href="{{ url('<front>') }}panel" class="icon fa-cog" aria-label="Ir al panel de control" {{ 'Ir al panel de control'|t }}></a>
+              {% else %}
+              <a href="{{ url('<front>') }}user" class="icon fa-cog" aria-label="Ingresar al sitio"{{ 'Ingresar al sitio'|t }}></a>
+              {% endif %}
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

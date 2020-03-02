@@ -1,0 +1,107 @@
+// Quita un espacio blanco al fondo del slider
+/* .slick-dotted.slick-slider {
+  margin-bottom: -10px;
+} */
+
+.slide__media {
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+    
+.slide__media:after {
+  content: "";
+  background: rgba(36, 30, 58, 0.55);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+    
+.slide__caption {
+  color: #fff;
+  text-shadow: 0 1px 6px #081d30;
+  line-height: 1.2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1%;
+  text-align: center;
+  z-index: 4;
+  padding: 0 70px;
+}
+    
+.slick-dots {
+  color: #000;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 7;
+}
+    
+.slick-dotted.slick-slider {
+  margin-bottom: -10px;
+}
+
+.slick-dots li button::before {
+  color: #fff;
+  opacity: .25;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #fff;
+  opacity: .75;
+}
+
+.slick-arrow::before {
+  color:rgba(252, 252, 252, 0.856);
+}
+
+.carousel-caption h3 {
+  color: #fff;
+}
+
+/* Extra large devices */
+@media screen and (min-width:993px) and (max-width:12000px) {
+
+  /** Slider starts **/
+  .carousel-caption h3 {font-size: 60px;}
+
+}
+
+/* Large devices */
+@media screen and (min-width:769px) and (max-width:992px) {
+
+  /** Slider starts **/
+  .carousel-caption h3 {font-size: 50px;}
+    
+}
+
+/* Medium devices */
+@media screen and (min-width:641px) and (max-width:768px) {
+
+  /** Slider starts **/
+  .carousel-caption h3 {font-size: 40px;}
+    
+}
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+
+  /** Slider starts **/
+  .carousel-caption h3 {
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  .carousel-caption {
+    font-size: 10px;
+    line-height: 1;
+  }
+  
+}
+  

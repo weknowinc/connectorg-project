@@ -1,0 +1,49 @@
+blockquote {
+  color: #555555;
+  font-size: 1.4em;
+  font-style: italic;
+  padding: 20px 5px 20px 75px;
+  line-height: 1.6;
+  position: relative;
+  margin: 20px 0 20px -9px;
+}
+
+blockquote::before { 
+content: "\201C";
+  color:#F47B39;
+  text-shadow: 0 1px 6px #081d30;
+  font-size: 4em;
+  position: absolute;
+  left: 0px;
+  top: -20px;
+}
+
+blockquote::after { content: ''; }
+
+blockquote span {
+  color:#333333;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+  text-align: right;
+}
+
+.author { 
+  text-align: right; 
+}
+
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+    
+    blockquote { 
+      padding: 25px 10px 20px 45px;
+      font-size: 1em; 
+    }
+    
+    blockquote::before { 
+      top: 0px;
+    }
+    
+}

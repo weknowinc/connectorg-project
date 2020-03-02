@@ -1,0 +1,18 @@
+body {
+  color: #555;
+  font-size: 16px;
+  font-family: 'Source Sans Pro';
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+/* Small devices */
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  p {
+    font-size: 14px;
+  }
+  ul.tabs {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=custom-style.css.map */

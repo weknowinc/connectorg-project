@@ -1,0 +1,41 @@
+.form-actions { 
+  margin: 5px 0; 
+}
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: $primary;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  padding: 10px 24px;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  transition:1s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.dark input[type="submit"],
+.highlighted-block .btn:hover,
+.highlighted-block .btn:focus,
+.call-to-action .btn,
+.tag a:hover {
+  background-color: #E74C3C;
+}
+
+// Adding animation to buttons provided via Ckeditor 
+.btn {
+  -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  transition:1s;
+}

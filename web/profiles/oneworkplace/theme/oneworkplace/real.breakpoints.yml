@@ -1,0 +1,50 @@
+# Breakpoints #
+
+oneworkplace.mobile:
+  label: Mobile
+  mediaQuery: 'all and (min-width: 0px) and (max-width: 640px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+oneworkplace.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 641px) and (max-width: 767px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+oneworkplace.landscape:
+  label: landscape
+  mediaQuery: 'all and (min-width: 350px) and (max-width: 1024px) and (orientation: landscape)'
+  weight: 2
+  multipliers:
+    - 1x
+
+oneworkplace.nexus7:
+  label: nexus7
+  mediaQuery: 'all and (min-width: 600px) and (max-width: 960px) and (orientation: portrait)'
+  weight: 3
+  multipliers:
+    - 1x
+
+oneworkplace.tablet:
+  label: Tablet
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 1024px)'
+  weight: 4
+  multipliers:
+    - 1x
+
+oneworkplace.desktop:
+  label: Desktop
+  mediaQuery: 'all and (min-width: 1025px) and (max-width: 1366px)'
+  weight: 5
+  multipliers:
+    - 1x
+
+oneworkplace.tv:
+  label: TV
+  mediaQuery: 'all and (min-width: 1367px) and (max-width: 1600px)'
+  weight: 6
+  multipliers:
+    - 1x

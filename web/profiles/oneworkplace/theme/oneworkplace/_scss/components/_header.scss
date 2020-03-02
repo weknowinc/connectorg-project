@@ -1,0 +1,32 @@
+.bg-info {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+//** _branding.scss file controls elements padding **/
+
+.header {
+  background-color: #343a40;
+  padding: 0.5rem 1rem 0.2rem 1rem;
+}
+
+//** Toggler (menú) related styles **/
+
+.toggler-position {
+  float: right;
+}
+
+.toggler-position button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+

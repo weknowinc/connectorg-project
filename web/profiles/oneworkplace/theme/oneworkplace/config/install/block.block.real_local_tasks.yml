@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  theme:
+    - oneworkplace
+id: oneworkplace_local_tasks
+theme: oneworkplace
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

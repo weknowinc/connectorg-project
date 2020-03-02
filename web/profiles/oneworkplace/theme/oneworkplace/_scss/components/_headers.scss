@@ -1,0 +1,53 @@
+
+//   font-family: 'Dosis';
+// h1, h2, h3, h4, h5, h6 { 
+// }
+
+/* Extra large devices */
+@media screen and (min-width:993px) and (max-width:12000px) {   
+
+    h1 { font-size: 48px; }
+    h2 { font-size: 35px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 22px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 18px; }
+      
+}
+
+/* Large devices */
+@media screen and (min-width:769px) and (max-width:992px) {
+    
+    h1 { font-size: 38px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 22px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 18px; }
+    
+}
+
+/* Medium devices */
+@media screen and (min-width:641px) and (max-width:768px) {
+      
+    h1 { font-size: 28px; }
+    h2 { font-size: 25px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 22px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 18px; }
+      
+}
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+    
+    h1 { font-size: 22px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 22px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 18px; }
+
+}
+    

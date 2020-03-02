@@ -1,0 +1,11 @@
+global:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/bootstrap.min.js: 
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.dialog.ajax
+

@@ -1,0 +1,100 @@
+.overlay .nav { 
+  display: block; 
+}
+
+.overlay {
+  background-color: $gray-900; 
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 16;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.1s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 80px;
+  width: 100%;
+  text-align: left;
+}
+
+.overlay a {
+  color: $gray-300;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  font-family: 'Montserrat';
+}
+
+.overlay a.is-active {
+  color: $secondary;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: $secondary;
+}
+
+.overlay .closebtn {
+  color: #fff;
+  padding: 10px 8px;
+  position: absolute;
+  top: 37px;
+  right: 85px;
+  font-size: 50px;
+}
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 38px;
+      right: 30px;
+      font-size: 50px;
+    }
+    
+    
+}
+ 
+/** Preliminar implementation of login block in right overlay (main menu overlay) **/
+.overlay .block-user-login-block { 
+  background: black;
+  border: none;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+#block-navegacionprincipal {
+  //** border: .5px solid $gray-800;
+  margin: 5px 20px;
+  padding: 5px 10px;
+}
+
+#block-menudecuentadeusuario {
+  //** border: .5px solid $gray-800;
+  margin: 20px;
+  padding: 10px;
+  color: $gray-200;
+}
+
+#block-menudecuentadeusuario h2 {
+  border-bottom: .5px solid $gray-700;
+  margin: 10px 8px;
+  padding: 0;
+  color: $gray-200;
+  font-size: 20px;
+}
+
+/*   Espacio izquierdo del menu (listas)
+.overlay ul.menu li a {
+  padding-left: 21px;
+} */
+
+
+.link-text {
+  padding-left: 5px;
+}

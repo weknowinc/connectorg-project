@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="container branding">
+    <div class="row">
+      <div class="col-6">
+        <div>{{ page.header }}</div>
+      </div>
+      <div class="col-6">
+          <div id="myNav" class="overlay">
+                <div>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+              <div class="overlay-content">
+                {# {{ page.tabs }} #}
+                <br />
+                {{ page.primary_menu }}
+              </div>
+          </div>
+          <div class="toggler-position">
+            <span style="" onclick="openNav()">
+              <button class="navbar-toggler" type="button" data-toggle="" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </span>
+          </div>
+      </div>
+    </div>
+   </div>
+  </div>
+
+{% if page.tabs %}
+<div class="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          {{ page.tabs }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.messages %}
+  <div class="messages">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+            {{ page.messages }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
