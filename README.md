@@ -4,6 +4,7 @@
 
 - [Drupal](https://www.drupal.org/)
 - [DDEV](https://www.ddev.com/)
+- [Docker-compose](https://docs.docker.com/compose/)
 
 ## Setup local enviroment
 
@@ -34,6 +35,26 @@ and then install all composer dependencies
 ddev composer update
 ```
 For further information about ddev visit https://ddev.readthedocs.io/
+
+## Elastic Search
+
+#### Build the stack
+```
+docker-compose -f elastic/docker-compose.yml build
+
+```
+then
+```
+docker-compose -f elastic/docker-compose.yml up
+
+```
+or in detached mode:
+
+```
+docker-compose -f elastic/docker-compose.yml up -d
+```
+- [Set vm.max_map_count](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#_set_vm_max_map_count_to_at_least_262144)
+
 ## Export configuration
 
 Run the following command in the root dir:
