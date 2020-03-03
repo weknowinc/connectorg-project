@@ -153,7 +153,16 @@ timezone: ""
 # See https://ddev.readthedocs.io/en/stable/users/extending-commands/ for more
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
-#hooks:
+hooks:
 # post-import-db:
 #   - exec: drush cr
 #   - exec: drush updb
+
+  post-start:
+    - exec-host: "docker-compose -f elastic/docker-compose.yml build"
+    - exec-host: "docker-compose -f elastic/docker-compose.yml up -d"
+
+  post-stop:
+    - exec-host: "docker-compose -f elastic/docker-compose.yml down"
+
+
