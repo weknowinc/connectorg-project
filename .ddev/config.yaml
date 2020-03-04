@@ -162,7 +162,7 @@ hooks:
     - exec-host: "docker-compose -f elastic/docker-compose.yml build"
     - exec-host: "docker-compose -f elastic/docker-compose.yml up -d"
 
-  post-stop:
+  pre-stop:
     - exec-host: "docker-compose -f elastic/docker-compose.yml down"
 
 
