@@ -159,10 +159,10 @@ hooks:
 #   - exec: drush updb
 
   post-start:
-    - exec-host: "docker-compose -f elastic/docker-compose.yml build"
-    - exec-host: "docker-compose -f elastic/docker-compose.yml up -d"
-
-  pre-stop:
-    - exec-host: "docker-compose -f elastic/docker-compose.yml down"
+#    - exec-host: "docker-compose -f elastic/docker-compose.yml build"
+#    - exec-host: "docker-compose -f elastic/docker-compose.yml up -d"
+#
+#  pre-stop:
+#    - exec-host: "docker-compose -f elastic/docker-compose.yml down"
 
 
