@@ -1,78 +1,72 @@
-var gulp        = require('gulp'),
-    browserSync = require('browser-sync'),
-    sass        = require('gulp-sass'),
-    prefix      = require('gulp-autoprefixer'),
-    concat      = require('gulp-concat'),
-    babel       = require('gulp-babel'),
-    cp          = require('child_process');
+let gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  cleanCss = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  browserSync = require('browser-sync').create()
 
-/**
- * Launch the Server
- */
- gulp.task('browser-sync', ['sass', 'scripts'], function() {
-    browserSync.init({
-      // Change as required, also remember to set in theme settings
-      proxy: "http://oneworkplace.ddev.local",
-      port: 3000
-    });
-});
+const paths = {
+  scss: {
+    src: './_scss/style.scss',
+    dest: './css',
+    watch: './_scss/**/*.scss',
+    bootstrap: './node_modules/bootstrap/scss/bootstrap.scss'
+  },
+  js: {
+    bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    jquery: './node_modules/jquery/dist/jquery.min.js',
+    popper: 'node_modules/popper.js/dist/umd/popper.min.js',
+    dest: './js'
+  }
+}
 
-/**
- * @task sass
- * Compile files from scss
- */
-gulp.task('sass', function () {
-  return gulp.src('_scss/style.scss')
-  .pipe(sass())
-  .pipe(prefix(['last 3 versions', '> 1%', 'ie 8'], { cascade: true }))
-  .pipe(gulp.dest('css'))
-  .pipe(browserSync.reload({stream:true}))
-});
+// Compile sass into CSS & auto-inject into browsers
+function styles () {
+  return gulp.src([paths.scss.bootstrap, paths.scss.src])
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer({
+      browsers: [
+        'Chrome >= 35',
+        'Firefox >= 38',
+        'Edge >= 12',
+        'Explorer >= 10',
+        'iOS >= 8',
+        'Safari >= 8',
+        'Android 2.3',
+        'Android >= 4',
+        'Opera >= 12']
+    })]))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(cleanCss())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(browserSync.stream())
+}
 
-/**
- * @task scripts
- * Compile files from js
- */
-gulp.task('scripts', function() {
-  return gulp.src(['_js/*.js', '_js/custom.js'])
-  .pipe(babel({
-    presets: ['es2015']
-  }))
-  .pipe(concat('scripts.js'))
-  .pipe(gulp.dest('js'))
-  .pipe(browserSync.reload({stream:true}))
-});
+// Move the javascript files into our js folder
+function js () {
+  return gulp.src([paths.js.bootstrap, paths.js.jquery, paths.js.popper])
+    .pipe(gulp.dest(paths.js.dest))
+    .pipe(browserSync.stream())
+}
 
-/**
- * @task clearcache
- * Clear all caches
- */
-gulp.task('clearcache', function(done) {
-  return cp.spawn('drush', ['cache-rebuild'], {stdio: 'inherit'})
-  .on('close', done);
-});
+// Static Server + watching scss/html files
+function serve () {
+  browserSync.init({
+    proxy: 'https://oneworkplace.ddev.site/',
+  })
 
-/**
- * @task reload
- * Refresh the page after clearing cache
- */
-gulp.task('reload', ['clearcache'], function () {
-  browserSync.reload();
-});
+  gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
+}
 
-/**
- * @task watch
- * Watch scss files for changes & recompile
- * Clear cache when Drupal related files are changed
- */
-gulp.task('watch', function () {
-  gulp.watch(['_scss/*.scss', '_scss/**/*.scss'], ['sass']);
-  gulp.watch(['_js/*.js'], ['scripts']);
-  gulp.watch(['templates/*.html.twig', '**/*.yml'], ['reload']);
-});
+const build = gulp.series(styles, gulp.parallel(js, serve))
 
-/**
- * Default task, running just `gulp` will 
- * compile Sass files, launch BrowserSync, watch files.
- */
-gulp.task('default', ['browser-sync', 'watch']);
+exports.styles = styles
+exports.js = js
+exports.serve = serve
+
+exports.default = build
