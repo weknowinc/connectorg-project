@@ -1,6 +1,20 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.news_entity.field_body
+    - field.storage.news_entity.field_category
+    - field.storage.event_entity.field_date
+    - field.storage.star_entity.field_employee
+    - field.storage.event_entity.field_image
+    - field.storage.event_entity.field_office
+    - field.storage.news_entity.field_office
+    - field.storage.office_entity.field_phone_number
+    - field.storage.event_entity.field_tags
+    - field.storage.news_entity.field_tags
+    - field.storage.microsite_entity.field_theme
+    - field.storage.star_entity.field_type
+    - search_api.server.elastic
   module:
     - owp_birthdays
     - owp_events
@@ -10,20 +24,6 @@ dependencies:
     - owp_employee_engagement
     - search_api
     - node
-  config:
-    - field.storage.event_entity.field_date
-    - field.storage.event_entity.field_image
-    - field.storage.event_entity.field_office
-    - field.storage.event_entity.field_tags
-    - field.storage.microsite_entity.field_theme
-    - field.storage.news_entity.field_body
-    - field.storage.news_entity.field_category
-    - field.storage.news_entity.field_office
-    - field.storage.news_entity.field_tags
-    - field.storage.office_entity.field_phone_number
-    - field.storage.star_entity.field_employee
-    - field.storage.star_entity.field_type
-    - search_api.server.elastic
 id: elastic_index
 name: 'Elastic Index'
 description: ''
