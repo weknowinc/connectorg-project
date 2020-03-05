@@ -1,0 +1,22 @@
+version: "3.6"
+services:
+  nodejs:
+    container_name: ddev-${DDEV_SITENAME}-nodejs
+    hostname: ${DDEV_SITENAME}-nodejs
+    image: node:latest
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - ./:/var/www/html/web/themes/oneworkplace
+    command: sh -c "npm install npm@latest -g && npm install && gulp"
+  web:
+    links:
+      - nodejs:nodejs
+volumes:
+  nodejs:
+    name: "${DDEV_SITENAME}-nodejs"
