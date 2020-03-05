@@ -5,6 +5,7 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/themes/oneworkplace/node_modules/
+/web/themes/oneworkplace/package-lock.json
 /web/profiles/contrib/
 /web/libraries/
 
