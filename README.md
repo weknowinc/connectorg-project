@@ -37,7 +37,4 @@ For further information about ddev visit https://ddev.readthedocs.io/
 ## Export configuration
 
 Run the following command in the root dir:
-1. ``` ddev exec drush cex ```
-2. ``` find ./web/profiles/oneworkplace/config/install/ -type f -exec sed -i -e '/^uuid: /d' {} \; ```
-3. ``` find ./web/profiles/oneworkplace/config/install/ -type f  -exec sed -i -e '/_core:/,+1d' {} \; ```
-3. Finally, delete the following files in the dir config/install: core.extension.yml, update.settings.yml, file.settings.yml.
+* ``` sh export.sh ```
