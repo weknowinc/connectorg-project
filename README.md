@@ -28,37 +28,18 @@ Rename the file `oneworkplace/.env.example` to `oneworkplace/.env` and paste the
 
 ### Build the stack
 
-###### Elastic Search
-
 Before start to the creation of the containers, enable locally this setting to avoid memory issues:
 
 [vm.max_map_count](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#_set_vm_max_map_count_to_at_least_262144)
 
 
-Once is finished, run the following commands:
-
-
-```
-docker-compose -f elastic/docker-compose.yml build
-
-```
-
-```
-docker-compose -f elastic/docker-compose.yml up
-
-```
-or in detached mode:
-
-```
-docker-compose -f elastic/docker-compose.yml up -d
-```
-
 ###### DDEV
 
+First, run:
 ```
 ddev start
 ```
-and then install all composer dependencies
+and then run, in order to install all composer dependencies
 ```
 ddev composer update
 ```
