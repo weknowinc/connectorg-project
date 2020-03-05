@@ -1,12 +1,57 @@
 // Base
-@import 'bootstrap/bootstrap.scss';
-@import 'bootstrap/bootstrap-reboot.scss';
-@import 'bootstrap/bootstrap-grid.scss';
-@import 'custom-style.scss';
-@import 'font-awesome.min.scss';
+/* @import 'custom-style.scss'; */
 
+body {
+    background-color: #999999;
+    color: #666666;
+    font-family: 'Signika';
+    font-size: 16px;
+    margin: 0;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
 
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+    p { font-size: 14px; }
+    ul.tabs { font-size: 12px; }    
+    }
+    
+    // Variables 
+    $padding-grande: 60px;
+    $padding-medio: 40px 0px 20px 0px;
+    $padding-pequeno: 10px 0px 10px 0px;
+    $vertical-space: 20px; 
+
+/*   Paleta de colores
+
+  Azul weKnow 
+  #0069A7
+
+  Morado weKnow 
+  #5D4D76
+
+  Rojish
+  #922E46
+
+  Menos azul
+  #238DC1
+
+  Amarillo weKnow 
+  #EE9D2E
+
+  Gris oscuro
+  #666666
+
+  Gris claro
+  #999999
+
+  Gris muy claro
+  #EEEEEE
+ */
+  
 // Components
+@import 'font-awesome.min.scss';
 @import 'components/_audio.scss';
 @import 'components/_banner.scss';
 @import 'components/_branding.scss';
@@ -34,8 +79,3 @@
 @import 'components/_slider.scss';
 @import 'components/_social.scss';
 @import 'components/_tabs.scss';
-
-
-
-
-

@@ -3,7 +3,7 @@
 }
 
 .overlay {
-  background-color: $gray-900; 
+  background-color: #ccc; 
   height: 100%;
   width: 0;
   position: fixed;
@@ -22,20 +22,19 @@
 }
 
 .overlay a {
-  color: $gray-300;
+  color: #fff;
   padding: 5px 8px;
   text-decoration: none;
   font-size: 1em;
   display: block;
-  font-family: 'Montserrat';
 }
 
 .overlay a.is-active {
-  color: $secondary;
+  color: #ccc;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: $secondary;
+  color: #ccc;
 }
 
 .overlay .closebtn {
@@ -56,8 +55,6 @@
       right: 30px;
       font-size: 50px;
     }
-    
-    
 }
  
 /** Preliminar implementation of login block in right overlay (main menu overlay) **/
@@ -73,27 +70,6 @@
   margin: 5px 20px;
   padding: 5px 10px;
 }
-
-#block-menudecuentadeusuario {
-  //** border: .5px solid $gray-800;
-  margin: 20px;
-  padding: 10px;
-  color: $gray-200;
-}
-
-#block-menudecuentadeusuario h2 {
-  border-bottom: .5px solid $gray-700;
-  margin: 10px 8px;
-  padding: 0;
-  color: $gray-200;
-  font-size: 20px;
-}
-
-/*   Espacio izquierdo del menu (listas)
-.overlay ul.menu li a {
-  padding-left: 21px;
-} */
-
 
 .link-text {
   padding-left: 5px;

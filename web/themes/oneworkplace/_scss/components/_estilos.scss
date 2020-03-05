@@ -1,15 +1,14 @@
 // Estilos Generales 
 
 .blanco, .negro, .naranjo, .papel, .arena {
-  padding: $padding-grande;
+  padding: 10px 60px 10px 60px;
   margin: 0;
 }
-
 
 // Blanco
 
 .blanco { background-color: #fff; }
-.blanco h2 { color: $gray-900; }
+.blanco h2 { color: #ccc; }
 
 
 // Naranjo 
@@ -71,13 +70,13 @@
 
 
   .blanco, .negro, .naranjo, .papel, .arena {
-    padding: $padding-medio;
+    padding: 10px 60px 10px 60px;
     margin: 0;
   }
 
   // Important: These elements control the mobile view space between vertical elements in the page. 
   .paragraph--type--parthreecol .col-md-4 { 
-    margin-bottom: $vertical-space;
+    margin-bottom: 10px 60px 10px 60px;
   }
 
 
