@@ -3,7 +3,7 @@ status: '1'
 dependencies: {  }
 cluster_id: local
 name: Local
-url: 'http://oneworkplace.ddev.site:9200'
+url: 'http://localhost:9200/'
 options:
   multiple_nodes_connection: false
   use_authentication: 0
