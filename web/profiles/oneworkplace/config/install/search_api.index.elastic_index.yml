@@ -22,12 +22,14 @@ datasource_settings:
   'entity:event_entity':
     languages:
       default: true
-      selected: {  }
+      selected:
+        - en
   'entity:microsite_entity': {  }
   'entity:news_entity':
     languages:
       default: true
-      selected: {  }
+      selected:
+        - en
   'entity:node':
     bundles:
       default: true
