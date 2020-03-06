@@ -4,6 +4,7 @@
 
 - [Drupal](https://www.drupal.org/)
 - [DDEV](https://www.ddev.com/)
+- [Docker-compose](https://docs.docker.com/compose/)
 
 ## Setup local enviroment
 
@@ -24,16 +25,27 @@ then, install ddev
 ### Create .env file
 Rename the file `oneworkplace/.env.example` to `oneworkplace/.env` and paste the values for:
 
+
 ### Build the stack
 
+Before start to the creation of the containers, enable locally this setting to avoid memory issues:
+
+[vm.max_map_count](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#_set_vm_max_map_count_to_at_least_262144)
+
+
+###### DDEV
+
+First, run:
 ```
 ddev start
 ```
-and then install all composer dependencies
+and then run, in order to install all composer dependencies
 ```
 ddev composer update
 ```
 For further information about ddev visit https://ddev.readthedocs.io/
+
+
 ## Export configuration
 
 Run the following command in the root dir:
