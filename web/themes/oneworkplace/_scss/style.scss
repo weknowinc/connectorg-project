@@ -2,28 +2,32 @@
 /* @import 'custom-style.scss'; */
 
 body {
-    background-color: #999999;
-    color: #666666;
-    font-family: 'Signika';
-    font-size: 16px;
-    margin: 0;
-    line-height: 24px;
-    letter-spacing: 0px;
-  }
+  background-color: #fff;
+  color: #666666;
+  font-family: 'Signika';
+  font-size: 16px;
+  margin: 0;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
 
 /* Small devices */
 @media screen and (min-width:0px) and (max-width:640px) {
-    p { font-size: 14px; }
-    ul.tabs { font-size: 12px; }    
-    }
-    
-    // Variables 
-    $padding-grande: 60px;
-    $padding-medio: 40px 0px 20px 0px;
-    $padding-pequeno: 10px 0px 10px 0px;
-    $vertical-space: 20px; 
+  p { font-size: 14px; }
+  ul.tabs { font-size: 12px; }    
+}
 
-/*   Paleta de colores
+.content {
+  padding: 40px;
+}
+
+// Variables 
+$padding-grande: 60px;
+$padding-medio: 40px 0px 20px 0px;
+$padding-pequeno: 10px 0px 10px 0px;
+$vertical-space: 20px; 
+
+/*   Paleta de colores 
 
   Azul weKnow 
   #0069A7
