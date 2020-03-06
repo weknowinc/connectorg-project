@@ -16,6 +16,7 @@ services:
       - node.max_local_storage_nodes=3
       - xpack.security.enabled=false
       - discovery.type=single-node
+      - TAKE_FILE_OWNERSHIP="true"
     ulimits:
       memlock:
         soft: -1
