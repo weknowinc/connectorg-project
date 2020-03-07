@@ -7,6 +7,8 @@ core: '8.x'
 libraries:
   - oneworkplace/global
 
+base theme: false
+
 #Regions
 regions:
   header: 'Header'

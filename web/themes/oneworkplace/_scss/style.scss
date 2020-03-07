@@ -52,6 +52,7 @@ $vertical-space: 20px;
 
   Gris muy claro
   #EEEEEE
+
  */
   
 // Components
@@ -72,7 +73,7 @@ $vertical-space: 20px;
 @import 'components/_login-form.scss';
 @import 'components/_messages.scss';
 @import 'components/_menubar.scss';
-@import 'components/_nabvar.scss';
+@import 'components/_navbar.scss';
 @import 'components/_overlay.scss';
 @import 'components/_pager.scss';
 @import 'components/_panel.scss';
