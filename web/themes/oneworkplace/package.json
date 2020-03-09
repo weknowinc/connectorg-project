@@ -11,7 +11,7 @@
     "Bootstrap",
     "Drupal"
   ],
-  "author": "@hatuhay",
+  "author": "@translector",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.4.1",

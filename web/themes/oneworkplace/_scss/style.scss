@@ -17,9 +17,7 @@ body {
   ul.tabs { font-size: 12px; }    
 }
 
-.content {
-  padding: 40px;
-}
+.content { padding: 40px 0; } 
 
 // Variables 
 $padding-grande: 60px;
@@ -27,33 +25,16 @@ $padding-medio: 40px 0px 20px 0px;
 $padding-pequeno: 10px 0px 10px 0px;
 $vertical-space: 20px; 
 
-/*   Paleta de colores 
 
-  Azul weKnow 
-  #0069A7
-
-  Morado weKnow 
-  #5D4D76
-
-  Rojish
-  #922E46
-
-  Menos azul
-  #238DC1
-
-  Amarillo weKnow 
-  #EE9D2E
-
-  Gris oscuro
-  #666666
-
-  Gris claro
-  #999999
-
-  Gris muy claro
-  #EEEEEE
-
- */
+/* WeKnow Brand colors. Do not use black */
+$Azul_weKnow: #0069A7;
+$Morado_weKnow:#5D4D76;
+$Rojish: #922E46;
+$Menos_azul: #238DC1;
+$Amarillo_weKnow: #EE9D2E;
+$Gris_oscuro: #666666;
+$Gris_claro: #999999;
+$Gris_muy_claro: #EEEEEE;
   
 // Components
 @import 'font-awesome.min.scss';
