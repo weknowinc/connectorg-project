@@ -3,30 +3,33 @@
 }
 
 .overlay {
-  background-color: #fff; 
-  height: 100%;
+  background-color: $Gris_claro; 
+  height: 60%;
   width: 0;
   position: fixed;
   z-index: 16;
-  top: 0;
+  top: 60px;
   right: 20px;
   overflow-x: hidden;
   transition: 0.1s;
 }
 
 .overlay-content {
+  padding: 1.5em 1em;
   position: relative;
-  top: 20px;
+  top: 0px;
   width: 100%;
   text-align: left;
+  z-index: -1;
 }
 
 .overlay a {
   color: #fff;
-  padding: 5px 8px;
-  text-decoration: none;
-  font-size: 1em;
   display: block;
+  font-size: 1em;
+  line-height: 0;
+  margin: 10px 5px;
+  text-decoration: none;
 }
 
 .overlay a.is-active {
@@ -34,43 +37,24 @@
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #ccc;
+  color: $Rojish;
+  text-decoration: none;
 }
 
 .overlay .closebtn {
   color: #fff;
-  padding: 10px 8px;
+  padding: 0;
   position: absolute;
-  top: 37px;
-  right: 85px;
-  font-size: 50px;
+  top: 0;
+  left: 0;
+  font-size: 25px;
 }
 
 /* Small devices */
 @media screen and (min-width:0px) and (max-width:640px) {
 
     .overlay .closebtn {
-      position: absolute;
-      top: 38px;
-      right: 30px;
-      font-size: 50px;
+
     }
 }
  
-/** Preliminar implementation of login block in right overlay (main menu overlay) **/
-.overlay .block-user-login-block { 
-  background: black;
-  border: none;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-#block-navegacionprincipal {
-  //** border: .5px solid $gray-800;
-  margin: 5px 20px;
-  padding: 5px 10px;
-}
-
-.link-text {
-  padding-left: 5px;
-}
