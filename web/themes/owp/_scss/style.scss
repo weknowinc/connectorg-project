@@ -1,0 +1,67 @@
+// Base
+/* @import 'custom-style.scss'; */
+
+body {
+  background-color: #fff;
+  color: #666666;
+  font-family: 'Signika';
+  font-size: 16px;
+  margin: 0;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+  p { font-size: 14px; }
+  ul.tabs { font-size: 12px; }    
+}
+
+.content { padding: 40px 0; } 
+
+// Variables 
+$padding-grande: 60px;
+$padding-medio: 40px 0px 20px 0px;
+$padding-pequeno: 10px 0px 10px 0px;
+$vertical-space: 20px; 
+
+
+/* WeKnow Brand colors. Do not use black */
+$Azul_weKnow: #0069A7;
+$Morado_weKnow:#5D4D76;
+$Rojish: #922E46;
+$Menos_azul: #238DC1;
+$Amarillo_weKnow: #EE9D2E;
+$Gris_oscuro: #666666;
+$Gris_claro: #999999;
+$Gris_muy_claro: #EEEEEE;
+  
+// Components
+@import 'font-awesome.min.scss';
+@import 'components/_audio.scss';
+@import 'components/_banner.scss';
+@import 'components/_branding.scss';
+@import 'components/_buttons.scss';
+@import 'components/_blocks.scss';
+@import 'components/_contact-form.scss';
+@import 'components/_estilos.scss';
+@import 'components/_fonts.scss';
+@import 'components/_footer.scss';
+@import 'components/_header.scss';
+@import 'components/_headers.scss';
+@import 'components/_images.scss';
+@import 'components/_links.scss';
+@import 'components/_login-form.scss';
+@import 'components/_messages.scss';
+@import 'components/_menubar.scss';
+@import 'components/_navbar.scss';
+@import 'components/_overlay.scss';
+@import 'components/_pager.scss';
+@import 'components/_panel.scss';
+@import 'components/_paragraphs.scss';
+@import 'components/_quote.scss';
+@import 'components/_regions.scss';
+@import 'components/_servicios.scss';
+@import 'components/_slider.scss';
+@import 'components/_icons.scss';
+@import 'components/_tabs.scss';

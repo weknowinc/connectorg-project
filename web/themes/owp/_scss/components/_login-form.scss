@@ -1,0 +1,31 @@
+
+label { 
+  color: #999;
+  margin-bottom: 3px; 
+}
+
+.user-login-form,
+.user-form,
+.user-pass {
+  border: 1px solid rgb(241, 235, 235);
+  background: #FBFBFB;
+  max-width: 650px;
+  margin: 1px auto;
+  padding: 10px 30px;
+}
+
+.user-login-form .form-text,
+.user-login-form .form-email,
+.user-form .form-text,
+.user-form .form-email,
+.user-pass .form-text {
+  width: 100%;
+}
+
+.form-composite > .fieldset-wrapper > .description,
+.form-item .description {
+  color: #999;
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: .5em;
+}

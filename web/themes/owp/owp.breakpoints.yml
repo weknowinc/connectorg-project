@@ -1,0 +1,50 @@
+# Breakpoints #
+
+owp.mobile:
+  label: Mobile
+  mediaQuery: 'all and (min-width: 0px) and (max-width: 640px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+owp.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 641px) and (max-width: 767px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+owp.landscape:
+  label: landscape
+  mediaQuery: 'all and (min-width: 350px) and (max-width: 1024px) and (orientation: landscape)'
+  weight: 2
+  multipliers:
+    - 1x
+
+owp.nexus7:
+  label: nexus7
+  mediaQuery: 'all and (min-width: 600px) and (max-width: 960px) and (orientation: portrait)'
+  weight: 3
+  multipliers:
+    - 1x
+
+owp.tablet:
+  label: Tablet
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 1024px)'
+  weight: 4
+  multipliers:
+    - 1x
+
+owp.desktop:
+  label: Desktop
+  mediaQuery: 'all and (min-width: 1025px) and (max-width: 1366px)'
+  weight: 5
+  multipliers:
+    - 1x
+
+owp.tv:
+  label: TV
+  mediaQuery: 'all and (min-width: 1367px) and (max-width: 1600px)'
+  weight: 6
+  multipliers:
+    - 1x

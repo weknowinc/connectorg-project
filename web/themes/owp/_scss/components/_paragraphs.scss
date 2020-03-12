@@ -1,0 +1,24 @@
+// Paragraph related styles.-
+
+.tituloParrafo {
+  padding: 0 0 45px 0;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 140%;
+}
+
+/* Small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+
+  .tituloParrafo {
+    padding: 0 0 25px 0;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+
+}
+
+.paragraph--type--parfourcol p {
+  font-size: 13px;
+}
+     

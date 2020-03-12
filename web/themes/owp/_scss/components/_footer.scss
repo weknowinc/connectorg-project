@@ -1,0 +1,42 @@
+.footer {
+  background-color: #0069A7;
+  color: #fff;
+  padding: 10px 0 10px 0;
+  overflow: hidden;
+}
+
+// Copyright line
+.copyright {
+  text-align: center;  
+}
+// Small devices
+@media screen and (min-width:0px) and (max-width:640px) {
+  .footer {
+    padding: 15px;
+  }
+  .copyright {
+    text-align: center;  
+  }    
+}
+
+.footer a { 
+  color: #ccc; 
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer a:hover { 
+  color:red; 
+}
+
+.footer ul.menu li { display: inline; }
+
+.footer ul.menu { list-style: none; padding: 0; }
+
+.footer ul.menu li a { display: inline-block; }
+    
+.footer a:hover { 
+  text-decoration: none;
+}

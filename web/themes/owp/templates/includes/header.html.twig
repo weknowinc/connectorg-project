@@ -1,0 +1,50 @@
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div>{{ page.header }}</div>
+      </div>
+      <div class="col-6">
+        <div id="myNav" class="overlay">
+          <div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+          <div class="overlay-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat mauris eget pharetra tincidunt. Nulla imperdiet risus risus, sit amet eleifend urna maximus vel. </p>
+            <p>Curabitur bibendum pharetra condimentum. Cras tincidunt maximus mi luctus pharetra. Duis sed auctor ex. Vestibulum quis ornare magna. </p>
+          </div>
+        </div>
+        <div class="toggler-position">
+            <ul class="icons">
+              <li><span style="" onclick="openNav()"><a href="#" class="icon fa-bars" aria-label="Menu"></a></span></li>
+              <li><a href="#" class="icon fa-user" aria-label="User Account"></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+
+{% if page.tabs %}
+  <div class="tabs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            {{ page.tabs }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% if page.messages %}
+  <div class="messages">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+            {{ page.messages }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

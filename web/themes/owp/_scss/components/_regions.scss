@@ -1,0 +1,26 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.contenido { 
+  background-color: #fff;
+  margin: 0; 
+  padding: 0; 
+}
+
+.region { 
+  margin: 0; padding: 0; 
+}
+
+//** User login form **//  
+.usercContent { 
+  background-color: #fff;
+  padding: 50px 0 150px 0; 
+}
+
+/* User login form in small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+  .usercContent { 
+    padding: 50px 10px 150px 10px; 
+  }  
+}
