@@ -16,7 +16,7 @@ function oneworkplace_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'oneworkplace')
+    ->set('default', 'owp')
     ->save();
 
   Drupal::configFactory()
