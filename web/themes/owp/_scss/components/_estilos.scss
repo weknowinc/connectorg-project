@@ -55,7 +55,6 @@
 .arena { background: url(/themes/owp/images/arena.png); }
 
 
-
 /* Revisar y borrar si corresponde - hay un estilo en la base de datos que apunta a este estilo. */
 .blanco-no-margins {
   background-color: #fff;
@@ -68,7 +67,6 @@
 /* Small devices */
 @media screen and (min-width:0px) and (max-width:640px) {
 
-
   .blanco, .negro, .naranjo, .papel, .arena {
     padding: 10px 60px 10px 60px;
     margin: 0;
@@ -78,7 +76,5 @@
   .paragraph--type--parthreecol .col-md-4 { 
     margin-bottom: 10px 60px 10px 60px;
   }
-
-
 
 }

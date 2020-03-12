@@ -36,9 +36,15 @@
   color: #ccc;
 }
 
-.overlay a:hover, .overlay a:focus {
-  color: $Rojish;
-  text-decoration: none;
+.overlay {
+  a {
+    &:hover {
+      color: $Rojish;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 .overlay .closebtn {
