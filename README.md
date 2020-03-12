@@ -26,7 +26,7 @@ then, install ddev
 Rename the file `oneworkplace/.env.example` to `oneworkplace/.env` and paste the values for:
 
 ### Create local .ddev/config.local.yaml and Override defaults
-Create a copy of file `oneworkplace/.ddev/config.yaml` to `oneworkplace/.ddev/config.local.yaml` and override values for router_http_port and xdebug_enabled according to your needs 
+Create a copy of file `oneworkplace/.ddev/config.yaml` to `oneworkplace/.ddev/config.local.yaml` and override values for router_http_port and xdebug_enabled according to your needs
 i.e.
 `router_http_port: "8080"`
 `xdebug_enabled: true`
@@ -51,6 +51,9 @@ ddev composer install
 ```
 For further information about ddev visit https://ddev.readthedocs.io/
 
+## Theme
+If you want to make some changes on the theme,
+[follow this instructions](web/themes/owp/README.md)
 
 ## Export configuration
 
