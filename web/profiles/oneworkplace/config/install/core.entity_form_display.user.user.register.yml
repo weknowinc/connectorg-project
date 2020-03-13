@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
     - field.field.user.user.field_name
+    - field.field.user.user.field_office
     - image.style.thumbnail
   module:
     - image
@@ -66,3 +67,4 @@ content:
 hidden:
   field_birthday: true
   field_last_name: true
+  field_office: true
