@@ -1,0 +1,14 @@
+.tabs {
+  background-color: #fff;
+}
+
+.region-tabs {
+  margin-top: 0px;
+}
+
+/* Tabs in User login form in small devices */
+@media screen and (min-width:0px) and (max-width:640px) {
+  .nav-tabs a {
+    padding: 0.5rem 0.5rem;
+  }
+}

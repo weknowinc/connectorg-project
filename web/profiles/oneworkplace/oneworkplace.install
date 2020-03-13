@@ -14,6 +14,15 @@
 function oneworkplace_install() {
   // First, do everything in standard profile.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'owp')
+    ->save();
+
+  Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'seven')
+    ->save();
   standard_install();
 
   // Can add code in here to make nodes, terms, etc.

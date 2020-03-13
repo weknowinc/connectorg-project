@@ -1,0 +1,30 @@
+.banner {
+  text-align: center;
+  line-height: 160%;
+  padding: 200px 0;
+  height: 100%;
+}
+
+.banner h2 {
+  color: #fff;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.main-header {
+  color: #fff;
+  background-size: cover;
+  padding: 0 0 60px 0;
+  position: relative;
+}
+
+.main-header:after {
+content: "";
+  background: rgba(21, 22, 26, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+}
