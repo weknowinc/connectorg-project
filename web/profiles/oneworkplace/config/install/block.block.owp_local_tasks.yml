@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  theme:
+    - owp
+id: owp_local_tasks
+theme: owp
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
