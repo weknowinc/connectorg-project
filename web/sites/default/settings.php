@@ -4,4 +4,4 @@
 if (file_exists($app_root . '/' . $site_path . '/settings.ddev.php')) {
   include $app_root . '/' . $site_path . '/settings.ddev.php';
 }
-$config_directories['sync'] = '../web/profiles/oneworkplace/config/install';
+$config_directories['sync'] = 'web/profiles/oneworkplace/config/install';
