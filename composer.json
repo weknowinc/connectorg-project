@@ -9,12 +9,16 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    ],
+    },
     "require": {
         "php": ">=7.0.8",
         "composer/installers": "^1.2",
@@ -24,9 +28,11 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
+
         "drupal/search_api": "^1.15",
         "drupal/smart_date": "^1.1",
         "drupal/twig_tweak": "^2.4",
+        "drupal/varbase_heroslider_media": "^7.7",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "eluceo/ical": "^0.16.0",
         "vlucas/phpdotenv": "^4.0",
@@ -69,6 +75,10 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -82,11 +92,24 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-libraries": {
+            "library-directory": "web/libraries",
+            "libraries": [
+                {"name": "dropzone","package": "npm-asset/dropzone"},
+                {"name": "blazy", "package": "npm-asset/blazy"},
+                {"name": "slick", "package": "npm-asset/slick-carousel"},
+                {"name": "slick", "package": "npm-asset/slick"}
+            ]
         }
     }
 }
