@@ -28,8 +28,9 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
-
         "drupal/search_api": "^1.15",
+        "drupal/slick": "^2.1",
+        "drupal/slick_views": "^2.2",
         "drupal/smart_date": "^1.1",
         "drupal/twig_tweak": "^2.4",
         "drupal/varbase_heroslider_media": "^7.7",
