@@ -63,7 +63,6 @@ install:
   - views
   - owp_employee_engagement
   - owp_birthdays
-  - flexslider
 
 dependencies:
   - node
