@@ -1,4 +1,4 @@
-ddev exec drush cex
+ddev exec drush cex --destination ./profiles/oneworkplace/config/install/
 find ./web/profiles/oneworkplace/config/install/ -type f -exec sed -i -e '/^uuid: /d' {} \;
 find ./web/profiles/oneworkplace/config/install/ -type f  -exec sed -i -e '/_core:/,+1d' {} \;
 
