@@ -63,6 +63,9 @@ install:
   - views
   - owp_employee_engagement
   - owp_birthdays
+  - devel
+  - devel_generate
+  - kint
 
 dependencies:
   - node
