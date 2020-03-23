@@ -63,6 +63,11 @@ install:
   - views
   - owp_employee_engagement
   - owp_birthdays
+  - vmi
+  - field_group
+  - smart_trim
+  - ds
+  - ds_extras
 
 dependencies:
   - node
