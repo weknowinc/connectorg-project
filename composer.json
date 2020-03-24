@@ -24,6 +24,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/devel": "^2.1",
         "drupal/elasticsearch_connector": "^7.0@alpha",
         "drupal/flexslider": "^2.0@beta",
         "drupal/search_api": "^1.15",
