@@ -63,6 +63,10 @@ install:
   - views
   - owp_employee_engagement
   - owp_birthdays
+  - flexslider
+  - flexslider_example
+  - flexslider_fields
+  - flexslider_views
   - vmi
   - field_group
   - smart_trim

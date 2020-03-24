@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": ">=7.0.8",
+        "balbuf/drupal-libraries-installer": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "~1.0",
@@ -24,6 +25,7 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/flexslider": "^2.0@beta",
         "drupal/search_api": "^1.15",
         "drupal/smart_date": "^1.1",
         "drupal/twig_tweak": "^2.4",
@@ -75,6 +77,9 @@
                 "web-root": "web/"
             }
         },
+        "drupal-libraries": {
+            "flexslider": "https://github.com/woocommerce/FlexSlider/archive/master.zip"
+        },
         "patches": {
             "drupal/core": {
                 "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
@@ -83,7 +88,7 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/sites/all/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
