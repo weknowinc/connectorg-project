@@ -8,6 +8,7 @@
 /web/themes/oneworkplace/package-lock.json
 /web/profiles/contrib/
 /web/libraries/
+/web/sites/all/libraries/
 
 # Ignore sensitive information
 /web/sites/*/settings.php
