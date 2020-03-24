@@ -67,6 +67,9 @@ install:
   - flexslider_example
   - flexslider_fields
   - flexslider_views
+  - devel
+  - devel_generate
+  - kint
 
 dependencies:
   - node
