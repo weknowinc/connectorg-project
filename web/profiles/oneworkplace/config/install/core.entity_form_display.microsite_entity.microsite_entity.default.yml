@@ -9,6 +9,7 @@ dependencies:
   module:
     - link
     - owp_microsites
+    - path
     - text
 id: microsite_entity.microsite_entity.default
 targetEntityType: microsite_entity
@@ -44,6 +45,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   layout_builder__layout: true

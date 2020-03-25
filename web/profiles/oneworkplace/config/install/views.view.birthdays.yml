@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.full
     - field.storage.user.field_avatar
     - field.storage.user.field_birthday
     - field.storage.user.field_job_title
@@ -11,6 +12,7 @@ dependencies:
     - user.role.authenticated
   module:
     - datetime
+    - ds
     - image
     - user
 id: birthdays
@@ -463,7 +465,22 @@ display:
         row: false
         pager: false
       row:
-        type: fields
+        type: 'ds_entity:user'
+        options:
+          relationship: none
+          view_mode: full
+          alternating_fieldset:
+            alternating: false
+            allpages: false
+            item_0: default
+            item_1: default
+            item_2: default
+            item_3: default
+            item_4: default
+          grouping_fieldset:
+            group: false
+          advanced_fieldset:
+            advanced: false
       pager:
         type: full
         options:

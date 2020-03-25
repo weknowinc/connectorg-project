@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_tool
+id: tools
+label: Tools
+type: 'canonical_entities:tool_entity'
+pattern: 'tools/[tool_entity:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -9,6 +9,7 @@ dependencies:
     - image
     - link
     - owp_tool
+    - path
 id: tool_entity.tool_entity.default
 targetEntityType: tool_entity
 bundle: tool_entity
@@ -37,6 +38,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   status: true

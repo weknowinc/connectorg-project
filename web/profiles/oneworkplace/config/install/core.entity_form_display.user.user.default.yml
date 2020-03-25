@@ -12,6 +12,7 @@ dependencies:
   module:
     - datetime
     - image
+    - path
     - user
 id: user.user.default
 targetEntityType: user
@@ -80,6 +81,12 @@ content:
     region: content
   language:
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
