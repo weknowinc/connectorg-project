@@ -10,6 +10,7 @@ dependencies:
     - address
     - image
     - owp_office
+    - path
 id: office_entity.office_entity.default
 targetEntityType: office_entity
 bundle: office_entity
@@ -44,6 +45,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

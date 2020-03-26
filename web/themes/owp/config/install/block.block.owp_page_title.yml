@@ -11,7 +11,7 @@ provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Título de la página'
+  label: 'Title Page'
   provider: core
   label_display: '0'
 visibility: {  }

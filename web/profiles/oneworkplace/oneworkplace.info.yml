@@ -50,6 +50,11 @@ install:
   - path
   - path_alias
   - quickedit
+  - token
+  - ctools
+  - ctools_block
+  - ctools_views
+  - pathauto
   - rdf
   - search
   - shortcut
@@ -70,6 +75,11 @@ install:
   - devel
   - devel_generate
   - kint
+  - vmi
+  - field_group
+  - smart_trim
+  - ds
+  - ds_extras
 
 dependencies:
   - node

@@ -13,6 +13,7 @@ dependencies:
     - image
     - link
     - owp_events
+    - path
     - smart_date
 id: event_entity.event_entity.default
 targetEntityType: event_entity
@@ -71,6 +72,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

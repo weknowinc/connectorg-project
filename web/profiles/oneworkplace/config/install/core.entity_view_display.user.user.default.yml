@@ -10,8 +10,36 @@ dependencies:
     - field.field.user.user.field_office
   module:
     - datetime
+    - ds
     - image
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: horizontal_media_teaser_large
+      library: vmi/horizontal_media_teaser_large
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_name
+        - field_birthday
+        - member_for
+        - field_job_title
+        - field_avatar
+        - field_last_name
+        - field_office
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -25,7 +53,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
+    region: left
   field_birthday:
     weight: 1
     label: above
@@ -34,7 +62,7 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-    region: content
+    region: left
   field_job_title:
     weight: 3
     label: above
@@ -42,7 +70,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: left
   field_last_name:
     weight: 5
     label: above
@@ -50,7 +78,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: left
   field_name:
     weight: 0
     label: above
@@ -58,7 +86,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: left
   field_office:
     weight: 6
     label: above
@@ -66,10 +94,10 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: left
   member_for:
     weight: 2
-    region: content
+    region: left
     settings: {  }
     third_party_settings: {  }
 hidden:

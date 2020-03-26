@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_news
+id: news
+label: News
+type: 'canonical_entities:news_entity'
+pattern: 'news/[news_entity:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
