@@ -16,15 +16,14 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: horizontal_media_teaser_large
-      library: vmi/horizontal_media_teaser_large
+      id: tout_medium
+      library: vmi/tout_medium
       disable_css: false
       entity_classes: all_classes
       settings:
         label: ''
         wrappers:
-          left: div
-          right: div
+          main: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
