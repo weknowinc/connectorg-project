@@ -1,7 +1,10 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.user.homepage
   module:
+    - ds
     - user
 id: who_s_new
 label: 'Who''s new'
@@ -50,7 +53,24 @@ display:
       style:
         type: html_list
       row:
-        type: fields
+        type: 'ds_entity:user'
+        options:
+          relationship: none
+          view_mode: homepage
+          alternating_fieldset:
+            alternating: false
+            allpages: false
+            item_0: default
+            item_1: default
+            item_2: default
+            item_3: default
+            item_4: default
+          grouping_fieldset:
+            group: false
+            group_field: users_field_data|created
+            group_field_function: ''
+          advanced_fieldset:
+            advanced: false
       fields:
         name:
           id: name

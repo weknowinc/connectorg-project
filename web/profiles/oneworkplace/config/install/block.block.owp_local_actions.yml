@@ -1,12 +1,12 @@
 langcode: es
-status: true
+status: false
 dependencies:
   theme:
     - owp
 id: owp_local_actions
 theme: owp
 region: content
-weight: -10
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

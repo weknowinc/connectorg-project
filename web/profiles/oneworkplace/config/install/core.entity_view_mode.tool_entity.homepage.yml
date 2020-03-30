@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_tool
+id: tool_entity.homepage
+label: HomePage
+targetEntityType: tool_entity
+cache: true

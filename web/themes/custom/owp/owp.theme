@@ -33,3 +33,17 @@ function owp_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
       'bg-transparent' => t('Transparent'),
   );
 }
+if (\Drupal::moduleHandler()->moduleExists('bootstrap_library')) {
+  $library = theme_get_setting('bootstrap_barrio_library');
+  switch ($library) {
+    case 'cdn' :
+      $variables['#attached']['library'][] = 'bootstrap_library/bootstrap-cdn';
+      break;
+    case 'production':
+      $variables['#attached']['library'][] = 'bootstrap_library/bootstrap';
+      break;
+    case 'development':
+      $variables['#attached']['library'][] = 'bootstrap_library/bootstrap-dev';
+      break;
+  }
+}

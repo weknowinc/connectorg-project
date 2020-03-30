@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.birthdays
+    - views.view.events
   module:
     - system
     - views
   theme:
     - owp
-id: views_block__birthdays_block_1
+id: views_block__events_block_1
 theme: owp
-region: featured_bottom_second
+region: sidebar_second
 weight: -4
 provider: null
-plugin: 'views_block:birthdays-block_1'
+plugin: 'views_block:events-block_1'
 settings:
-  id: 'views_block:birthdays-block_1'
+  id: 'views_block:events-block_1'
   label: ''
   provider: views
   label_display: visible

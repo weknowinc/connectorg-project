@@ -6,8 +6,8 @@ core: 8.x
 base theme: bootstrap_barrio
 
 libraries:
-  - bootstrap_barrio_subtheme/bootstrap_cdn
-  - bootstrap_barrio_subtheme/global-styling
+  - owp/bootstrap_cdn
+  - owp/global-styling
 
 regions:
   top_header: 'Top Header'

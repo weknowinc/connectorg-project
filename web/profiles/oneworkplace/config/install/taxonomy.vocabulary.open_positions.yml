@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Open positions'
+vid: open_positions
+description: ''
+weight: 0

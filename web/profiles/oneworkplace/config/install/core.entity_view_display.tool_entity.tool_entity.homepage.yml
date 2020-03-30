@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.tool_entity.homepage
+    - field.field.tool_entity.tool_entity.field_icon
+    - field.field.tool_entity.tool_entity.field_link
+  module:
+    - ds
+    - image
+    - layout_builder
+    - link
+    - owp_tool
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: hero_xlarge
+      library: vmi/hero_xlarge
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_icon
+        - status
+        - user_id
+        - name
+        - field_link
+id: tool_entity.tool_entity.homepage
+targetEntityType: tool_entity
+bundle: tool_entity
+mode: homepage
+content:
+  field_icon:
+    type: image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_separate
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+  name:
+    type: smart_trim
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  user_id:
+    type: author
+    weight: 0
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true
