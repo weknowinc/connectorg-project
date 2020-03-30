@@ -10,8 +10,8 @@ dependencies:
     - owp
 id: views_block__birthdays_block_1
 theme: owp
-region: featured_bottom_second
-weight: -4
+region: content
+weight: 0
 provider: null
 plugin: 'views_block:birthdays-block_1'
 settings:
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /home
+    pages: '*/'
     negate: false
     context_mapping: {  }

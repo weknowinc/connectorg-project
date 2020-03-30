@@ -9,77 +9,77 @@ dependencies:
     - field.field.event_entity.event_entity.field_tags
     - field.field.event_entity.event_entity.field_url
   module:
-    - ds
+    - image
+    - link
     - owp_events
-    - smart_date
-    - smart_trim
-third_party_settings:
-  ds:
-    layout:
-      id: bb_cardimageoverlay
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        wrappers:
-          first: div
-          second: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      second:
-        - title
-        - field_date
 id: event_entity.event_entity.default
 targetEntityType: event_entity
 bundle: event_entity
 mode: default
 content:
-  field_date:
-    type: smartdate_custom
-    weight: 1
-    region: second
-    label: hidden
+  field_category:
+    weight: 5
+    label: above
     settings:
-      separator: ' - '
-      join: ', '
-      time_format: 'g:ia'
-      time_hour_format: ga
-      date_format: 'D, M j Y'
-      allday_label: 'All day'
-      date_first: '1'
-      ampm_reduce: '1'
-      custom_date_format: ''
-      timezone: ''
+      link: true
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: smart_trim
-    weight: 0
-    region: second
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 1
+    label: above
     settings:
-      trim_length: 600
-      trim_type: chars
-      trim_suffix: ''
-      wrap_output: false
-      wrap_class: trimmed
-      more_link: false
-      more_class: more-link
-      more_text: More
-      summary_handler: full
-      trim_options: {  }
+      timezone_override: ''
+      separator: '-'
+    third_party_settings: {  }
+    type: smartdate_ics
+    region: content
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_office:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_url:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  title:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_category: true
-  field_image: true
-  field_office: true
-  field_tags: true
-  field_url: true
   search_api_excerpt: true
   status: true
   user_id: true
