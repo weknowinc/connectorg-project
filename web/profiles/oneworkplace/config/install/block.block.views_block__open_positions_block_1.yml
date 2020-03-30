@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.open_positions
+  module:
+    - system
+    - views
+  theme:
+    - owp
+id: views_block__open_positions_block_1
+theme: owp
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'views_block:open_positions-block_1'
+settings:
+  id: 'views_block:open_positions-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+    context_mapping: {  }

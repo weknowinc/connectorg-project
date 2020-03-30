@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home.body
+    - node.type.home
+  module:
+    - user
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  search_api_excerpt: true

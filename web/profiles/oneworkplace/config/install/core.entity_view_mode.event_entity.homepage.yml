@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_events
+id: event_entity.homepage
+label: HomePage
+targetEntityType: event_entity
+cache: true

@@ -1,5 +1,5 @@
 langcode: es
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -7,7 +7,7 @@ dependencies:
     - owp
 id: owp_messages
 theme: owp
-region: messages
+region: top_header
 weight: -3
 provider: null
 plugin: system_messages_block
