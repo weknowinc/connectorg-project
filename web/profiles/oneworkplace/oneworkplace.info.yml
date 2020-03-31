@@ -80,6 +80,7 @@ install:
   - smart_trim
   - ds
   - ds_extras
+  - bootstrap_library
 
 dependencies:
   - node
@@ -90,4 +91,4 @@ dependencies:
 # Note that this will not set any theme as the default theme.
 themes:
   - seven
-  - owp
+  - oneworkplace_theme
