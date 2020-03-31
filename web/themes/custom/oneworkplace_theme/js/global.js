@@ -7,7 +7,7 @@
 
   'use strict';
 
-  Drupal.behaviors.oneworkplace = {
+  Drupal.behaviors.oneworkplace_theme = {
     attach: function (context, settings) {
 
     }

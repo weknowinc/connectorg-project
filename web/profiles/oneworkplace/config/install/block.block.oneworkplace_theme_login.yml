@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - oneworkplace_theme
+id: oneworkplace_theme_login
+theme: oneworkplace_theme
+region: header
+weight: -3
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Login
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -115,7 +115,7 @@ $info = [
   ],
 
   // Preview files.
-  'preview_library' => 'oneworkplace/color.preview',
+  'preview_library' => 'oneworkplace_theme/color.preview',
   'preview_html' => 'color/preview.html',
 
   // Attachments.

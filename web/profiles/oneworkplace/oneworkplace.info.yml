@@ -80,6 +80,7 @@ install:
   - smart_trim
   - ds
   - ds_extras
+  - bootstrap_library
 
 dependencies:
   - node
