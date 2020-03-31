@@ -1,22 +1,22 @@
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
     - system
   theme:
-    - owp_theme
-id: owp_theme_branding
-theme: owp_theme
+    - seven
+id: seven_branding
+theme: seven
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: 'Branding site'
   provider: system
   label_display: '0'
   use_site_logo: true
-  use_site_name: true
+  use_site_name: false
   use_site_slogan: false
 visibility: {  }
