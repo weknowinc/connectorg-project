@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - owp_birthdays
+    - system
+  theme:
+    - oneworkplace_theme
+id: todaysbirthdays
+theme: oneworkplace_theme
+region: content
+weight: 0
+provider: null
+plugin: todays_birthdays
+settings:
+  id: todays_birthdays
+  label: 'Todays birthdays'
+  provider: owp_birthdays
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /node
+    negate: false
+    context_mapping: {  }
