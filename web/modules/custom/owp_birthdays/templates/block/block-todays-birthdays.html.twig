@@ -15,6 +15,10 @@
   {% for value in listBirthdays %}
     <a href="/user/{{ value.id }}">
       <img src="{{ file_url(value.url) }}">
+      <span>
+        <p>{{ value.name }}</p>
+        <p>{{ value.jobTitle }}</p>
+      </span>
     </a>
   {% endfor %}
 </div>

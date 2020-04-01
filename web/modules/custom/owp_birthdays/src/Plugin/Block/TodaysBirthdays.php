@@ -40,9 +40,15 @@ class TodaysBirthdays extends BlockBase
     foreach ($users as $rowUser) {
       $fileUri = $rowUser->get('field_avatar')->entity->getFileUri();
       $id = $rowUser->id();
+      $name = $rowUser->get('field_name')->value;
+      $jobTitle = $rowUser->get('field_job_title')->entity->getName();
+      $lastName = $rowUser->get('field_last_name')->value;
+      $fullName = sprintf("%s %s", $name, $lastName);
       $listUsers[] = [
         'url' => $fileUri,
-        'id' => $id
+        'id' => $id,
+        'name' => ucfirst($fullName),
+        'jobTitle' => ucfirst($jobTitle)
       ];
     }
     return ($listUsers);
