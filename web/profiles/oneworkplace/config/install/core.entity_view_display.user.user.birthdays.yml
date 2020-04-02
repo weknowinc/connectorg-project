@@ -1,8 +1,8 @@
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.user.full
+    - core.entity_view_mode.user.birthdays
     - field.field.user.user.field_avatar
     - field.field.user.user.field_birthday
     - field.field.user.user.field_job_title
@@ -35,20 +35,17 @@ third_party_settings:
           layout_class: {  }
     regions:
       left:
-        - field_name
-        - field_last_name
-        - field_job_title
         - field_avatar
   layout_builder:
     allow_custom: false
     enabled: false
-id: user.user.full
+id: user.user.birthdays
 targetEntityType: user
 bundle: user
-mode: full
+mode: birthdays
 content:
   field_avatar:
-    weight: 3
+    weight: 0
     label: hidden
     settings:
       image_style: thumbnail
@@ -56,32 +53,11 @@ content:
     third_party_settings: {  }
     type: image
     region: left
-  field_job_title:
-    weight: 2
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: left
-  field_last_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: left
-  field_name:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: left
 hidden:
   field_birthday: true
+  field_job_title: true
+  field_last_name: true
+  field_name: true
   field_office: true
   member_for: true
   search_api_excerpt: true
