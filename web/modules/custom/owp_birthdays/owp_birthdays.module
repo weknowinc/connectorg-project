@@ -9,8 +9,12 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
+ * @param $route_name
+ * @param RouteMatchInterface $route_match
+ * @return string
  */
-function owp_birthdays_help($route_name, RouteMatchInterface $route_match) {
+function owp_birthdays_help($route_name, RouteMatchInterface $route_match)
+{
   switch ($route_name) {
     // Main module help for the owp_birthdays module.
     case 'help.page.owp_birthdays':
@@ -26,10 +30,15 @@ function owp_birthdays_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function owp_birthdays_theme() {
+function owp_birthdays_theme()
+{
   return [
-    'owp_birthdays' => [
+    'todays_birthdays' => [
+      'template' => 'block/block-todays-birthdays',
       'render element' => 'children',
+      'variables' => [
+        'listBirthdays' => []
+      ],
     ],
   ];
 }
