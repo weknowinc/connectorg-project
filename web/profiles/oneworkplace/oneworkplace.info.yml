@@ -16,6 +16,8 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
+  - social_auth_google
+  - social_auth_facebook
   - address
   - search_api
   - elasticsearch_connector
