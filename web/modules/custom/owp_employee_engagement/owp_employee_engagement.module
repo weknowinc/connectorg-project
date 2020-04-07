@@ -9,8 +9,12 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
+ * @param $route_name
+ * @param RouteMatchInterface $route_match
+ * @return string
  */
-function owp_employee_engagement_help($route_name, RouteMatchInterface $route_match) {
+function owp_employee_engagement_help($route_name, RouteMatchInterface $route_match)
+{
   switch ($route_name) {
     // Main module help for the owp_employee_engagement module.
     case 'help.page.owp_employee_engagement':
@@ -25,11 +29,30 @@ function owp_employee_engagement_help($route_name, RouteMatchInterface $route_ma
 
 /**
  * Implements hook_theme().
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
  */
-function owp_employee_engagement_theme() {
+function owp_employee_engagement_theme($existing, $type, $theme, $path)
+{
   return [
     'owp_employee_engagement' => [
       'render element' => 'children',
+      'path' => $path . '/templates',
+      'template' => 'owp-employee-engagement',
+      'variables' => [
+        'list_employees' => [],
+        'categories' => [],
+        'ranking' => []
+      ],
     ],
   ];
+}
+
+function owp_employee_engagement_theme_suggestions_stars(array $variables) {
+  $suggestions = array();
+  $suggestions[] = 'node__' . $variables['elements']['#langcode'];
+  return $suggestions;
 }
