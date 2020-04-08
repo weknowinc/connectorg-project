@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node
+    pages: /home
     negate: false
     context_mapping: {  }

@@ -22,11 +22,11 @@ body {
 }
 
 #navbar-top {
-    background-color: #055a8e;
+    background-color: #922E46 !important;
 }
 
 #navbar-main {
-    background-color: #1d84c3;
+    background-color: #922E46 !important;
 }
 
 a,
@@ -43,11 +43,11 @@ a:focus,
 
 a:active,
 .link:active {
-    color: #23aeff;
+    color: #23aeff !important;
 }
 
 .page-item.active .page-link {
-    background-color: #0071b3;
+    background-color: #0071b3 !important;
     border-color: #0071b3;
 }
 
@@ -62,13 +62,13 @@ a:active,
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #922E46;
     border-color: #007bff;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: #0256b1;
+    background-color: #922E46;
 }
 
 .site-footer {
