@@ -9,6 +9,9 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
+ * @param $route_name
+ * @param RouteMatchInterface $route_match
+ * @return string
  */
 function owp_employee_engagement_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
@@ -28,8 +31,18 @@ function owp_employee_engagement_help($route_name, RouteMatchInterface $route_ma
  */
 function owp_employee_engagement_theme() {
   return [
-    'owp_employee_engagement' => [
+    'list_stars' => [
+      'template' => 'owp-employee-engagement',
       'render element' => 'children',
+      'variables' => [],
+    ],
+    'add_star' => [
+      'template' => 'block/block-add-stars-employees',
+      'render element' => 'children',
+      'variables' => [
+        'listUsers' => [],
+        'listTypes' => [],
+      ],
     ],
   ];
 }
