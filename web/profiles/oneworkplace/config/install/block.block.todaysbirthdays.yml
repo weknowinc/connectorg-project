@@ -9,7 +9,7 @@ dependencies:
 id: todaysbirthdays
 theme: oneworkplace_theme
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: todays_birthdays
 settings:

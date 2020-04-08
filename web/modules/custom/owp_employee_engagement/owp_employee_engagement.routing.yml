@@ -1,0 +1,14 @@
+owp_employee_engagement.content:
+  path: '/stars'
+  defaults:
+    _controller: '\Drupal\owp_employee_engagement\Controller\DefaultController::content'
+  requirements:
+    _access: 'TRUE'
+
+owp_employee_engagement.save:
+  path: '/stars/add'
+  defaults:
+    _controller: '\Drupal\owp_employee_engagement\Controller\DefaultController::save'
+  requirements:
+    _access: 'TRUE'
+
