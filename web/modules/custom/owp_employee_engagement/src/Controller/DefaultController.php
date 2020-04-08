@@ -3,14 +3,12 @@
 namespace Drupal\owp_employee_engagement\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Core\Messenger\Messenger;
 use Drupal\owp_employee_engagement\Entity\StarEntity;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Zend\Diactoros\Response\JsonResponse;
 
 class DefaultController extends ControllerBase
 {
@@ -53,34 +51,33 @@ class DefaultController extends ControllerBase
 
   /**
    * @param Request $request
-   * @return void
+   * @return RedirectResponse
    */
   public function save(Request $request)
   {
-    $_REQUEST['destination'] = "stars";
     $idUser = $request->request->get("id_user", '');
     $typeStar = $request->request->get("type_star", '');
     $description = trim($request->request->get("description", ''));
     $title = trim($request->request->get("title", ''));
-    //TODO: Improve this validation
     if (empty($title) || empty($idUser) || empty($typeStar) || empty($description)) {
       $this->messenger->addError('Missing Parameters');
-      return;
+    } else {
+      try {
+        $star = StarEntity::create([
+          "title" => $title,
+          "field_employee" => $idUser,
+          "field_message" => $description,
+          "field_type" => $typeStar
+        ]);
+        $star->save();
+        $message = "New star created";
+        $this->messenger->addStatus($message);
+      } catch (EntityStorageException $e) {
+        $message = "Troubles on the creation of the star";
+        $this->messenger->addError($message);
+      }
     }
-    $message = "New star created";
-    try {
-      $star = StarEntity::create([
-        "title" => $title,
-        "field_employee" => $idUser,
-        "field_message" => $description,
-        "field_type" => $typeStar
-      ]);
-      $star->save();
-    } catch (EntityStorageException $e) {
-      $message = "Troubles on the creation of the star";
-    }
-    $this->messenger->addError($message);
-    return;
+    return new RedirectResponse('/stars');
   }
 
 }
