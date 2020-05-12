@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_office
+id: office_entity.token
+label: Token
+targetEntityType: office_entity
+cache: true

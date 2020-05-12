@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - owp_events
-id: event_entity.token
-label: Token
-targetEntityType: event_entity
-cache: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_news
+id: news_entity.featured
+label: Featured
+targetEntityType: news_entity
+cache: true
