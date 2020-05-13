@@ -9,14 +9,14 @@ use Drupal\user\Entity\User;
 use PDO;
 
 /**
- * Provides a 'StarsEmployees' block.
+ * Provides a 'AddStar' block.
  *
  * @Block(
- *  id = "stars_employees",
- *  admin_label = @Translation("Stars Employees"),
+ *  id = "add_star",
+ *  admin_label = @Translation("Add Star"),
  * )
  */
-class StarsEmployees extends BlockBase implements BlockPluginInterface
+class AddStar extends BlockBase implements BlockPluginInterface
 {
   /**
    * @return array
@@ -27,6 +27,7 @@ class StarsEmployees extends BlockBase implements BlockPluginInterface
     $ids = $query->execute()->fetchCol();
     $users = User::loadMultiple($ids);
     $listUsers = [];
+
     foreach ($users as $rowUser) {
       $id = $rowUser->id();
       $name = $rowUser->get('field_name')->value;
@@ -37,6 +38,7 @@ class StarsEmployees extends BlockBase implements BlockPluginInterface
         'name' => ucfirst($fullName)
       ];
     }
+
     return $listUsers;
   }
 
@@ -47,8 +49,7 @@ class StarsEmployees extends BlockBase implements BlockPluginInterface
   {
     $query = Drupal::database()->select('taxonomy_term_field_data ', 'ttfd')->fields('ttfd');
     $query->where("ttfd.vid = 'rewards'");
-    $types = $query->execute()->fetchAll(PDO::FETCH_ASSOC);
-    return $types;
+    return $query->execute()->fetchAll(PDO::FETCH_ASSOC);
   }
 
   /**
@@ -58,11 +59,11 @@ class StarsEmployees extends BlockBase implements BlockPluginInterface
   {
     $users = $this->getAllUsers();
     $types = $this->getAllTypes();
+
     return [
       '#theme' => 'add_star',
       '#listUsers' => $users,
       '#listTypes' => $types,
     ];
   }
-
 }

@@ -58,8 +58,8 @@ class DefaultController extends ControllerBase
     $idUser = $request->request->get("id_user", '');
     $typeStar = $request->request->get("type_star", '');
     $description = trim($request->request->get("description", ''));
-    $title = trim($request->request->get("title", ''));
-    if (empty($title) || empty($idUser) || empty($typeStar) || empty($description)) {
+    $title = trim($request->request->get("title", 'New Star'));
+    if (empty($idUser) || empty($typeStar) || empty($description)) {
       $this->messenger->addError('Missing Parameters');
     } else {
       try {
