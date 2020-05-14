@@ -1,0 +1,30 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()user
+*
+* @ingroup themeable
+*/
+#}
+
+{% set classes = [
+  'clear-both',
+] %}
+
+<div class="ws-custom--block">
+  {% for star in listStars %}
+    <div class="col-lg-12" style="width: 18rem;">
+      <div class="card">
+        <img class="card-img-top" src="{{ file_url(star.user_avatar) }}" alt="" title="{{ star.user_job_title }}">
+        <div class="card-body">
+          <p class="card-text">Type: {{ star.type_star }}</p>
+          <p class="card-text"><small class="text-muted">{{ star.name_user }}</small></p>
+          <p class="card-text">{{ star.message_star }}</p>
+          <a href="/stars/{{ star.id_star }}" class="card-link"><p class="card-text">See more</p></a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

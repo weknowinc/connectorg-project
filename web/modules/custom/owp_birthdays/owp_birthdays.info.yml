@@ -1,5 +1,0 @@
-name: 'owp_birthdays'
-type: module
-description: 'Module to handle all employees birthdays'
-core: 8.x
-package: 'OneWorkPlace'

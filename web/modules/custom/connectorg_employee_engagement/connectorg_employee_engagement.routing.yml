@@ -1,0 +1,14 @@
+connectorg_employee_engagement.content:
+  path: '/stars'
+  defaults:
+    _controller: '\Drupal\connectorg_employee_engagement\Controller\DefaultController::content'
+  requirements:
+    _access: 'TRUE'
+
+connectorg_employee_engagement.save:
+  path: '/stars/add'
+  defaults:
+    _controller: '\Drupal\connectorg_employee_engagement\Controller\DefaultController::save'
+  requirements:
+    _access: 'TRUE'
+

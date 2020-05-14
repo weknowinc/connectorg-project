@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains connectorg_news.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function connectorg_news_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the connectorg_news module.
+    case 'help.page.connectorg_news':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('News Intranet') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function connectorg_news_theme() {
+  return [
+    'connectorg_news' => [
+      'render element' => 'children',
+    ],
+  ];
+}
