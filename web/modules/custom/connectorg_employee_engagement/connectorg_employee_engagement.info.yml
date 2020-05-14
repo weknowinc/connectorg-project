@@ -1,0 +1,5 @@
+name: 'connectorg_employee_engagement'
+type: module
+description: 'Module created to manage employee engagement based on rewards'
+core: 8.x
+package: 'connectorg'

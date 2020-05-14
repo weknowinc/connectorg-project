@@ -1,0 +1,107 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8",
+        "balbuf/drupal-libraries-installer": "^1.0",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/address": "~1.0",
+        "drupal/bootstrap_barrio": "^4.23",
+        "drupal/bootstrap_library": "^1.11",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.8.0",
+        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/ctools": "^3.2",
+        "drupal/devel": "^2.1",
+        "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/flexslider": "^2.0@beta",
+        "drupal/pathauto": "^1.6",
+        "drupal/search_api": "^1.15",
+        "drupal/smart_date": "^1.1",
+        "drupal/social_auth_facebook": "~2.0",
+        "drupal/social_auth_google": "^2.0",
+        "drupal/token": "^1.6",
+        "drupal/twig_tweak": "^2.4",
+        "drupal/vmi": "^2.5",
+        "drush/drush": "^9.7.1 | ^10.0.0",
+        "eluceo/ical": "^0.16.0",
+        "vlucas/phpdotenv": "^4.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+      "ext-pdo": "*"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^8.8.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "drupal-libraries": {
+            "flexslider": "https://github.com/woocommerce/FlexSlider/archive/master.zip"
+        },
+        "patches": {
+            "drupal/core": {
+                "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
+                "2567773-The date plugin does not exist": "https://www.drupal.org/files/issues/2019-10-26/2325899-138_0.patch"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/sites/all/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        }
+    }
+}

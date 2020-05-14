@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_birthdays
+id: birthday_entity.token
+label: Token
+targetEntityType: birthday_entity
+cache: true

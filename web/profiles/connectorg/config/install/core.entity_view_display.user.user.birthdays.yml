@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.birthdays
+    - field.field.user.user.field_avatar
+    - field.field.user.user.field_birthday
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_office
+    - image.style.thumbnail
+  module:
+    - ds
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: horizontal_media_teaser_large
+      library: vmi/horizontal_media_teaser_large
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_avatar
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: user.user.birthdays
+targetEntityType: user
+bundle: user
+mode: birthdays
+content:
+  field_avatar:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: left
+hidden:
+  field_birthday: true
+  field_job_title: true
+  field_last_name: true
+  field_name: true
+  field_office: true
+  member_for: true
+  search_api_excerpt: true

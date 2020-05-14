@@ -1,0 +1,98 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_avatar
+    - field.field.user.user.field_birthday
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_office
+    - image.style.thumbnail
+  module:
+    - datetime
+    - image
+    - path
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_avatar:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_birthday:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_job_title:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_office:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  language:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

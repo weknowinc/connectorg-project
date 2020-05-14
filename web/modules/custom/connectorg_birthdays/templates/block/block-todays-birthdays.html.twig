@@ -1,0 +1,26 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+  'clear-both',
+] %}
+<div class="ws-custom--block">
+  {% for value in listBirthdays %}
+  <div class="col-lg-3 col-sm-6 col-md-3">
+    <a href="/user/{{ value.id }}">
+      <img class=".img-thumbnail" src="{{ file_url(value.url) }}">
+      <span>
+        <p>{{ value.name }}</p>
+        <p>{{ value.jobTitle }}</p>
+      </span>
+    </a>
+  </div>
+  {% endfor %}
+</div>

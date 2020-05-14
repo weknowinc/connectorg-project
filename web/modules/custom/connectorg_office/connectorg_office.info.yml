@@ -1,0 +1,5 @@
+name: 'Office'
+type: module
+description: 'Module to handle offices information'
+core: 8.x
+package: 'connectorg'

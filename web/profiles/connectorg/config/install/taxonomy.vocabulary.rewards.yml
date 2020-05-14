@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Rewards
+vid: rewards
+description: 'Types of rewards'
+weight: 0

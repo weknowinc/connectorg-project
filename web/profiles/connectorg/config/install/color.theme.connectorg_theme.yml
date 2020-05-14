@@ -1,0 +1,18 @@
+palette:
+  top: '#9A1B4E'
+  bottom: '#9A1B4E'
+  bg: '#ffffff'
+  sidebar: '#f6f6f2'
+  sidebarborders: '#f9f9f9'
+  footer: '#292929'
+  button: '#9A1B4E'
+  buttonhover: '#9A1B4E'
+  titleslogan: '#fffeff'
+  text: '#3b3b3b'
+  link: '#0071b3'
+logo: 'public://color/connectorg_theme-a054eeee/logo.svg'
+stylesheets:
+  - 'public://color/connectorg_theme-a054eeee/colors.css'
+files:
+  - 'public://color/connectorg_theme-a054eeee/logo.svg'
+  - 'public://color/connectorg_theme-a054eeee/colors.css'

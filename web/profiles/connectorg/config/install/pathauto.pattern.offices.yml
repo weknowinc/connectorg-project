@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_office
+id: offices
+label: Offices
+type: 'canonical_entities:office_entity'
+pattern: 'offices/[office_entity:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

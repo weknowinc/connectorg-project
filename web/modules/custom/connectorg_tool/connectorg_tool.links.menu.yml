@@ -1,0 +1,14 @@
+
+# Tool menu items definition
+entity.tool_entity.collection:
+  title: 'Tool list'
+  route_name: entity.tool_entity.collection
+  description: 'List Tool entities'
+  parent: system.admin_structure
+  weight: 100
+
+tool_entity.admin.structure.settings:
+  title: 'Tool settings'
+  description: 'Configure Tool entities'
+  route_name: tool_entity.settings
+  parent: system.admin_structure

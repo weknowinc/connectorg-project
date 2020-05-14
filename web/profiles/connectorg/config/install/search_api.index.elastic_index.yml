@@ -1,0 +1,260 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.news_entity.field_body
+    - field.storage.news_entity.field_category
+    - field.storage.event_entity.field_date
+    - field.storage.star_entity.field_employee
+    - field.storage.event_entity.field_image
+    - field.storage.event_entity.field_office
+    - field.storage.news_entity.field_office
+    - field.storage.office_entity.field_phone_number
+    - field.storage.event_entity.field_tags
+    - field.storage.news_entity.field_tags
+    - field.storage.microsite_entity.field_theme
+    - field.storage.star_entity.field_type
+    - search_api.server.elastic
+  module:
+    - connectorg_birthdays
+    - connectorg_events
+    - connectorg_microsites
+    - connectorg_news
+    - connectorg_office
+    - connectorg_employee_engagement
+    - search_api
+    - node
+id: elastic_index
+name: 'Elastic Index'
+description: ''
+read_only: false
+field_settings:
+  field_body:
+    label: Body
+    datasource_id: 'entity:news_entity'
+    property_path: field_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.news_entity.field_body
+  field_category:
+    label: Category
+    datasource_id: 'entity:news_entity'
+    property_path: field_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.news_entity.field_category
+  field_date:
+    label: Date
+    datasource_id: 'entity:event_entity'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.event_entity.field_date
+  field_employee:
+    label: Employee
+    datasource_id: 'entity:star_entity'
+    property_path: field_employee
+    type: integer
+    dependencies:
+      config:
+        - field.storage.star_entity.field_employee
+  field_image:
+    label: Image
+    datasource_id: 'entity:event_entity'
+    property_path: field_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.event_entity.field_image
+  field_office:
+    label: Office
+    datasource_id: 'entity:event_entity'
+    property_path: field_office
+    type: integer
+    dependencies:
+      config:
+        - field.storage.event_entity.field_office
+  field_office_1:
+    label: Office
+    datasource_id: 'entity:news_entity'
+    property_path: field_office
+    type: integer
+    dependencies:
+      config:
+        - field.storage.news_entity.field_office
+  field_phone_number:
+    label: 'Phone Number'
+    datasource_id: 'entity:office_entity'
+    property_path: field_phone_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.office_entity.field_phone_number
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:event_entity'
+    property_path: field_tags
+    type: string
+    dependencies:
+      config:
+        - field.storage.event_entity.field_tags
+  field_tags_1:
+    label: Tags
+    datasource_id: 'entity:news_entity'
+    property_path: field_tags
+    type: string
+    dependencies:
+      config:
+        - field.storage.news_entity.field_tags
+  field_theme:
+    label: Theme
+    datasource_id: 'entity:microsite_entity'
+    property_path: field_theme
+    type: integer
+    dependencies:
+      config:
+        - field.storage.microsite_entity.field_theme
+  field_type:
+    label: Type
+    datasource_id: 'entity:star_entity'
+    property_path: field_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.star_entity.field_type
+  id:
+    label: ID
+    datasource_id: 'entity:birthday_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_birthdays
+  id_1:
+    label: ID
+    datasource_id: 'entity:event_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_events
+  id_2:
+    label: ID
+    datasource_id: 'entity:microsite_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_microsites
+  id_3:
+    label: ID
+    datasource_id: 'entity:news_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_news
+  id_4:
+    label: ID
+    datasource_id: 'entity:office_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_office
+  id_5:
+    label: ID
+    datasource_id: 'entity:star_entity'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - connectorg_employee_engagement
+  name:
+    label: Name
+    datasource_id: 'entity:birthday_entity'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - connectorg_birthdays
+  name_1:
+    label: Name
+    datasource_id: 'entity:microsite_entity'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - connectorg_microsites
+  name_2:
+    label: Name
+    datasource_id: 'entity:office_entity'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - connectorg_office
+  title:
+    label: Title
+    datasource_id: 'entity:event_entity'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - connectorg_events
+  title_1:
+    label: Title
+    datasource_id: 'entity:news_entity'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - connectorg_news
+  title_2:
+    label: Title
+    datasource_id: 'entity:star_entity'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - connectorg_employee_engagement
+datasource_settings:
+  'entity:birthday_entity': {  }
+  'entity:event_entity':
+    languages:
+      default: true
+      selected:
+        - en
+  'entity:microsite_entity': {  }
+  'entity:news_entity':
+    languages:
+      default: true
+      selected:
+        - en
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:office_entity':
+    languages:
+      default: true
+      selected: {  }
+  'entity:star_entity': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: elastic
