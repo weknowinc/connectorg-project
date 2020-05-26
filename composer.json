@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": ">=7.0.8",
+        "ext-pdo": "*",
         "balbuf/drupal-libraries-installer": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
@@ -37,13 +38,13 @@
         "drupal/social_auth_google": "^2.0",
         "drupal/token": "^1.6",
         "drupal/twig_tweak": "^2.4",
+        "drupal/upgrade_status": "^2.6",
         "drupal/vmi": "^2.5",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "eluceo/ical": "^0.16.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
-      "ext-pdo": "*"
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"
