@@ -17,19 +17,21 @@
     ],
     "require": {
         "php": ">=7.0.8",
+        "composer/installers": "^1.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core": "^9",
+        "drupal/core-recommended": "^9",
         "ext-pdo": "*",
         "balbuf/drupal-libraries-installer": "^1.0",
-        "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "~1.0",
         "drupal/bootstrap_barrio": "^4.23",
         "drupal/bootstrap_library": "^1.11",
-        "drupal/console": "^1.0.2",
-        "drupal/core": "^8.8.0",
-        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/console": "^1.9.4",
         "drupal/ctools": "^3.2",
-        "drupal/devel": "^2.1",
-        "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/devel": "^3.0",
+        "drupal/elasticsearch_connector": "^7.0",
         "drupal/flexslider": "^2.0@beta",
         "drupal/pathauto": "^1.6",
         "drupal/search_api": "^1.15",
@@ -45,9 +47,6 @@
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^8.8.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -94,6 +93,12 @@
             "drupal/core": {
                 "http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
                 "2567773-The date plugin does not exist": "https://www.drupal.org/files/issues/2019-10-26/2325899-138_0.patch"
+            },
+            "drupal/devel":{
+                "3118857 - Drupal9 Readiness and compatibility - Devel": "https://www.drupal.org/files/issues/2020-03-10/drupal9_readiness-3118857-13503046.patch"
+            },
+            "drupal/social_auth_google":{
+                "3119615 - Add the 'core_version_requirement' key in info.yml": "https://www.drupal.org/files/issues/2020-03-17/3119615-2.patch"
             }
         },
         "installer-paths": {
