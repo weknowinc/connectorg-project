@@ -20,7 +20,7 @@
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
-        "drupal/core": "9.1.x-dev as 8.8.x-dev",
+        "drupal/core": "9.0.0-rc1 as 8.8.x-dev",
         "ext-pdo": "*",
         "balbuf/drupal-libraries-installer": "^1.0",
         "cweagans/composer-patches": "^1.6.5",
@@ -28,7 +28,7 @@
         "drupal/bootstrap_barrio": "^4.23",
         "drupal/bootstrap_library": "^1.11",
         "drupal/ctools": "^3.2",
-        "drupal/devel": "^2.1",
+        "drupal/devel": "^3.0",
         "drupal/elasticsearch_connector": "^7.0",
         "drupal/flexslider": "^2.0@beta",
         "drupal/pathauto": "^1.6",
@@ -90,11 +90,13 @@
         },
         "patches": {
             "drupal/core": {
-                "3103529 - http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
-                "2567773 - The date plugin does not exist": "https://www.drupal.org/files/issues/2019-10-26/2325899-138_0.patch"
+                "3103529 - http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch"
             },
-            "drupal/social_auth_google":{
+            "drupal/social_auth_google": {
                 "3119615 - Add the 'core_version_requirement' key in info.yml": "https://www.drupal.org/files/issues/2020-03-17/3119615-2.patch"
+            },
+            "drupal/devel": {
+                "3118857 - Drupal9 Readiness and compatibility - Devel": "https://www.drupal.org/files/issues/2020-03-10/drupal9_readiness-3118857-13503046.patch"
             }
         },
         "installer-paths": {

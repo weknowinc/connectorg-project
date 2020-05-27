@@ -47,7 +47,7 @@ timezone: ""
 # However these directives are mutually exclusive
 # mariadb_version: 10.2
 # mysql_version: 8.0
-mariadb_version: 10.3.7
+mariadb_version: 10.3
 
 # router_http_port: <port>  # Port to be used for http (defaults to port 80)
 # router_https_port: <port> # Port for https (defaults to 443)
