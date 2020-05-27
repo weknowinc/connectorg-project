@@ -2,4 +2,5 @@ name: 'connectorg_microsites'
 type: module
 description: 'Module to manage microsites'
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: 'connectorg'
