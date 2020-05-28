@@ -2,6 +2,7 @@
 name: connectorg
 type: profile
 core: 8.x
+core_version_requirement: ^8 || ^9
 
 # Optionally we may also give a description for our profile or declare our
 # installation profile as a distribution, so that it'll be auto-selected.
