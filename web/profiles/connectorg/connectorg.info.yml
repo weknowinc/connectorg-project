@@ -19,8 +19,6 @@ install:
   - social_auth_google
   - social_auth_facebook
   - address
-  - search_api
-  - elasticsearch_connector
   - smart_date
   - block
   - block_content
@@ -32,7 +30,6 @@ install:
   - contact
   - contextual
   - layout_builder
-  - dblog
   - editor
   - field
   - field_ui
@@ -66,20 +63,12 @@ install:
   - toolbar
   - update
   - user
-  - views_ui
   - views
   - connectorg_employee_engagement
   - connectorg_birthdays
-  - flexslider
-  - flexslider_example
-  - flexslider_fields
-  - flexslider_views
-  - vmi
   - field_group
-  - smart_trim
   - ds
   - ds_extras
-  - bootstrap_library
 
 dependencies:
   - node
@@ -90,4 +79,3 @@ dependencies:
 # Note that this will not set any theme as the default theme.
 themes:
   - seven
-  - connectorg_theme

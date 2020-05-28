@@ -15,10 +15,6 @@ function connectorg_install() {
   // First, do everything in standard profile.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
-  Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('default', 'connectorg_theme')
-    ->save();
 
   Drupal::configFactory()
     ->getEditable('system.theme')

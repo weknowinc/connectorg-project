@@ -5,9 +5,9 @@ dependencies:
     - connectorg_birthdays
     - system
   theme:
-    - connectorg_theme
+    - seven
 id: todaysbirthdays
-theme: connectorg_theme
+theme: seven
 region: content
 weight: -1
 provider: null
