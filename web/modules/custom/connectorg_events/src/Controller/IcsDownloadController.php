@@ -6,6 +6,7 @@ use DateTime;
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileSystemInterface;
 use Eluceo\iCal\Component\Calendar;
 use Eluceo\iCal\Component\Event;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -116,7 +117,7 @@ class IcsDownloadController extends ControllerBase
     );
     $uri = 'public://' . $fileName;
     $content = $calendarService->render();
-    $file = file_save_data($content, $uri, FILE_EXISTS_REPLACE);
+    $file = file_save_data($content, $uri, FileSystemInterface::EXISTS_REPLACE);
     if (empty($file)) {
       return new Response(
         'Simple ICS Error, Please contact the System Administrator'
