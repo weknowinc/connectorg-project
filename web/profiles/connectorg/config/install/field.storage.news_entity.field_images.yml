@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - connectorg_news
     - file
     - image
-    - connectorg_news
 id: news_entity.field_images
 field_name: field_images
 entity_type: news_entity

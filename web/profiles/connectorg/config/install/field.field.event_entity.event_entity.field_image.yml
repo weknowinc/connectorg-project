@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.event_entity.field_image
   module:
-    - image
     - connectorg_events
+    - image
 id: event_entity.event_entity.field_image
 field_name: field_image
 entity_type: event_entity

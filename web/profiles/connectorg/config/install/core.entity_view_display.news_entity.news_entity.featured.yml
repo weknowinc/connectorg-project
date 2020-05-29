@@ -8,12 +8,11 @@ dependencies:
     - field.field.news_entity.news_entity.field_images
     - field.field.news_entity.news_entity.field_office
     - field.field.news_entity.news_entity.field_tags
-    - flexslider.optionset.default
   module:
-    - ds
-    - flexslider_fields
-    - layout_builder
     - connectorg_news
+    - ds
+    - image
+    - layout_builder
     - smart_trim
     - user
 third_party_settings:
@@ -78,16 +77,14 @@ content:
       link: true
     third_party_settings: {  }
   field_images:
-    weight: 2
-    label: hidden
+    weight: 3
+    label: above
     settings:
       image_style: ''
       image_link: ''
-      optionset: default
-      caption: ''
     third_party_settings: {  }
-    type: flexslider
-    region: left
+    type: image
+    region: content
   field_office:
     type: entity_reference_entity_view
     weight: 0

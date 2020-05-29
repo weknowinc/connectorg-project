@@ -9,8 +9,8 @@ dependencies:
     - field.field.news_entity.news_entity.field_tags
     - image.style.thumbnail
   module:
-    - image
     - connectorg_news
+    - image
     - path
     - text
 id: news_entity.news_entity.default

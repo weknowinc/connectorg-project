@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - options
     - connectorg_microsites
+    - options
 id: microsite_entity.field_theme
 field_name: field_theme
 entity_type: microsite_entity

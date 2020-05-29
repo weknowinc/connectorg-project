@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - connectorg_employee_engagement
     - file
     - image
-    - connectorg_employee_engagement
 id: star_entity.field_image
 field_name: field_image
 entity_type: star_entity

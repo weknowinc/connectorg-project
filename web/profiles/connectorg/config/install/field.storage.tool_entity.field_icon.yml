@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - connectorg_tool
     - file
     - image
-    - connectorg_tool
 id: tool_entity.field_icon
 field_name: field_icon
 entity_type: tool_entity

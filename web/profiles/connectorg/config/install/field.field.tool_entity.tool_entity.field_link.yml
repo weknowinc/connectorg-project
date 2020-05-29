@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.tool_entity.field_link
   module:
-    - link
     - connectorg_tool
+    - link
 id: tool_entity.tool_entity.field_link
 field_name: field_link
 entity_type: tool_entity

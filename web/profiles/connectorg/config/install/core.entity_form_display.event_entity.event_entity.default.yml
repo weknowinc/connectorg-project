@@ -10,9 +10,9 @@ dependencies:
     - field.field.event_entity.event_entity.field_url
     - image.style.thumbnail
   module:
+    - connectorg_events
     - image
     - link
-    - connectorg_events
     - path
     - smart_date
 id: event_entity.event_entity.default

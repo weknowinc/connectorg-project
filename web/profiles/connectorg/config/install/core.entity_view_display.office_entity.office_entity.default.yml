@@ -7,8 +7,8 @@ dependencies:
     - field.field.office_entity.office_entity.field_phone_number
   module:
     - address
-    - image
     - connectorg_office
+    - image
 id: office_entity.office_entity.default
 targetEntityType: office_entity
 bundle: office_entity

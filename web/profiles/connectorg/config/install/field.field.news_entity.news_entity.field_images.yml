@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.news_entity.field_images
   module:
-    - image
     - connectorg_news
+    - image
 id: news_entity.news_entity.field_images
 field_name: field_images
 entity_type: news_entity

@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.office_entity.field_image
   module:
-    - image
     - connectorg_office
+    - image
 id: office_entity.office_entity.field_image
 field_name: field_image
 entity_type: office_entity
