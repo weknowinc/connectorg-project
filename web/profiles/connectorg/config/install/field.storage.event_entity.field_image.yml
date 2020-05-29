@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - connectorg_events
     - file
     - image
-    - connectorg_events
 id: event_entity.field_image
 field_name: field_image
 entity_type: event_entity

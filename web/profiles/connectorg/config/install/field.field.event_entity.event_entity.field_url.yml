@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.event_entity.field_url
   module:
-    - link
     - connectorg_events
+    - link
 id: event_entity.event_entity.field_url
 field_name: field_url
 entity_type: event_entity

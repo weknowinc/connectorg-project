@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.microsite_entity.layout_builder__layout
   module:
-    - layout_builder
     - connectorg_microsites
+    - layout_builder
 id: microsite_entity.microsite_entity.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: microsite_entity

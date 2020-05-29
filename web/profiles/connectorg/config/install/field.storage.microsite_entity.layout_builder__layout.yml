@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - layout_builder
     - connectorg_microsites
+    - layout_builder
 id: microsite_entity.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: microsite_entity

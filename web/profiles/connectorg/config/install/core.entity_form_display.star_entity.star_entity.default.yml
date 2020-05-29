@@ -8,8 +8,8 @@ dependencies:
     - field.field.star_entity.star_entity.field_type
     - image.style.thumbnail
   module:
-    - image
     - connectorg_employee_engagement
+    - image
     - path
     - text
 id: star_entity.star_entity.default
