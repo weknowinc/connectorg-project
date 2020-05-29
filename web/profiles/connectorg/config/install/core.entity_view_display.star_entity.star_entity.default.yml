@@ -7,8 +7,8 @@ dependencies:
     - field.field.star_entity.star_entity.field_message
     - field.field.star_entity.star_entity.field_type
   module:
-    - image
     - connectorg_employee_engagement
+    - image
     - text
     - user
 id: star_entity.star_entity.default

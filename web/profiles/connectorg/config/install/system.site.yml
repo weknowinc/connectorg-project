@@ -1,5 +1,5 @@
-name: connectorg
-mail: connectorg@weknowinc.com
+name: 'Drush Site-Install'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''

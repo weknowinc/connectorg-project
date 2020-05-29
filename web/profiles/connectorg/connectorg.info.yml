@@ -17,59 +17,62 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
-  - social_auth_google
-  - social_auth_facebook
   - address
-  - smart_date
   - block
   - block_content
   - breakpoint
   - ckeditor
-  - color
   - comment
   - config
+  - connectorg_birthdays
+  - connectorg_employee_engagement
+  - connectorg_events
+  - connectorg_microsites
+  - connectorg_news
+  - connectorg_office
+  - connectorg_tool
   - contact
   - contextual
-  - layout_builder
+  - ctools
+  - datetime
   - editor
   - field
+  - field_group
   - field_ui
   - file
   - filter
   - help
   - history
   - image
+  - layout_builder
+  - layout_discovery
   - link
   - node
   - options
-  - connectorg_news
-  - connectorg_microsites
-  - connectorg_office
-  - connectorg_tool
-  - connectorg_events
   - path
   - path_alias
   - quickedit
-  - token
-  - ctools
-  - ctools_block
-  - ctools_views
-  - pathauto
   - rdf
   - search
   - shortcut
+  - smart_date
+  - smart_trim
+  - social_api
+  - social_auth
+  - social_auth_facebook
+  - social_auth_google
   - system
   - taxonomy
   - text
+  - token
   - toolbar
   - update
   - user
-  - views
-  - connectorg_employee_engagement
-  - connectorg_birthdays
-  - field_group
   - ds
+  - pathauto
   - ds_extras
+  - vmi
+  - views
 
 dependencies:
   - node

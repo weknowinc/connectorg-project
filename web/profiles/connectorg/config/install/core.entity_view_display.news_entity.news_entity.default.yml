@@ -8,8 +8,8 @@ dependencies:
     - field.field.news_entity.news_entity.field_office
     - field.field.news_entity.news_entity.field_tags
   module:
-    - image
     - connectorg_news
+    - image
     - text
     - user
 id: news_entity.news_entity.default

@@ -5,9 +5,9 @@ dependencies:
     - field.field.tool_entity.tool_entity.field_icon
     - field.field.tool_entity.tool_entity.field_link
   module:
+    - connectorg_tool
     - image
     - link
-    - connectorg_tool
     - user
 id: tool_entity.tool_entity.default
 targetEntityType: tool_entity

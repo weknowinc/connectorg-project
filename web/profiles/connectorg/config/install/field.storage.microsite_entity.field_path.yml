@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - link
     - connectorg_microsites
+    - link
 id: microsite_entity.field_path
 field_name: field_path
 entity_type: microsite_entity

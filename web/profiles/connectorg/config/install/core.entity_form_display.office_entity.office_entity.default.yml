@@ -8,8 +8,8 @@ dependencies:
     - image.style.thumbnail
   module:
     - address
-    - image
     - connectorg_office
+    - image
     - path
 id: office_entity.office_entity.default
 targetEntityType: office_entity

@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.microsite_entity.field_path
   module:
-    - link
     - connectorg_microsites
+    - link
 id: microsite_entity.microsite_entity.field_path
 field_name: field_path
 entity_type: microsite_entity

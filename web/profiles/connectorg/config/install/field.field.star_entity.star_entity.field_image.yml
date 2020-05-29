@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.star_entity.field_image
   module:
-    - image
     - connectorg_employee_engagement
+    - image
 id: star_entity.star_entity.field_image
 field_name: field_image
 entity_type: star_entity

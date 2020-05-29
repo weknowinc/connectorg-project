@@ -34,9 +34,9 @@
         "drupal/social_auth_facebook": "2.x-dev",
         "drupal/social_auth_google": "2.x-dev",
         "drupal/token": "^1.6",
-        "drupal/twig_tweak": "^2.4",
         "drupal/upgrade_status": "^2.6",
         "drupal/vmi": "^2.5",
+        "drush/drush": "^9.7.1 | ^10.0.0",
         "eluceo/ical": "^0.16.0",
         "symfony/http-foundation": "^4.4.7",
         "vlucas/phpdotenv": "^4.0",
@@ -83,7 +83,8 @@
         "drupal-libraries": {},
         "patches": {
             "drupal/core": {
-                "3103529 - http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch"
+                "3103529 - http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
+                "2985882 - Workaround for 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
             },
             "drupal/social_auth": {
                 "3131765 - Drupal 9 Readiness": "https://www.drupal.org/files/issues/2020-04-29/3131765-2.patch"
