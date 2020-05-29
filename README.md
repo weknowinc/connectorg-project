@@ -3,7 +3,6 @@
 **Resources:**
 
 - [Drupal](https://www.drupal.org/)
-- [DDEV](https://www.ddev.com/)
 - [Docker-compose](https://docs.docker.com/compose/)
 
 ## Setup local enviroment
