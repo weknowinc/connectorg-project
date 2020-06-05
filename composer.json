@@ -28,7 +28,7 @@
         "drupal/core-project-message": "^9",
         "drupal/ctools": "^3.2",
         "drupal/pathauto": "^1.6",
-        "drupal/search_api": "^1.17",
+        "drupal/search_api": "^1.16",
         "drupal/smart_date": "^2.5",
         "drupal/social_api": "2.x-dev",
         "drupal/social_auth": "2.x-dev",
@@ -87,22 +87,8 @@
                 "3103529 - http installation of 8.8.1 fails": "https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch",
                 "2985882 - Workaround for 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
             },
-            "drupal/social_auth": {
-                "3131765 - Drupal 9 Readiness": "https://www.drupal.org/files/issues/2020-04-29/3131765-2.patch"
-            },
-            "drupal/social_api": {
-                "3134034-3 - Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-05-08/d9-3134034-3.patch",
-                "3134034-4 - Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-05-22/3134034-4.patch"
-            },
-            "drupal/social_auth_google": {
-                "3119615 - Add the 'core_version_requirement' key in info.yml": "https://www.drupal.org/files/issues/2020-03-17/3119615-2.patch"
-            },
             "drupal/social_auth_facebook": {
-                "3119616-2 - Add the 'core_version_requirement' key in info.yml": "https://www.drupal.org/files/issues/2020-03-17/3119616-2.patch",
                 "3119616-3 - Add the 'core_version_requirement' key in info.yml": "https://www.drupal.org/files/issues/2020-04-14/3119616-3.patch"
-            },
-            "drupal/smart_date": {
-                "3137811 - Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-05-19/3137811-3.patch"
             }
         },
         "installer-paths": {
