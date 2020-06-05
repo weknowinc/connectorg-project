@@ -23,3 +23,8 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Local setup.
+.docksal/
+web/sites/settings.local.php
+
