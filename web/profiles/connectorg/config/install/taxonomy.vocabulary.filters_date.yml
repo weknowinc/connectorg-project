@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Filters Date'
+vid: filters_date
+description: ''
+weight: 0

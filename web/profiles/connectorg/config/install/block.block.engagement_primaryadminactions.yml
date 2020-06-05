@@ -1,0 +1,18 @@
+uuid: 08ca2839-9060-4140-b9b4-73a7c3c0d916
+langcode: en
+status: true
+dependencies:
+  theme:
+    - engagement
+id: engagement_primaryadminactions
+theme: engagement
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

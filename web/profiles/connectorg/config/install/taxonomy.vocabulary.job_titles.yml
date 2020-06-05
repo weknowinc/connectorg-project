@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Job Titles'
+vid: job_titles
+description: 'All job titles with their own seniority '
+weight: 0
