@@ -17,13 +17,39 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
-  - address
-  - block
-  - block_content
+  - history
   - breakpoint
   - ckeditor
-  - comment
+  - color
   - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views_ui
+  - tour
+  - automated_cron
+  - address
   - connectorg_birthdays
   - connectorg_employee_engagement
   - connectorg_events
@@ -31,48 +57,24 @@ install:
   - connectorg_news
   - connectorg_office
   - connectorg_tool
-  - contact
-  - contextual
   - ctools
-  - datetime
-  - editor
   - field
-  - field_group
-  - field_ui
-  - file
   - filter
-  - help
-  - history
-  - image
   - layout_builder
   - layout_discovery
   - link
-  - node
-  - options
-  - path
   - path_alias
-  - quickedit
-  - rdf
-  - search
-  - shortcut
   - smart_date
-  - smart_trim
   - social_api
   - social_auth
   - social_auth_facebook
   - social_auth_google
   - system
-  - taxonomy
   - text
   - token
-  - toolbar
   - update
   - user
-  - ds
   - pathauto
-  - ds_extras
-  - vmi
-  - views
 
 dependencies:
   - node
@@ -82,6 +84,7 @@ dependencies:
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
 themes:
+  - bartik
   - seven
   - bond
   - engagement

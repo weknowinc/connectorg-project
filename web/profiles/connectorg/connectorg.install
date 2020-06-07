@@ -16,9 +16,8 @@ function connectorg_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
   Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('admin', 'seven')
+     ->getEditable('system.theme')
+    ->set('default', 'engagement')
     ->save();
-
   // Can add code in here to make nodes, terms, etc.
 }
