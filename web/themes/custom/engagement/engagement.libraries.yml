@@ -2,9 +2,10 @@ global-styling:
   version: 1.0
   css:
     theme:
-      css/styles.css: {}
+      dist/css/styles.css: {}
   js:
-    js/script.js: {}
+    dist/js/script.js: {}
   dependencies:
     - core/jquery
     - core/drupal
+    - bold/global-styling

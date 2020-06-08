@@ -5,7 +5,7 @@ package: Engagement Theme
 core: 8.x
 core_version_requirement: ^8 || ^9
 libraries:
-  - bond/global-styling
+  - engagement/global-styling
 
 base theme: bond
 
