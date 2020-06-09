@@ -24,3 +24,8 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Local ignore configs, please remove before release
+.docksal/
+web/sites/settings.local.php
+

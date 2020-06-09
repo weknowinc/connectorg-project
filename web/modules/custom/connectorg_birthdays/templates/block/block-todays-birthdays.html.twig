@@ -10,15 +10,18 @@
 #}
 {% set classes = [
   'clear-both',
+  'birthday-block',
 ] %}
-<div class="ws-custom--block">
+<div class="ws-custom--block {{ classes|join(' ') }}">
   {% for value in listBirthdays %}
-  <div class="col-lg-3 col-sm-6 col-md-3">
+  <div class="birthday-block-content">
     <a href="/user/{{ value.id }}">
-      <img class=".img-thumbnail" src="{{ file_url(value.url) }}">
+      <div class="icon icon-bday"></div>
+      <img class="img-thumbnail rounded-circle" src="{{ file_url(value.url) }}">
       <span>
-        <p>{{ value.name }}</p>
-        <p>{{ value.jobTitle }}</p>
+        <p>{{ value.header }}</p>
+        <p class="birthday-name">{{ value.name|capitalize }}</p>
+        <p class="birthday-regards">{{ value.footer }}</p>
       </span>
     </a>
   </div>
