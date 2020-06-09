@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.event_entity.event_entity.field_category
     - field.field.event_entity.event_entity.field_date
+    - field.field.event_entity.event_entity.field_description
     - field.field.event_entity.event_entity.field_image
     - field.field.event_entity.event_entity.field_office
     - field.field.event_entity.event_entity.field_tags
@@ -15,6 +16,7 @@ dependencies:
     - link
     - path
     - smart_date
+    - text
 id: event_entity.event_entity.default
 targetEntityType: event_entity
 bundle: event_entity
@@ -35,6 +37,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: smartdate_default
+    region: content
+  field_description:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_image:
     weight: 4
