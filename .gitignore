@@ -25,6 +25,9 @@
 # Ignore .env files as they are personal
 /.env
 
+# We don't need node_modules to be versioned
+node_modules
+
 # Local ignore configs, please remove before release
 .docksal/
 web/sites/settings.local.php

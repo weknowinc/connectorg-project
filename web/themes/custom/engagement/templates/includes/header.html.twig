@@ -1,0 +1,57 @@
+<!-- =============================== header ===============================-->
+{% set header_attribute = create_attribute() %}
+{%
+  set header_classes = [
+    'top-header',
+    'navbar',
+    'navbar-expand',
+    bond.header_link_style,
+    'header-menu',
+    bond.header_type,
+    bond.header_position,
+  ]
+%}
+
+<nav {{ header_attribute.addClass(header_classes) }} {{ header_attribute.setAttribute('data-fixed', bond.header_type_sticky ).setAttribute('data-resize', bond.header_type_sticky_resize ).setAttribute('data-bgcolor', bond.header_color ) }}>
+  <div class="container">
+    {% if page.header_left %}
+      {{ page.header_left }}
+    {% endif %}
+    <!-- end of navbar-toggler -->
+    <div class="d-flex align-items-center justify-content-end" id="navigation-group">
+
+      <div class="navbar-right mr-4 d-none d-md-block">
+        {% if page.main_navigation %}
+          {{ page.main_navigation }}
+        {% endif %}
+      </div>
+
+      <div class="navbar-right m-account">
+
+        {% if page.header_right %}
+          {{ page.header_right }}
+        {% endif %}
+
+        <a class="waffle-tools" tabindex="0" data-placement="bottom" role="" data-toggle="popover" data-trigger="focus"></a>
+        <div class="d-none waffle-tools-container">
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <a href="#" class="tool"><img src="/themes/custom/engagement/asana-1.png" alt=""></a>
+          <div class="tool asana"></div>
+        </div>
+
+      </div>
+      <!-- end of navbar-right -->
+    </div>
+    <!-- end of collapse -->
+  </div>
+  <!-- end of container -->
+</nav>
+<!-- end of nav -->

@@ -1,0 +1,36 @@
+
+#navigation-group > div.navbar-right {
+  width: 26px;
+  height: 26px;
+
+  a.waffle-tools {
+    width: 29px;
+    height: 29px;
+    background: transparent url(/themes/custom/engagement/circle.png) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.waffle-tools-container {
+  display: flex;
+  width: 210px;
+  flex-wrap: wrap;
+
+  .tool {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.asana {
+      background-image: url("/themes/custom/engagement/asana-1.png");
+    }
+  }
+
+}
+
