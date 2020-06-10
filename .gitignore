@@ -28,6 +28,9 @@
 # We don't need node_modules to be versioned
 node_modules
 
+# ignoring engagement subtheme dist folder
+/web/themes/custom/engagement/dist/
+
 # Local ignore configs, please remove before release
 .docksal/
 web/sites/settings.local.php

@@ -1,0 +1,356 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tool_entity.field_icon
+    - field.storage.tool_entity.field_link
+    - image.style.thumbnail
+  module:
+    - connectorg_tool
+    - image
+    - link
+id: waffle_tools_list
+label: "Waffle Tools List"
+module: views
+description: ""
+tag: ""
+base_table: tool_entity
+base_field: id
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: none
+        options: {}
+      cache:
+        type: tag
+        options: {}
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ""
+          query_tags: {}
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: "Sort by"
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          grouping: {}
+          row_class: ""
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {}
+          separator: ""
+          hide_empty: false
+      fields:
+        name:
+          id: name
+          table: tool_entity
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ""
+          label: ""
+          exclude: true
+          alter:
+            alter_text: false
+            text: ""
+            make_link: false
+            path: ""
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ""
+            more_link_path: ""
+            strip_tags: false
+            trim: false
+            preserve_tags: ""
+            html: false
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
+          element_label_colon: false
+          element_wrapper_type: ""
+          element_wrapper_class: ""
+          element_default_classes: false
+          empty: ""
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {}
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ", "
+          field_api_classes: false
+          entity_type: null
+          entity_field: name
+          plugin_id: field
+        field_icon:
+          id: field_icon
+          table: tool_entity__field_icon
+          field: field_icon
+          relationship: none
+          group_type: group
+          admin_label: ""
+          label: ""
+          exclude: true
+          alter:
+            alter_text: true
+            text: "{{ field_icon }}"
+            make_link: false
+            path: ""
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ""
+            more_link_path: ""
+            strip_tags: false
+            trim: false
+            preserve_tags: ""
+            html: false
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
+          element_label_colon: false
+          element_wrapper_type: ""
+          element_wrapper_class: ""
+          element_default_classes: false
+          empty: ""
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ""
+          group_column: ""
+          group_columns: {}
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ", "
+          field_api_classes: false
+          plugin_id: field
+        field_link:
+          id: field_link
+          table: tool_entity__field_link
+          field: field_link
+          relationship: none
+          group_type: group
+          admin_label: ""
+          label: ""
+          exclude: true
+          alter:
+            alter_text: true
+            text: "{{ field_link__uri }}"
+            make_link: false
+            path: ""
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ""
+            more_link_path: ""
+            strip_tags: false
+            trim: false
+            preserve_tags: ""
+            html: false
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
+          element_label_colon: false
+          element_wrapper_type: ""
+          element_wrapper_class: ""
+          element_default_classes: false
+          empty: ""
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link_separate
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: "0"
+            target: "0"
+          group_column: ""
+          group_columns: {}
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ", "
+          field_api_classes: false
+          plugin_id: field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ""
+          label: ""
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<a href=\"{{ field_link }}\" class=\"tool\" alt=\"\"><span class=\"tool-icon\">{{ field_icon }}</span><br><span class=\"tool-name\">{{ name }}</span></a>\r\n"
+            make_link: false
+            path: ""
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ""
+            more_link_path: ""
+            strip_tags: false
+            trim: false
+            preserve_tags: ""
+            html: false
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
+          element_label_colon: false
+          element_wrapper_type: ""
+          element_wrapper_class: ""
+          element_default_classes: false
+          empty: ""
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+      filters:
+        status:
+          value: "1"
+          table: tool_entity
+          field: status
+          plugin_id: boolean
+          entity_type: tool_entity
+          entity_field: status
+          id: status
+          expose:
+            operator: ""
+            operator_limit_selection: false
+            operator_list: {}
+          group: 1
+      sorts:
+        name:
+          id: name
+          table: tool_entity
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ""
+          order: ASC
+          exposed: false
+          expose:
+            label: ""
+          entity_type: tool_entity
+          entity_field: name
+          plugin_id: standard
+      header: {}
+      footer: {}
+      empty: {}
+      relationships: {}
+      arguments: {}
+      display_extenders: {}
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - "languages:language_content"
+        - "languages:language_interface"
+      tags:
+        - "config:field.storage.tool_entity.field_icon"
+        - "config:field.storage.tool_entity.field_link"

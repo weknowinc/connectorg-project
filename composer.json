@@ -35,6 +35,7 @@
         "drupal/social_auth_facebook": "2.x-dev",
         "drupal/social_auth_google": "2.x-dev",
         "drupal/token": "^1.6",
+        "drupal/twig_tweak": "^2.6",
         "drupal/upgrade_status": "^2.6",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "eluceo/ical": "^0.16.0",
