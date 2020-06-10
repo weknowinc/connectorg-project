@@ -3,7 +3,6 @@ status: false
 dependencies:
   config:
     - core.entity_form_mode.user.register
-    - field.field.user.user.field_avatar
     - field.field.user.user.field_birthday
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
@@ -29,14 +28,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_avatar:
-    weight: 8
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_job_title:
     weight: 4
     settings:

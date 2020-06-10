@@ -42,9 +42,15 @@ class TodaysBirthdays extends BlockBase
     foreach ($users as $rowUser) {
       $fileUri =  ($rowUser->hasField('user_picture')) ? $rowUser->get('user_picture')->entity->getFileUri() : 'none.jpg';
       $id = $rowUser->id();
-      $name = $rowUser->get('field_name')->value;
-      $jobTitle = $rowUser->get('field_job_title')->entity->getName();
-      $lastName = $rowUser->get('field_last_name')->value;
+      $name = ($rowUser->hasField('field_name') && isset($rowUser->get('field_name')->value))
+        ? $rowUser->get('field_name')->value
+        : '';
+      $jobTitle = ($rowUser->hasField('field_job_title') && isset($rowUser->get('field_job_title')->entity))
+        ? $rowUser->get('field_job_title')->entity->getName()
+        : '';
+      $lastName = ($rowUser->hasField('field_last_name') && isset($rowUser->get('field_last_name')->value))
+        ? $rowUser->get('field_last_name')->value
+        : '';
       $fullName = sprintf("%s %s", $name, $lastName);
       $listUsers[] = [
         'url' => $fileUri,
@@ -52,7 +58,6 @@ class TodaysBirthdays extends BlockBase
         'name' => ucfirst($fullName),
         'jobTitle' => ucfirst($jobTitle),
         'header' => $config['birthday_block_header'] ?: $this->t('Today is we celebrate the birthday of'),
-        'footer' => $config['birthday_block_footer'] ?: $this->t('Send a regard through Slack.'),
       ];
     }
     return ($listUsers);
@@ -78,13 +83,6 @@ class TodaysBirthdays extends BlockBase
       '#default_value' => isset($config['birthday_block_header']) ? $config['birthday_block_header'] : '',
     ];
 
-    $form['birthday_block_footer'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Footer'),
-      '#description' => $this->t('Birthday block footer message.'),
-      '#default_value' => isset($config['birthday_block_footer']) ? $config['birthday_block_footer'] : '',
-    ];
-
     return $form;
   }
 
@@ -95,7 +93,6 @@ class TodaysBirthdays extends BlockBase
     parent::blockSubmit($form, $form_state);
     $values = $form_state->getValues();
     $this->configuration['birthday_block_header'] = $values['birthday_block_header'];
-    $this->configuration['birthday_block_footer'] = $values['birthday_block_footer'];
   }
 
   /**
