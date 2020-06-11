@@ -5,6 +5,7 @@
  * Contains connectorg_news.module.
  */
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -26,10 +27,36 @@ function connectorg_news_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function connectorg_news_theme() {
+function connectorg_news_theme($existing, $type, $theme, $path) {
   return [
-    'connectorg_news' => [
-      'render element' => 'children',
+    'news_entity' => [
+      'path' => $path . '/templates',
+      'template' => 'news-entity',
+      'render element' => 'elements',
     ],
   ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function connectorg_news_theme_suggestions_news_entity(array $variables) {
+  $suggestions = [];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $suggestions[] = 'news_entity__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function connectorg_news_preprocess_news_entity(&$variables) {
+  $variables['content'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+  $entity = $variables['elements']['#news_entity'];
+  $variables['author_name'] = \Drupal::service('renderer')
+    ->render($variables['elements']['user_id']);
+  $variables['url'] = $entity->toUrl()->toString();
 }
