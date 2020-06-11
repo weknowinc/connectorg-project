@@ -56,7 +56,7 @@ function connectorg_events_preprocess_event_entity(&$variables) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
   $entity = $variables['elements']['#event_entity'];
-  $variables['content']['date_start'] = $entity->hasField('field_date') && !$entity->field_date->isEmpty()
+  $variables['date_start'] = $entity->hasField('field_date') && !$entity->field_date->isEmpty()
     ? $entity->field_date->value
     : NULL;
   $variables['url'] = $entity->toUrl()->toString();

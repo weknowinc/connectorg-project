@@ -17,39 +17,15 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
-  - history
+  - address
+  - automated_cron
+  - big_pipe
+  - block_content
   - breakpoint
   - ckeditor
   - color
-  - config
   - comment
-  - contextual
-  - contact
-  - menu_link_content
-  - datetime
-  - block_content
-  - quickedit
-  - editor
-  - help
-  - image
-  - menu_ui
-  - options
-  - path
-  - page_cache
-  - dynamic_page_cache
-  - big_pipe
-  - taxonomy
-  - dblog
-  - search
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
-  - rdf
-  - views_ui
-  - tour
-  - automated_cron
-  - address
+  - config
   - connectorg_birthdays
   - connectorg_employee_engagement
   - connectorg_events
@@ -57,24 +33,49 @@ install:
   - connectorg_news
   - connectorg_office
   - connectorg_tool
+  - contact
+  - contextual
   - ctools
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
   - field
+  - field_ui
+  - file
   - filter
+  - help
+  - history
+  - image
   - layout_builder
   - layout_discovery
   - link
+  - menu_link_content
+  - menu_ui
+  - options
+  - page_cache
+  - path
   - path_alias
+  - pathauto
+  - quickedit
+  - rdf
+  - search
+  - shortcut
   - smart_date
   - social_api
   - social_auth
   - social_auth_facebook
   - social_auth_google
   - system
+  - taxonomy
   - text
   - token
+  - toolbar
+  - tour
+  - twig_tweak
   - update
   - user
-  - pathauto
+  - views_ui
 
 dependencies:
   - node
