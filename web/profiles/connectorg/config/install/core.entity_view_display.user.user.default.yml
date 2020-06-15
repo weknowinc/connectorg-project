@@ -2,6 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_birthday
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_office
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -24,4 +29,9 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  field_birthday: true
+  field_job_title: true
+  field_last_name: true
+  field_name: true
+  field_office: true

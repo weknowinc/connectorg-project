@@ -33,6 +33,7 @@ install:
   - connectorg_news
   - connectorg_office
   - connectorg_tool
+  - connectorg_hero
   - contact
   - contextual
   - ctools
