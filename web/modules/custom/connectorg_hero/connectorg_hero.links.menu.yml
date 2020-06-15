@@ -1,0 +1,13 @@
+# Hero entity menu items definition
+entity.hero_entity.collection:
+  title: "Hero list"
+  route_name: entity.hero_entity.collection
+  description: "List Hero entity entities"
+  parent: system.admin_structure
+  weight: 100
+
+hero_entity.admin.structure.settings:
+  title: "Hero settings"
+  description: "Configure Hero entity entities"
+  route_name: hero_entity.settings
+  parent: system.admin_structure

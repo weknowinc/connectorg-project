@@ -1,0 +1,50 @@
+.hero {
+  background-size: cover;
+
+  &--wrapper {
+    background: linear-gradient(
+      90deg,
+      rgba($stiletto, 0.8) 0%,
+      rgba($stiletto, 0.8) 5%,
+      rgba($mulled-wine, 0.8) 50%,
+      rgba($white, 0) 50%
+    );
+    height: 50vh;
+  }
+
+  &--button {
+    border: 1px solid $white;
+    border-radius: 0;
+  }
+
+  &--content {
+    color: $white;
+    height: 50vh;
+
+    a {
+      color: $white;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white;
+    }
+
+    h2 {
+      font-size: 4em;
+    }
+    h3 {
+      font-size: 3em;
+      font-weight: normal;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin-bottom: 0px;
+    }
+  }
+}

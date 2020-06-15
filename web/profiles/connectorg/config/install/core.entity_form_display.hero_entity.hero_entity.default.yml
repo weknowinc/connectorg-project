@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hero_entity.hero_entity.field_image
+    - field.field.hero_entity.hero_entity.field_text
+    - image.style.thumbnail
+  module:
+    - connectorg_hero
+    - image
+    - text
+id: hero_entity.hero_entity.default
+targetEntityType: hero_entity
+bundle: hero_entity
+mode: default
+content:
+  field_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_text:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: -3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

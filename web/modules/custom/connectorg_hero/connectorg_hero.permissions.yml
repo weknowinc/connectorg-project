@@ -1,0 +1,19 @@
+add hero entity entities:
+  title: "Create new Hero entity entities"
+
+administer hero entity entities:
+  title: "Administer Hero entity entities"
+  description: "Allow to access the administration form to configure Hero entity entities."
+  restrict access: true
+
+delete hero entity entities:
+  title: "Delete Hero entity entities"
+
+edit hero entity entities:
+  title: "Edit Hero entity entities"
+
+view published hero entity entities:
+  title: "View published Hero entity entities"
+
+view unpublished hero entity entities:
+  title: "View unpublished Hero entity entities"
