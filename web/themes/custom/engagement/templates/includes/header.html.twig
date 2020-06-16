@@ -32,15 +32,6 @@
           {{ page.header_right }}
         {% endif %}
 
-        {# Waffle menu that fills with tools, these are coming from a view #}
-        <a class="waffle-tools" data-placement="bottom" data-toggle="popover" data-trigger="focus" tabindex="0"></a>
-        <div class="d-none waffle-tools-container">
-          {% set view = drupal_view_result('waffle_tools_list')|length %}
-          {% if view > 0 %}
-            {{ drupal_view('waffle_tools_list') }}
-          {% endif %}
-        </div>
-
       </div>
       <!-- end of navbar-right -->
     </div>
