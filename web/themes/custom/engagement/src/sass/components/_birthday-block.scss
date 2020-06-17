@@ -2,9 +2,6 @@ $font-color: #393939;
 $bday-logo: url("../img/assets/xmas.svg");
 
 .birthday-block {
-  width: 50%;
-  max-height: 240px;
-  max-width: 500px;
   overflow: hidden;
   background-color: #EEF4F8;
 
@@ -14,7 +11,7 @@ $bday-logo: url("../img/assets/xmas.svg");
 
     a {
       display: table;
-      padding: 1.5em;
+      padding: 0.75em;
       width: 100%;
       overflow: hidden;
       max-height: 230px;
@@ -61,4 +58,8 @@ $bday-logo: url("../img/assets/xmas.svg");
       }
     }
   }
+}
+
+.block-todays-birthdays {
+  margin-top: 30px;
 }

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.news_entity.teaser
+    - system.menu.main
   module:
     - connectorg_news
 id: news
@@ -165,7 +166,7 @@ display:
           entity_type: news_entity
           entity_field: status
           plugin_id: standard
-      title: 'News Block'
+      title: News
       header: {  }
       footer: {  }
       empty: {  }
@@ -187,6 +188,30 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: news
+      menu:
+        type: normal
+        title: News
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

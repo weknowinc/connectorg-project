@@ -5,3 +5,15 @@ definitions:
     parent: ''
     weight: 0
     expanded: false
+  user__logout:
+    weight: -49
+    parent: ''
+    menu_name: account
+    expanded: false
+    enabled: true
+  user__page:
+    weight: -50
+    menu_name: account
+    parent: ''
+    enabled: true
+    expanded: true

@@ -7,8 +7,8 @@ dependencies:
     - engagement
 id: engagement_messages
 theme: engagement
-region: header_left
-weight: 0
+region: content_header
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:

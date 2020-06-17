@@ -358,7 +358,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      title: 'Events Block'
+      title: Events
     cache_metadata:
       max-age: -1
       contexts:
@@ -409,10 +409,10 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: news
+      path: events
       menu:
         type: normal
-        title: News
+        title: Events
         description: ''
         expanded: false
         parent: ''

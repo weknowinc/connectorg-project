@@ -9,7 +9,7 @@ dependencies:
 id: socialauthlogin
 theme: engagement
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: social_auth_login
 settings:

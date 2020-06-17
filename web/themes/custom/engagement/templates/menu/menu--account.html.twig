@@ -48,7 +48,7 @@
                   <a href="{{ item.url }}" class="{{ user_classes }}"></a>
                 {% endif %}
               {% else %}
-                <a href="{{ item.url }}" class="nav-link {{ (logged_in)? 'd-none' }}">{{ item.title }}</a>
+                <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
               {% endif %}
           {% else %}
             <li{{ item.attributes.addClass(item_classes) }}>

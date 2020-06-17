@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_hero
+id: hero_entity.token
+label: Token
+targetEntityType: hero_entity
+cache: true
