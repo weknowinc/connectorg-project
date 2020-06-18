@@ -60,7 +60,7 @@ class StarEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.star_entity.canonical', ['star_entity' => $entity->id()]);
+    $form_state->setRedirect('connectorg_employee_engagement.content');
   }
 
 }

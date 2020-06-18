@@ -1,0 +1,19 @@
+.block-stars-listing {
+  .card {
+    margin: .3rem;
+  }
+  &--picture img{
+    height: auto;
+    margin: 10px;
+  }
+  &--type {
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+#block-views-block-rewards-add-a-star .views-field.views-field-tid  h4 {
+  line-height: 110px;
+}
