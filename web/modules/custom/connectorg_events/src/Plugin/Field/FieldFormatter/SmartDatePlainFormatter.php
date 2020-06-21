@@ -51,12 +51,14 @@ class SmartDatePlainFormatter extends DateTimePlainFormatter {
         $start_time = $item->start_time;
         /** @var DrupalDateTime $end_time */
         $end_time = $item->end_time;
+        $start = \Drupal::service('date.formatter')->format($start_time->getTimestamp(), 'short');
+        $end = \Drupal::service('date.formatter')->format($end_time->getTimestamp(), 'short');
 
         if ($start_time->getTimestamp() !== $end_time->getTimestamp()) {
           $elements[$delta] = [
-            'start_time' => $this->buildDate($start_time),
+            'start_time' => ['#markup' => '<div>'.$start],
             'separator' => ['#plain_text' => ' ' . $separator . ' '],
-            'end_time' => $this->buildDate($end_time),
+            'end_time' => ['#markup' => $end.'</div>'],
             'download_ics' => ['#markup' => Link::createFromRoute(
               $this->t('Add to calendar'),
               'connectorg_events.download_ics',
@@ -65,6 +67,9 @@ class SmartDatePlainFormatter extends DateTimePlainFormatter {
                 'id' => $item->getParent()->getParent()->getEntity()->id(),
                 'fieldName' => $item->getParent()->getName(),
                 'delta' => $delta
+              ],
+              [
+                'attributes'=> ['class' => 'btn btn-primary']
               ]
               )->toString()
             ]

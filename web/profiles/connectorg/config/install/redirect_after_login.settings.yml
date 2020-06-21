@@ -1,0 +1,7 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  administrator: /
+  editor: /
+  employee: /
+exclude_urls: ''

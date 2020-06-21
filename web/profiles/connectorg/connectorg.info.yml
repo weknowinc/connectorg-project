@@ -60,6 +60,7 @@ install:
   - pathauto
   - quickedit
   - rdf
+  - redirect_after_login
   - search
   - shortcut
   - smart_date

@@ -28,6 +28,7 @@
         "drupal/core-project-message": "^9",
         "drupal/ctools": "^3.2",
         "drupal/pathauto": "^1.6",
+        "drupal/redirect_after_login": "^2.6",
         "drupal/search_api": "^1.16",
         "drupal/smart_date": "^2.5",
         "drupal/social_api": "2.x-dev",

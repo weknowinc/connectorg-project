@@ -1,0 +1,277 @@
+.ui-autocomplete.ui-widget.ui-widget-content {
+  z-index: 1060;
+}
+
+.birthday-block {
+  overflow: hidden;
+  background-color: #eef4f8;
+}
+
+.birthday-block .birthday-block-content {
+  max-height: 230px;
+  overflow: hidden;
+}
+
+.birthday-block .birthday-block-content a {
+  display: table;
+  padding: 0.75em;
+  width: 100%;
+  overflow: hidden;
+  max-height: 230px;
+  position: relative;
+}
+
+.birthday-block .birthday-block-content a .icon.icon-bday {
+  background-image: url('../img/assets/xmas.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px auto;
+  z-index: 110;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: rotate(280deg);
+  transform: rotate(280deg);
+}
+
+.birthday-block .birthday-block-content a img {
+  max-width: 160px;
+  display: inline-block;
+}
+
+.birthday-block .birthday-block-content a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  text-align: left;
+  line-height: normal;
+  color: #393939;
+}
+
+.birthday-block .birthday-block-content a span p {
+  margin-bottom: 0.2rem;
+}
+
+.birthday-block .birthday-block-content a span p.birthday-name {
+  font-size: 1.8em;
+}
+
+.birthday-block .birthday-block-content a span p.birthday-regards {
+  margin-top: 0.4rem;
+}
+
+.block-todays-birthdays {
+  margin-top: 30px;
+}
+
+.event-block--title {
+  background: #0069a7;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0;
+  padding: 5px 25px;
+}
+
+.event {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event a {
+  color: #393939;
+  font-weight: 300;
+}
+
+.event a:hover {
+  text-decoration: none;
+}
+
+.event--wrapper {
+  color: #393939;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.event--date {
+  color: #7f7f7f;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.event--title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero {
+  background-size: cover;
+}
+
+.hero--wrapper {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(146, 46, 70, 0.8)), color-stop(5%, rgba(146, 46, 70, 0.8)), color-stop(50%, rgba(93, 77, 118, 0.8)), color-stop(50%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(146, 46, 70, 0.8) 0%, rgba(146, 46, 70, 0.8) 5%, rgba(93, 77, 118, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+  height: 50vh;
+}
+
+.hero--button {
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.hero--content {
+  color: #fff;
+  height: 50vh;
+}
+
+.hero--content a {
+  color: #fff;
+}
+
+.hero--content h2,
+.hero--content h3,
+.hero--content h4,
+.hero--content h5,
+.hero--content h6 {
+  color: #fff;
+}
+
+.hero--content h2 {
+  font-size: 4em;
+}
+
+.hero--content h3 {
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.hero--content h3,
+.hero--content h4,
+.hero--content h5 {
+  margin-bottom: 0px;
+}
+
+.news-block--title {
+  background: #5d4d76 0% 0% no-repeat padding-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0;
+  padding: 5px 25px;
+}
+
+.news--date {
+  color: #999;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.news--date a {
+  color: #999;
+}
+
+.news--title {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.news--title a {
+  color: #5d5d5d;
+}
+
+.news--body {
+  color: #393939;
+  font-weight: 300;
+}
+
+.news--read-more a {
+  padding: 25px;
+}
+
+.plus-button {
+  width: 50px;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), #5d4d76;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), #5d4d76;
+  background-position: center;
+  background-size: 50% 1px, 1px 50%;
+  /*thickness = 2px, length = 50% (25px)*/
+  background-repeat: no-repeat;
+}
+
+.region-content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.region-content-top section {
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+.region-content-top section:first-of-type {
+  margin-right: 10px;
+}
+
+.region-content-top section:last-of-type {
+  margin-left: 10px;
+}
+
+#navigation-group > .navbar-right .waffle-tools {
+  background: transparent url('/themes/custom/engagement/circle.png') 0% 0% no-repeat padding-box;
+  display: inline-block;
+  height: 29px;
+  opacity: 1;
+  width: 29px;
+}
+
+#navigation-group > .navbar-right .waffle-tools:focus {
+  outline: unset;
+}
+
+.waffle-tools-container .views-element-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.waffle-tools-container .views-element-container > div .views-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 10px;
+  width: 50px;
+}
+
+.waffle-tools-container .views-element-container > div .views-row .tool {
+  text-align: center;
+}
+
+.waffle-tools-container .views-element-container > div .views-row .tool .tool-icon {
+  display: inline-block;
+  height: 50px;
+}
+
+.waffle-tools-container .views-element-container > div .views-row .tool img {
+  height: auto;
+  width: 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */
