@@ -1,20 +1,6 @@
 api: 2
-core: 8.x
+core: 9.x
 projects:
-  drupal:
-    subdir: contrib
-    type: core
-    version: "8.8.x"
-    patch:
-      3103529: 'https://www.drupal.org/files/issues/2020-01-29/3103529-22.patch'
-      2985882: 'https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch'
-  balbuf/drupal-libraries-installer:
-    subdir: contrib
-    type: module
-    download:
-      type: git
-      url: 'git@github.com:balbuf/drupal-libraries-installer.git'
-      branch: 8.x-1.x
   cweagans/composer-patches:
     subdir: contrib
     type: module
