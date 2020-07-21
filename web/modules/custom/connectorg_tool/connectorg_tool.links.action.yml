@@ -1,5 +1,0 @@
-entity.tool_entity.add_form:
-  route_name: entity.tool_entity.add_form
-  title: 'Add Tool'
-  appears_on:
-    - entity.tool_entity.collection

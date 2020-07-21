@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - connectorg_news
-id: news_entity.token
-label: Token
-targetEntityType: news_entity
-cache: true

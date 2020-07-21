@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - connectorg_tool
-id: tool_entity.token
-label: Token
-targetEntityType: tool_entity
-cache: true

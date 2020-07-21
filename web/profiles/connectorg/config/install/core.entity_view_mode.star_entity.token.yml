@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - connectorg_employee_engagement
-id: star_entity.token
-label: Token
-targetEntityType: star_entity
-cache: true

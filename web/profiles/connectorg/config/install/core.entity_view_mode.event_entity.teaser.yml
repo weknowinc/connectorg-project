@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - connectorg_events
-id: event_entity.teaser
-label: Teaser
-targetEntityType: event_entity
-cache: true

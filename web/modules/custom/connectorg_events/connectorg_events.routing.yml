@@ -1,6 +1,0 @@
-connectorg_events.download_ics:
-  path: '/download/ics/{entityType}/{id}/{fieldName}/{delta}'
-  defaults:
-    _controller: '\Drupal\connectorg_events\Controller\IcsDownloadController::download'
-  requirements:
-    _access: 'TRUE'

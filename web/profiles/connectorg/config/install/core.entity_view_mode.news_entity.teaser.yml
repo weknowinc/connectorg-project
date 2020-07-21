@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - connectorg_news
-id: news_entity.teaser
-label: Teaser
-targetEntityType: news_entity
-cache: true

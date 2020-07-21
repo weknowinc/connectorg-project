@@ -1,6 +1,0 @@
-name: 'connectorg_tool'
-type: module
-description: 'Module to handle all information from tools'
-core: 8.x
-core_version_requirement: ^8 || ^9
-package: 'connectorg'
