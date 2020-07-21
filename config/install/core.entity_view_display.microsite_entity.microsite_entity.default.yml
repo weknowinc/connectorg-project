@@ -1,0 +1,136 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.microsite_entity.microsite_entity.field_description
+    - field.field.microsite_entity.microsite_entity.field_path
+    - field.field.microsite_entity.microsite_entity.field_theme
+    - field.field.microsite_entity.microsite_entity.layout_builder__layout
+  module:
+    - connectorg_microsites
+    - layout_builder
+    - layout_discovery
+    - link
+    - options
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          08de9543-e062-451c-8a6b-9e6bb9ace5ad:
+            uuid: 08de9543-e062-451c-8a6b-9e6bb9ace5ad
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:microsite_entity:microsite_entity:name'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          6e775ec6-9715-4de8-a6ea-7e033ec42fa6:
+            uuid: 6e775ec6-9715-4de8-a6ea-7e033ec42fa6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:microsite_entity:microsite_entity:field_path'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 1
+          3985bcae-1cf2-40d4-92c8-ba3921b4763b:
+            uuid: 3985bcae-1cf2-40d4-92c8-ba3921b4763b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:microsite_entity:microsite_entity:field_description'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 2
+          952c6b9a-cefb-4220-af2a-bf91842039ed:
+            uuid: 952c6b9a-cefb-4220-af2a-bf91842039ed
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:microsite_entity:microsite_entity:field_theme'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+id: microsite_entity.microsite_entity.default
+targetEntityType: microsite_entity
+bundle: microsite_entity
+mode: default
+content:
+  field_description:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_path:
+    weight: -3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_theme:
+    weight: -1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  layout_builder__layout: true
+  search_api_excerpt: true
+  status: true
+  user_id: true

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.news_entity.field_category
+  module:
+    - connectorg_news
+id: news_entity.news_entity.field_category
+field_name: field_category
+entity_type: news_entity
+bundle: news_entity
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_vocabulary'
+  handler_settings: {  }
+field_type: entity_reference

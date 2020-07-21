@@ -1,0 +1,20 @@
+add tool entities:
+  title: 'Create new Tool entities'
+
+administer tool entities:
+  title: 'Administer Tool entities'
+  description: 'Allow to access the administration form to configure Tool entities.'
+  restrict access: true
+
+delete tool entities:
+  title: 'Delete Tool entities'
+
+edit tool entities:
+  title: 'Edit Tool entities'
+
+view published tool entities:
+  title: 'View published Tool entities'
+
+view unpublished tool entities:
+  title: 'View unpublished Tool entities'
+

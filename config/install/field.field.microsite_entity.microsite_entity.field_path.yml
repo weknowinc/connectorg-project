@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.microsite_entity.field_path
+  module:
+    - connectorg_microsites
+    - link
+id: microsite_entity.microsite_entity.field_path
+field_name: field_path
+entity_type: microsite_entity
+bundle: microsite_entity
+label: Path
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

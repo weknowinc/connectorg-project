@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains connectorg_events.module.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function connectorg_events_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the connectorg_events module.
+    case 'help.page.connectorg_events':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module to handle events') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function connectorg_events_theme($existing, $type, $theme, $path) {
+  return [
+    'event_entity' => [
+      'path' => $path . '/templates',
+      'template' => 'event-entity',
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function connectorg_events_theme_suggestions_event_entity(array $variables) {
+  $suggestions = [];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $suggestions[] = 'event_entity__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function connectorg_events_preprocess_event_entity(&$variables) {
+  $variables['content'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+  $entity = $variables['elements']['#event_entity'];
+  $variables['date_start'] = $entity->hasField('field_date') && !$entity->field_date->isEmpty()
+    ? $entity->field_date->value
+    : NULL;
+  $variables['url'] = $entity->toUrl()->toString();
+}

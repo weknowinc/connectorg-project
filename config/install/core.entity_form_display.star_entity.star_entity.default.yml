@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.star_entity.star_entity.field_employee
+    - field.field.star_entity.star_entity.field_image
+    - field.field.star_entity.star_entity.field_message
+    - field.field.star_entity.star_entity.field_type
+  module:
+    - connectorg_employee_engagement
+    - text
+id: star_entity.star_entity.default
+targetEntityType: star_entity
+bundle: star_entity
+mode: default
+content:
+  field_employee:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_message:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_image: true
+  path: true
+  status: true
+  title: true
+  user_id: true

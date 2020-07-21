@@ -1,0 +1,12 @@
+.region-content-top {
+  display: flex;
+  section {
+    flex: 50%;
+    &:first-of-type {
+      margin-right: 10px;
+    }
+    &:last-of-type {
+      margin-left: 10px;
+    }
+  }
+}

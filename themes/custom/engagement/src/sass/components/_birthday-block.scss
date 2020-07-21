@@ -1,0 +1,65 @@
+$font-color: #393939;
+$bday-logo: url("../img/assets/xmas.svg");
+
+.birthday-block {
+  overflow: hidden;
+  background-color: #EEF4F8;
+
+  .birthday-block-content {
+    max-height: 230px;
+    overflow: hidden;
+
+    a {
+      display: table;
+      padding: 0.75em;
+      width: 100%;
+      overflow: hidden;
+      max-height: 230px;
+      position: relative;
+
+      .icon.icon-bday {
+        background-image: $bday-logo;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 60px auto;
+        z-index: 110;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 60px;
+        height: 60px;
+        transform: rotate(280deg);
+      }
+
+      img {
+        max-width: 160px;
+        display: inline-block;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        text-align: left;
+        line-height: normal;
+        color: $font-color;
+
+        p {
+          margin-bottom: 0.2rem;
+        }
+
+        p.birthday-name {
+          font-size: 1.8em;
+        }
+
+        p.birthday-regards {
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.block-todays-birthdays {
+  margin-top: 30px;
+}

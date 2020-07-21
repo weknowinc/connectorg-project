@@ -1,0 +1,42 @@
+
+#navigation-group > .navbar-right {
+  .waffle-tools {
+    background: transparent url('/themes/custom/engagement/circle.png') 0% 0% no-repeat padding-box;
+    display: inline-block;
+    height: 29px;
+    opacity: 1;
+    width: 29px;
+
+    &:focus {
+      outline: unset;
+    }
+  }
+}
+
+.waffle-tools-container .views-element-container > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .views-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 50px;
+
+    .tool {
+      text-align: center;
+
+      .tool-icon {
+        display: inline-block;
+        height: 50px;
+      }
+
+      img {
+        height: auto;
+        width: 50px;
+      }
+    }
+  }
+}
+

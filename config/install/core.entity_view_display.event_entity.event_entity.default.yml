@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.event_entity.event_entity.field_category
+    - field.field.event_entity.event_entity.field_date
+    - field.field.event_entity.event_entity.field_description
+    - field.field.event_entity.event_entity.field_image
+    - field.field.event_entity.event_entity.field_office
+    - field.field.event_entity.event_entity.field_tags
+    - field.field.event_entity.event_entity.field_url
+    - image.style.portrait_small
+  module:
+    - connectorg_events
+    - image
+    - text
+id: event_entity.event_entity.default
+targetEntityType: event_entity
+bundle: event_entity
+mode: default
+content:
+  field_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      separator: '-'
+    third_party_settings: {  }
+    type: smartdate_ics
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: portrait_small
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_office: true
+  field_tags: true
+  field_url: true
+  search_api_excerpt: true
+  status: true
+  user_id: true

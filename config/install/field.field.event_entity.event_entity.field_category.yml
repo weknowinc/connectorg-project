@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.event_entity.field_category
+  module:
+    - connectorg_events
+id: event_entity.event_entity.field_category
+field_name: field_category
+entity_type: event_entity
+bundle: event_entity
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_vocabulary'
+  handler_settings:
+    target_bundles: null
+    auto_create: true
+field_type: entity_reference

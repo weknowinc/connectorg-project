@@ -1,0 +1,6 @@
+name: 'connectorg_hero'
+type: module
+description: 'Module to handle Hero information'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'connectorg'

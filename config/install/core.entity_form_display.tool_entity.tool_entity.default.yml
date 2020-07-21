@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tool_entity.tool_entity.field_icon
+    - field.field.tool_entity.tool_entity.field_link
+    - image.style.thumbnail
+  module:
+    - connectorg_tool
+    - image
+    - link
+    - path
+id: tool_entity.tool_entity.default
+targetEntityType: tool_entity
+bundle: tool_entity
+mode: default
+content:
+  field_icon:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  status: true
+  user_id: true
