@@ -1,5 +1,5 @@
 api: 2
-core: 9.x
+core: 8.x
 projects:
   cweagans/composer-patches:
     subdir: contrib
