@@ -29,4 +29,3 @@ projects[twig_tweak][version] = 2.6
 projects[upgrade_status][type] = module
 projects[upgrade_status][version] = 2.9
 projects[bond][type] = theme
-projects[bond][version] = 1.0
