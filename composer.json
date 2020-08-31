@@ -1,12 +1,12 @@
 {
-  "name": "weknow/connectorg-project",
+  "name": "weknowinc/connectorg-project",
   "description": "Project template for connectorg distribution.",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "connectorg",
-      "homepage": "https://github.com/weknow",
+      "homepage": "https://github.com/weknowinc",
       "role": "Maintainer"
     }
   ],
@@ -58,7 +58,7 @@
       "post-create-project-cmd-message": [
         "<bg=blue;fg=white>                                                         </>",
         "<bg=blue;fg=white>  Congratulations, you’ve installed the connectorg distribution </>",
-        "<bg=blue;fg=white>  from the weknow/connectorg-project template!              </>",
+        "<bg=blue;fg=white>  from the weknowinc/connectorg-project template!              </>",
         "<bg=blue;fg=white>                                                         </>",
         "",
         "<bg=yellow;fg=black>Next steps</>:",
