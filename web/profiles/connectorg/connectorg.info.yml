@@ -12,7 +12,7 @@ core_version_requirement: ^8 || ^9
 
 # description: connectorg profile 1.0 for intranet projects
 distribution:
-  name: connectorg
+  name: Connectorg
 
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
