@@ -5,15 +5,15 @@ dependencies:
     - system
   theme:
     - engagement
-id: engagement_breadcrumbs
+id: engagement_mainpagecontent
 theme: engagement
-region: content_header
-weight: -5
+region: content
+weight: -7
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_main_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_main_block
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

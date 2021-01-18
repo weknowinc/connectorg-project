@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rewards
+  module:
+    - views
+  theme:
+    - engagement
+id: views_block__rewards_add_a_star
+theme: engagement
+region: content_header
+weight: 0
+provider: null
+plugin: 'views_block:rewards-add_a_star'
+settings:
+  id: 'views_block:rewards-add_a_star'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

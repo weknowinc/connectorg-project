@@ -6,15 +6,19 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Cache\Cache;
+use Drupal\Component\Serialization\Json;
 
 /**
  * Implements hook_help().
+ *
  * @param $route_name
  * @param RouteMatchInterface $route_match
+ *
  * @return string
  */
-function connectorg_employee_engagement_help($route_name, RouteMatchInterface $route_match)
-{
+function connectorg_employee_engagement_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the connectorg_employee_engagement module.
     case 'help.page.connectorg_employee_engagement':
@@ -28,39 +32,39 @@ function connectorg_employee_engagement_help($route_name, RouteMatchInterface $r
 }
 
 /**
- * Implements hook_theme().
+ * Implements hook_preprocess_HOOK().
  */
-function connectorg_employee_engagement_theme()
-{
-  return [
-    'random_stars' => [
-      'template' => 'block/block-random-employees-stars',
-      'render element' => 'children',
-      'variables' => [
-        'listStars' => []
+function connectorg_employee_engagement_preprocess_taxonomy_term(&$variables) {
+  if ($variables['view_mode'] == 'send_star') {
+    $type = !empty($variables['elements']['#taxonomy_term']) ? $variables['elements']['#taxonomy_term'] : NULL;
+    if (!empty($type)) {
+      $type = $type->id();
+    }
+    if (\Drupal::routeMatch()->getRouteName() === 'entity.user.canonical') {
+      $user = \Drupal::routeMatch()->getRawParameter('user');
+      $send_star_url = Url::fromRoute('connectorg_employee_engagement.send_a_star_type_to_user', [
+        'type' => $type,
+        'user' => $user,
+      ]);
+    }
+    else {
+      $send_star_url = Url::fromRoute('connectorg_employee_engagement.send_a_star_type', ['type' => $type]);
+    }
+    $variables['send_star_url'] = $send_star_url->toString();
+    $variables['send_star_link'] = [
+      '#type' => 'link',
+      '#title' => t('Send'),
+      '#url' => $send_star_url,
+      '#attributes' => [
+        'class' => ['use-ajax'],
+        'data-dialog-type' => 'modal',
+        'data-dialog-options' => Json::encode([
+          'width' => 700,
+        ]),
       ],
-    ],
-    'list_stars' => [
-      'template' => 'block/block-employees-stars',
-      'render element' => 'children',
-      'variables' => [
-        'listStars' => []
-      ],
-    ],
-    'ranking' => [
-      'template' => 'block/block-ranking-stars-employees',
-      'render element' => 'children',
-      'variables' => [
-        'listUsers' => []
-      ],
-    ],
-    'add_star' => [
-      'template' => 'block/block-add-stars-employees',
-      'render element' => 'children',
-      'variables' => [
-        'listUsers' => [],
-        'listTypes' => [],
-      ],
-    ],
-  ];
+    ];
+    $variables['#cache']['max-age'] = Cache::PERMANENT;
+    $variables['#cache']['contexts'][] = 'url';
+  }
 }
+

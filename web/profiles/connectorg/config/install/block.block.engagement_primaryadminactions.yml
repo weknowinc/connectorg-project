@@ -1,19 +1,17 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
     - engagement
-id: engagement_mainpagecontent
+id: engagement_primaryadminactions
 theme: engagement
 region: content
-weight: -3
+weight: -8
 provider: null
-plugin: system_main_block
+plugin: local_actions_block
 settings:
-  id: system_main_block
-  label: 'Main page content'
-  provider: system
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
   label_display: '0'
 visibility: {  }

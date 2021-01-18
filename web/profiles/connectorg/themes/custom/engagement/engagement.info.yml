@@ -19,6 +19,7 @@ regions:
   content: Content
   content_bottom: Content Bottom
   content_bottom_fluid: Content Bottom Fluid
+  sidebar_left: Sidebar Left
   sidebar_right: Sidebar Right
   footer_top: Footer Top
   footer: Footer

@@ -4,9 +4,9 @@
 {%
   set page_header_classes = [
     'page-header-wrapper',
-     bond.page_header_style ? 'type-' ~ bond.page_header_style|clean_class : 'empty',
-     node.field_image.entity.uri.value  ? 'has-' ~ 'image' : 'no-image',
-     bond.page_header_style == 'box-size' ? 'container',
+    bond.page_header_style ? 'type-' ~ bond.page_header_style|clean_class : 'empty',
+    node.field_image.entity.uri.value  ? 'has-' ~ 'image' : 'no-image',
+    bond.page_header_style == 'box-size' ? 'container',
   ]
 %}
 
@@ -16,94 +16,118 @@
   ]
 %}
 
-{% if bond.header_position == 'header-left' %}
-  <div class="main-content-wrapper">
+{% set has_sidebar_left = page.sidebar_left and page.sidebar_left is not empty %}
+{% set has_sidebar_right = page.sidebar_right and page.sidebar_right is not empty %}
+{% set has_two_sidebars = has_sidebar_left and has_sidebar_right %}
+
+{% set content_classes = ['col-md-12'] %}
+
+{% if has_sidebar_left or has_sidebar_right %}
+	{% set content_classes = ['col-md-9'] %}
 {% endif %}
-  {% include '@engagement/includes/header.html.twig' %}
 
-  <!-- If header position is left then add wrapper div -->
-  {% if bond.header_position == 'header-left' %}
-    <div class="content-right">
-  {% endif %}
+{% if has_two_sidebars %}
+	{% set content_classes = ['col-md-9', 'col-lg-6'] %}
+{% endif %}
 
-  {% if bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size' %}
-    <div
-      {{ page_header_attribute.addClass(page_header_classes) }}
-      {{ page_header_attribute.setAttribute('style', page_header_styles) }}>
-    {% endif %}
-      {% if not is_front %}
-        {% if page.content_header %}
-          {{page.content_header }}
-        {% endif %}
-      {% endif %}
-    {% if bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size' %}
-      </div>
-    {% endif %}
-
-    <!-- top Fluid section -->
-    {% if page.content_top_fluid %}
-      {{ page.content_top_fluid }}
-    {% endif %}
-    <!-- end top fluid section -->
-
-    {%
-            set content_classes = [
-              page.sidebar_right ? 'col-md-9',
-              page.sidebar_right is empty ? 'col-md-12'
-            ]
-    %}
-
-    <section class="content-wrapper">
-      <div class="container">
-        <div class="row">
-          <div {{ content_attributes.addClass(content_classes) }}>
-
-            <!-- page top section -->
-            {% if page.content_top %}
-              {{ page.content_top }}
-            {% endif %}
-            <!-- page top section -->
-
-    {% if node_has_image and (bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size') %}
-      {{ page.content|without('field_image') }}
-    {% else %}
-      {{ page.content }}
-    {% endif %}
-
-            <!-- page bottom section -->
-            {% if page.content_bottom %}
-              {{ page.content_bottom }}
-            {% endif %}
-            <!-- page bottom section -->
-
-          </div>
-
-          {% if page.sidebar_right %}
-            <div class="col-md-3 sidebar">
-              {% block sidebar_right %}
-                <aside role="complementary">
-                  {{ page.sidebar_right }}
-                </aside>
-              {% endblock %}
-            </div>
-          {% endif %}
-
-        </div>
-      </div>
-    </section>
-
-    <!-- bottom Fluid section -->
-    {% if page.content_bottom_fluid %}
-      {{ page.content_bottom_fluid }}
-    {% endif %}
-    <!-- bottom top fluid section -->
-
-    {% include '@engagement/includes/footer.html.twig' %}
-
-  {% if bond.header_position %}
-    </div>
-  {% endif %}
 
 {% if bond.header_position == 'header-left' %}
-  </div>
-{% endif %}
+	<div class="main-content-wrapper">
+	{% endif %}
+
+	{% include '@engagement/includes/header.html.twig' %}
+
+	<!-- If header position is left then add wrapper div -->
+	{% if bond.header_position == 'header-left' %}
+		<div class="content-right">
+		{% endif %}
+
+		{% if bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size' %}
+			<div {{ page_header_attribute.addClass(page_header_classes) }} {{ page_header_attribute.setAttribute('style', page_header_styles) }}>
+			{% endif %}
+			{% if not is_front %}
+				{% if page.content_header %}
+					{{page.content_header }}
+				{% endif %}
+			{% endif %}
+			{% if bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size' %}
+			</div>
+		{% endif %}
+
+		<!-- top Fluid section -->
+		{% if page.content_top_fluid %}
+			{{ page.content_top_fluid }}
+		{% endif %}
+		<!-- end top fluid section -->
+
+		<section class="content-wrapper">
+			{% if page.sidebar_left %}
+				<div class="container-fluid">
+				{% else %}
+					<div class="container">
+					{% endif %}
+
+					<div class="row">
+
+						{% if page.sidebar_left %}
+							<div class="col-md-3 sidebar">
+								{% block sidebar_left %}
+									<aside role="complementary">
+										{{ page.sidebar_left }}
+									</aside>
+								{% endblock %}
+							</div>
+						{% endif %}
+
+						<div
+							{{ content_attributes.addClass(content_classes) }}>
+
+							<!-- page top section -->
+							{% if page.content_top %}
+								{{ page.content_top }}
+							{% endif %}
+							<!-- page top section -->
+
+							{% if node_has_image and (bond.page_header_style == 'full-size' or bond.page_header_style == 'box-size') %}
+								{{ page.content|without('field_image') }}
+							{% else %}
+								{{ page.content }}
+							{% endif %}
+
+							<!-- page bottom section -->
+							{% if page.content_bottom %}
+								{{ page.content_bottom }}
+							{% endif %}
+							<!-- page bottom section -->
+
+						</div>
+
+						{% if page.sidebar_right %}
+							<div class="col-md-3 sidebar">
+								{% block sidebar_right %}
+									<aside role="complementary">
+										{{ page.sidebar_right }}
+									</aside>
+								{% endblock %}
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			</section>
+
+			<!-- bottom Fluid section -->
+			{% if page.content_bottom_fluid %}
+				{{ page.content_bottom_fluid }}
+			{% endif %}
+			<!-- bottom top fluid section -->
+
+			{% include '@engagement/includes/footer.html.twig' %}
+
+			{% if bond.header_position %}
+			</div>
+		{% endif %}
+
+		{% if bond.header_position == 'header-left' %}
+		</div>
+	{% endif %}

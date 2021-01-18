@@ -39,7 +39,7 @@ use Drupal\user\UserInterface;
  *   admin_permission = "administer star entities",
  *   entity_keys = {
  *     "id" = "id",
- *     "label" = "title",
+ *     "label" = "id",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
  *     "langcode" = "langcode",
@@ -74,7 +74,22 @@ class StarEntity extends ContentEntityBase implements StarEntityInterface {
    * {@inheritdoc}
    */
   public function getTitle() {
-    return $this->get('title')->value;
+    return $this->label();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function label()
+  {
+    if (!$this->get('field_type')->isEmpty()) {
+      $type = $this->get('field_type')->referencedEntities();
+      $type = current($type);
+      $label = $type->label();
+    } else {
+      $label = 'Unknown reward type';
+    }
+    return $label;
   }
 
   /**
@@ -140,8 +155,8 @@ class StarEntity extends ContentEntityBase implements StarEntityInterface {
     $fields += static::publishedBaseFieldDefinitions($entity_type);
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Authored by'))
-      ->setDescription(t('The author of this reward.'))
+      ->setLabel(t('Sent by'))
+      ->setDescription(t('The user who sent this star.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -163,28 +178,7 @@ class StarEntity extends ContentEntityBase implements StarEntityInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['title'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Title'))
-      ->setDescription(t('The title of the reward.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => -4,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE)
-      ->setRequired(TRUE);
-
-    $fields['status']->setDescription(t('A flag indicating whether this reward is published.'))
+    $fields['status']->setDescription(t('A flag indicating whether this star is hidden.'))
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
         'weight' => -3,

@@ -18,7 +18,7 @@ class StarEntityListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['id'] = $this->t('ID');
-    $header['title'] = $this->t('Title');
+    $header['type'] = $this->t('Type');
     return $header + parent::buildHeader();
   }
 
@@ -28,7 +28,7 @@ class StarEntityListBuilder extends EntityListBuilder {
   public function buildRow(EntityInterface $entity) {
     /* @var \Drupal\connectorg_employee_engagement\Entity\StarEntity $entity */
     $row['id'] = $entity->id();
-    $row['title'] = Link::createFromRoute(
+    $row['type'] = Link::createFromRoute(
       $entity->label(),
       'entity.star_entity.edit_form',
       ['star_entity' => $entity->id()]
