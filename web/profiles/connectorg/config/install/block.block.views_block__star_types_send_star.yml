@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.star_types
+  module:
+    - system
+    - views
+  theme:
+    - engagement
+id: views_block__star_types_send_star
+theme: engagement
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:star_types-send_star'
+settings:
+  id: 'views_block:star_types-send_star'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stars\r\n/user/*"
+    negate: false

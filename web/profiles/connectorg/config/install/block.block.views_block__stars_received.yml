@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.stars
+  module:
+    - system
+    - views
+  theme:
+    - engagement
+id: views_block__stars_received
+theme: engagement
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:stars-received'
+settings:
+  id: 'views_block:stars-received'
+  label: Received
+  provider: views
+  label_display: visible
+  views_label: Received
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
