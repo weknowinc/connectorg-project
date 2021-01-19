@@ -35,5 +35,4 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-hidden:
-  langcode: true
+hidden: {  }

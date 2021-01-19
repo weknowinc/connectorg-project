@@ -1,0 +1,54 @@
+.block-user-stars-counter {
+  border: 0;
+
+  &::before {
+    display: none !important;
+  }
+
+  .content {
+    box-shadow: $box-shadow-2;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        padding: 0;
+        border: 0;
+      }
+    }
+
+    .star-counter-description {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.star-counter {
+  .circle-wrapper {
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+
+    .circle {
+      filter: contrast(1.5) blur(10px);
+      background-size: 55px;
+      width: 55px;
+      height: 55px;
+    }
+
+    .counter-value {
+      width: 55px;
+      height: 55px;
+      color: #fff;
+      font-size: 26px;
+      position: relative;
+      text-align: center;
+      line-height: 55px;
+      margin-top: -55px;
+    }
+  }
+}

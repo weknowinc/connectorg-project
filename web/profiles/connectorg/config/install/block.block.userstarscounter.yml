@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - connectorg_employee_engagement
+    - system
+  theme:
+    - engagement
+id: userstarscounter
+theme: engagement
+region: sidebar_left
+weight: -8
+provider: null
+plugin: user_stars_counter
+settings:
+  id: user_stars_counter
+  label: 'User stars counter'
+  provider: connectorg_employee_engagement
+  label_display: '0'
+  description: 'Lorem impsum goes here'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

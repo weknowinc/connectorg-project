@@ -1,0 +1,43 @@
+<div class="star-entity star-entity-wrapper {% if is_user_page %}is-user-page{% endif %}">
+  <div class="content-first {% if user_from.own_page %}reverse{% endif %}">
+    <div class="user user-from {% if user_from.own_page %}own-page{% endif %}">
+      <div class="picture">
+        <a href="{{ user_from.url }}">
+          <img src="{{ user_from.picture }}"
+               alt="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}"
+               title="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}">
+        </a>
+      </div>
+      <div class="name">
+        {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}
+      </div>
+    </div>
+    <div class="star-type-icon {% if user_from.own_page or user_to.own_page %}alt{% endif %}">
+      <img src="{{ type_icon }}">
+    </div>
+    <div class="user user-to {% if user_to.own_page %}own-page{% endif %}">
+      <div class="picture">
+        <a href="{{ user_to.url }}">
+          <img src="{{ user_to.picture }}"
+               alt="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}"
+               title="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}">
+        </a>
+      </div>
+      <div class="name">
+        {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}
+      </div>
+    </div>
+  </div>
+  <div class="content-second">
+    <div class="star-type">
+      {{ type }}
+    </div>
+    <div class="star-message">
+      {{ message }}
+    </div>
+    <div class="star-date">
+      {{ date }}
+    </div>
+  </div>
+</div>
+

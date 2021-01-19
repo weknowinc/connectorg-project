@@ -28,6 +28,9 @@
 <div{{ attributes.addClass("send-star-wrapper") }}>
   <a href="{{ send_star_url }}" class="use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:700}">
     {{ content.field_image }}
-    {{ name }}
+    <div class="content-beside">
+      {{ name }}
+      {{ content.description }}
+    </div>
   </a>
 </div>

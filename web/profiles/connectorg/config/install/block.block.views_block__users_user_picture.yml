@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.users
+  module:
+    - system
+    - views
+  theme:
+    - engagement
+id: views_block__users_user_picture
+theme: engagement
+region: sidebar_left
+weight: -9
+provider: null
+plugin: 'views_block:users-user_picture'
+settings:
+  id: 'views_block:users-user_picture'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

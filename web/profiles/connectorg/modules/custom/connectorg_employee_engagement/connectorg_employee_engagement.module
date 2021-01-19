@@ -5,10 +5,12 @@
  * Contains connectorg_employee_engagement.module.
  */
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Cache\Cache;
 use Drupal\Component\Serialization\Json;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Implements hook_help().
@@ -66,5 +68,79 @@ function connectorg_employee_engagement_preprocess_taxonomy_term(&$variables) {
     $variables['#cache']['max-age'] = Cache::PERMANENT;
     $variables['#cache']['contexts'][] = 'url';
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function connectorg_employee_engagement_theme($existing, $type, $theme, $path) {
+  return [
+    'star_entity' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for star entity templates.
+ *
+ * Default template: star-entity.html.twig.
+ */
+function template_preprocess_star_entity(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  $variables['star'] = $variables['elements']['#star_entity'];
+  $variables['content'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+
+  $star = $variables['star'];
+
+  $user_from = $star->get('user_id')->referencedEntities();
+  $user_from = current($user_from);
+  $variables['user_from']['user'] = $user_from;
+  $variables['user_from']['url'] = $user_from->toUrl()->toString();
+  $picture = NULL;
+  if (!$user_from->get('user_picture')->isEmpty()) {
+    $picture = $user_from->get('user_picture')->entity->getFileUri();
+    $picture = ImageStyle::load('thumbnail')->buildUrl($picture);
+  }
+  $variables['user_from']['picture'] = $picture;
+
+  $user_to = $star->get('field_employee')->referencedEntities();
+  $user_to = current($user_to);
+  $variables['user_to']['user'] = $user_to;
+  $variables['user_to']['url'] = $user_to->toUrl()->toString();
+  $picture = NULL;
+  if (!$user_to->get('user_picture')->isEmpty()) {
+    $picture = $user_to->get('user_picture')->entity->getFileUri();
+    $picture = ImageStyle::load('thumbnail')->buildUrl($picture);
+  }
+  $variables['user_to']['picture'] = $picture;
+
+  $type = $star->get('field_type')->referencedEntities();
+  $type = current($type);
+  $variables['type'] = $type->label();
+  $type_icon = NULL;
+  if(!$type->get('field_image')->isEmpty()) {
+    $type_icon = $type->get('field_image')->entity->getFileUri();
+    $type_icon = ImageStyle::load('thumbnail')->buildUrl($type_icon);
+  }
+  $variables['type_icon'] = $type_icon;
+  $variables['message'] = $star->get('field_message')->value;
+  $variables['date'] = \Drupal::service('date.formatter')
+    ->format($star->getCreatedTime(), 'short_date');
+
+  $variables['user_from']['own_page'] = FALSE;
+  $variables['user_to']['own_page'] = FALSE;
+  $variables['is_user_page'] = (\Drupal::routeMatch()->getRouteName() === 'entity.user.canonical');
+  if ($variables['is_user_page']) {
+    $user = \Drupal::routeMatch()->getParameter('user');
+    $variables['user_from']['own_page'] = ($user_from->id() === $user->id());
+    $variables['user_to']['own_page'] = ($user_to->id() === $user->id());
+  }
+
+  $variables['#cache']['max-age'] = Cache::PERMANENT;
+  $variables['#cache']['contexts'][] = 'url';
 }
 

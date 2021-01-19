@@ -1,0 +1,22 @@
+.block-views-blockusers-user-picture {
+  &::before {
+    display: none !important;
+  }
+
+  display: flex;
+  justify-content: center;
+  border: 0 !important;
+  margin-bottom: 15px !important;
+
+  .views-field-user-picture {
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  .views-field-nothing,
+  .views-field-field-job-title {
+    font-size: 23px;
+    text-align: center;
+  }
+}
