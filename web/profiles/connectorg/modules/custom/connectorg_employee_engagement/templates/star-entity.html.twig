@@ -2,10 +2,14 @@
   <div class="content-first {% if user_from.own_page %}reverse{% endif %}">
     <div class="user user-from {% if user_from.own_page %}own-page{% endif %}">
       <div class="picture">
-        <a href="{{ user_from.url }}">
-          <img src="{{ user_from.picture }}"
-               alt="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}"
-               title="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}">
+        <a href="{{ user_from.url }}" class="picture {% if not user_from.picture %}fa fa-user-circle{% endif %}"
+           alt="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}"
+           title="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}">
+          {% if user_from.picture %}
+            <img src="{{ user_from.picture }}"
+                 alt="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}"
+                 title="{{ "From"|t }} {{ user_from.user.field_name.0.value }} {{ user_from.user.field_last_name.0.value }}">
+          {% endif %}
         </a>
       </div>
       <div class="name">
@@ -17,10 +21,14 @@
     </div>
     <div class="user user-to {% if user_to.own_page %}own-page{% endif %}">
       <div class="picture">
-        <a href="{{ user_to.url }}">
-          <img src="{{ user_to.picture }}"
-               alt="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}"
-               title="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}">
+        <a href="{{ user_to.url }}" class="picture {% if not user_to.picture %}fa fa-user-circle{% endif %}"
+           alt="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}"
+           title="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}">
+          {% if user_to.picture %}
+            <img src="{{ user_to.picture }}"
+                 alt="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}"
+                 title="{{ "To"|t }} {{ user_to.user.field_name.0.value }} {{ user_to.user.field_last_name.0.value }}">
+          {% endif %}
         </a>
       </div>
       <div class="name">

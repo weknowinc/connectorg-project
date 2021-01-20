@@ -5,66 +5,65 @@ namespace Drupal\connectorg_birthdays\Plugin\Block;
 use Drupal;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'TodaysBirthdays' block.
+ * Provides a "Today's Birthdays" block.
  *
  * @Block(
  *  id = "todays_birthdays",
- *  admin_label = @Translation("Todays birthdays"),
+ *  admin_label = @Translation("Today's birthdays"),
  * )
  */
-class TodaysBirthdays extends BlockBase
-{
+class TodaysBirthdays extends BlockBase {
 
   /**
-   * @return EntityInterface[]
+   * {@inheritdoc}
    */
-  public function getAll()
-  {
-    $config = $this->getConfiguration();
-    $currentTime = new DrupalDateTime();
-    $currentTime = $currentTime->format("m-d");
-    $query = Drupal::database()->select('users', 'u')->fields('u');
-    $query->innerJoin('user__field_birthday', 'field_birthday', 'field_birthday.entity_id = u.uid');
-    $query->innerJoin('user__user_picture', 'field_avatar', 'field_avatar.entity_id = u.uid');
-    $expression = "DATE_FORMAT(field_birthday.field_birthday_value,'%m-%d')";
-    $args = [
-      ':birthday' => $currentTime
+  public function defaultConfiguration() {
+    return [
+      'birthday_block_header' => 'Today we celebrate the birthday of',
     ];
-    $query->where($expression . '=:birthday', $args);
-    $ids = $query->execute()->fetchCol();
-    $users = User::loadMultiple($ids);
-    $listUsers = [];
-    foreach ($users as $rowUser) {
-      $fileUri =  ($rowUser->hasField('user_picture')) ? $rowUser->get('user_picture')->entity->getFileUri() : 'none.jpg';
-      $id = $rowUser->id();
-      $name = ($rowUser->hasField('field_name') && isset($rowUser->get('field_name')->value))
-        ? $rowUser->get('field_name')->value
-        : '';
-      $jobTitle = ($rowUser->hasField('field_job_title') && isset($rowUser->get('field_job_title')->entity))
-        ? $rowUser->get('field_job_title')->entity->getName()
-        : '';
-      $lastName = ($rowUser->hasField('field_last_name') && isset($rowUser->get('field_last_name')->value))
-        ? $rowUser->get('field_last_name')->value
-        : '';
-      $fullName = sprintf("%s %s", $name, $lastName);
-      $listUsers[] = [
-        'url' => $fileUri,
-        'id' => $id,
-        'name' => ucfirst($fullName),
-        'jobTitle' => ucfirst($jobTitle),
-        'header' => $config['birthday_block_header'] ?: $this->t('Today is we celebrate the birthday of'),
-      ];
-    }
-    return ($listUsers);
   }
 
-  public function getCacheMaxAge()
-  {
+  /**
+   * @return array
+   */
+  public function getList(DrupalDateTime $date = NULL) {
+    if (empty($date)) {
+      $date = new DrupalDateTime();
+    }
+    $date = $date->format("m-d");
+    $query = Drupal::database()->select('users', 'u')->fields('u');
+    // @todo refactor to use entity query, this assumes that field exists.
+    $query->innerJoin('user__field_birthday', 'field_birthday', 'field_birthday.entity_id = u.uid');
+    $expression = "DATE_FORMAT(field_birthday.field_birthday_value,'%m-%d')";
+    $query->where($expression . '=:birthday', [':birthday' => $date]);
+    $users = $query->execute()->fetchCol();
+    // @todo inject dependency.
+    $items = [];
+    foreach ($users as $uid) {
+      $user = User::load($uid);
+      $user_picture_uri = $user->hasField('user_picture') ? $user->get('user_picture')->entity->getFileUri() : 'none.jpg';
+      $job_title = $user->hasField('field_job_title') ? $user->get('field_job_title')->entity->label() : '';
+      $name = $user->hasField('field_name') ? $user->get('field_name')->value : '';
+      $last_name = $user->hasField('field_last_name') ? $user->get('field_last_name')->value : '';
+      $items[] = [
+        'user' => $user,
+        'picture' => file_create_url($user_picture_uri),
+        'url' => $user->toUrl(),
+        'name' => ucwords($name . ' ' . $last_name),
+        'job_title' => $job_title,
+      ];
+    }
+    return $items;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
     return 0;
   }
 
@@ -73,14 +72,11 @@ class TodaysBirthdays extends BlockBase
    */
   public function blockForm($form, FormStateInterface $form_state) {
     $form = parent::blockForm($form, $form_state);
-
-    $config = $this->getConfiguration();
-
     $form['birthday_block_header'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Header'),
       '#description' => $this->t('Birthday block header message.'),
-      '#default_value' => isset($config['birthday_block_header']) ? $config['birthday_block_header'] : '',
+      '#default_value' => isset($this->configuration['birthday_block_header']) ? $this->configuration['birthday_block_header'] : '',
     ];
 
     return $form;
@@ -98,12 +94,12 @@ class TodaysBirthdays extends BlockBase
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
-    $todayBirthdays = $this->getAll();
-    $build = [];
-    $build['#theme'] = 'todays_birthdays';
-    $build['#listBirthdays'] = $todayBirthdays;
+  public function build() {
+    $build['birthdays'] = [
+      '#theme' => 'todays_birthdays',
+      '#list' => $this->getList(),
+      '#header' => $this->t($this->configuration['birthday_block_header']),
+    ];
     return $build;
   }
 

@@ -253,6 +253,10 @@
   height: 100%;
 }
 
+.star-entity-wrapper .content-first .user .picture.fa::before {
+  font-size: 100px;
+}
+
 .star-entity-wrapper .content-first .star-type-icon {
   width: 64px;
   height: 64px;
@@ -445,7 +449,7 @@
 }
 
 #navigation-group > .navbar-right .waffle-tools {
-  background: transparent url('/themes/custom/engagement/circle.png') 0% 0% no-repeat padding-box;
+  background: transparent url('../img/assets/circle.png') 0% 0% no-repeat padding-box;
   display: inline-block;
   height: 29px;
   opacity: 1;

@@ -1,5 +1,0 @@
-entity.birthday_entity.add_form:
-  route_name: entity.birthday_entity.add_form
-  title: 'Add Birthday'
-  appears_on:
-    - entity.birthday_entity.collection

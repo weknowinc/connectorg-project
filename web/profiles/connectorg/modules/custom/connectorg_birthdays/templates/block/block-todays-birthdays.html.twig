@@ -13,17 +13,19 @@
   'birthday-block',
 ] %}
 <div class="ws-custom--block {{ classes|join(' ') }}">
-  {% for value in listBirthdays %}
-  <div class="birthday-block-content">
-    <a href="/user/{{ value.id }}">
-      <div class="icon icon-bday"></div>
-      <img class="img-thumbnail rounded-circle" src="{{ file_url(value.url) }}">
-      <span>
-        <p>{{ value.header }}</p>
-        <p class="birthday-name">{{ value.name|capitalize }}</p>
-        <p class="birthday-regards">{{ value.jobTitle }}</p>
-      </span>
-    </a>
-  </div>
+  {% for item in list %}
+    <div class="birthday-block-content">
+      <a href="{{ item.url }}">
+        <div class="icon icon-bday"></div>
+        <img class="img-thumbnail rounded-circle" src="{{ item.picture }}">
+        <span>
+          {% if header %}
+            <p>{{ header }}</p>
+          {% endif %}
+          <p class="birthday-name">{{ item.name }}</p>
+          <p class="birthday-regards">{{ item.job_title }}</p>
+        </span>
+      </a>
+    </div>
   {% endfor %}
 </div>
