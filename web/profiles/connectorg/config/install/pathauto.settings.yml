@@ -1,5 +1,4 @@
 enabled_entity_types:
-  - birthday_entity
   - star_entity
   - event_entity
   - microsite_entity
