@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.rewards.field_image
+    - field.field.taxonomy_term.star_types.field_image
     - image.style.thumbnail
-    - taxonomy.vocabulary.rewards
+    - taxonomy.vocabulary.star_types
   module:
     - image
     - path
     - text
-id: taxonomy_term.rewards.default
+id: taxonomy_term.star_types.default
 targetEntityType: taxonomy_term
-bundle: rewards
+bundle: star_types
 mode: default
 content:
   description:

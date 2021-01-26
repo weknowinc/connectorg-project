@@ -73,10 +73,10 @@ class SendStarForm extends FormBase implements ContainerInjectionInterface {
     $enable_type = (empty($type) || !$type->isPublished());
     $form['type'] = [
       '#type' => 'entity_autocomplete',
-      '#title' => $this->t('Reward type'),
+      '#title' => $this->t('Star type'),
       '#target_type' => 'taxonomy_term',
       '#default_value' => $enable_type ? NULL : $type,
-      '#selection_settings' => ['target_bundles' => ['rewards']],
+      '#selection_settings' => ['target_bundles' => ['star_types']],
       '#required' => TRUE,
       '#access' => $enable_type
     ];

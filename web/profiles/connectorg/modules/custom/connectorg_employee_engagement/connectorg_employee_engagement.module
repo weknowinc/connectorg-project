@@ -26,7 +26,7 @@ function connectorg_employee_engagement_help($route_name, RouteMatchInterface $r
     case 'help.page.connectorg_employee_engagement':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Module created to manage employee engagement based on rewards') . '</p>';
+      $output .= '<p>' . t('Module created to manage employee engagement based on Stars') . '</p>';
       return $output;
 
     default:

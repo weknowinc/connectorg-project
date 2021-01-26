@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.send_star
-    - field.field.taxonomy_term.rewards.field_image
+    - field.field.taxonomy_term.star_types.field_image
     - image.style.thumbnail
-    - taxonomy.vocabulary.rewards
+    - taxonomy.vocabulary.star_types
   module:
     - image
     - layout_builder
@@ -14,9 +14,9 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: taxonomy_term.rewards.send_star
+id: taxonomy_term.star_types.send_star
 targetEntityType: taxonomy_term
-bundle: rewards
+bundle: star_types
 mode: send_star
 content:
   description:

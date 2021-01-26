@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_image
-    - taxonomy.vocabulary.rewards
+    - taxonomy.vocabulary.star_types
   module:
     - image
-id: taxonomy_term.rewards.field_image
+id: taxonomy_term.star_types.field_image
 field_name: field_image
 entity_type: taxonomy_term
-bundle: rewards
+bundle: star_types
 label: Image
 description: ''
 required: false

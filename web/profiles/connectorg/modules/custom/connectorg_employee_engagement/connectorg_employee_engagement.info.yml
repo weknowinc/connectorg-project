@@ -1,6 +1,6 @@
 name: 'connectorg_employee_engagement'
 type: module
-description: 'Module created to manage employee engagement based on rewards'
+description: 'Module created to manage employee engagement based on Stars'
 core: 8.x
 core_version_requirement: ^8 || ^9
 package: 'connectorg'

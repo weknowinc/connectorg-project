@@ -163,7 +163,7 @@ class UserStarsCounterBlock extends BlockBase implements ContainerFactoryPluginI
   protected function getStarTypes() {
     return $this->entityTypeManager->getStorage('taxonomy_term')
       ->loadByProperties([
-        'vid' => 'rewards',
+        'vid' => 'star_types',
         'status' => '1',
       ]);
   }

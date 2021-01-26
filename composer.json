@@ -22,6 +22,7 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "~1.0",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/bond": "1.0.x-dev@dev",
         "drupal/core": "9.0.0 as 8.8.x-dev",
         "drupal/core-composer-scaffold": "^9",

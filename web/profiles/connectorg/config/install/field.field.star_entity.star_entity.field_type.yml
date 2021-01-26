@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.star_entity.field_type
-    - taxonomy.vocabulary.rewards
+    - taxonomy.vocabulary.star_types
   module:
     - connectorg_employee_engagement
 id: star_entity.star_entity.field_type
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      rewards: rewards
+      star_types: star_types
     sort:
       field: name
       direction: asc
