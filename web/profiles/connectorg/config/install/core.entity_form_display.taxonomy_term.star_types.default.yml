@@ -2,10 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.star_types.field_color
     - field.field.taxonomy_term.star_types.field_image
     - image.style.thumbnail
     - taxonomy.vocabulary.star_types
   module:
+    - color_field
     - image
     - path
     - text
@@ -16,12 +18,18 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_image:
     weight: 1
     settings:
@@ -40,7 +48,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -48,7 +56,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
 hidden: {  }

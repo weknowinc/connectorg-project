@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color
+    - taxonomy.vocabulary.star_types
+  module:
+    - color_field
+id: taxonomy_term.star_types.field_color
+field_name: field_color
+entity_type: taxonomy_term
+bundle: star_types
+label: Color
+description: 'Color associated to the star.'
+required: true
+translatable: false
+default_value:
+  -
+    color: '#e1e1e1'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

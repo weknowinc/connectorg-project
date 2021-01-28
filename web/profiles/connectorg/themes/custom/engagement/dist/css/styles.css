@@ -247,8 +247,15 @@
   height: 100px;
 }
 
+.star-entity-wrapper .content-first .user .picture a,
+.star-entity-wrapper .content-first .user .picture a:hover,
+.star-entity-wrapper .content-first .user .picture a:visited {
+  text-decoration: none;
+}
+
 .star-entity-wrapper .content-first .user .picture img {
   border-radius: 100%;
+  border: 1px solid #f1eaea;
   width: 100%;
   height: 100%;
 }
@@ -385,9 +392,6 @@
 }
 
 .star-counter .circle-wrapper .circle {
-  -webkit-filter: contrast(1.5) blur(10px);
-  filter: contrast(1.5) blur(10px);
-  background-size: 55px;
   width: 55px;
   height: 55px;
 }

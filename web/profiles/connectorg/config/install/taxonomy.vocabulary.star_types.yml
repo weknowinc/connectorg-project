@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: Star types
+name: 'Star types'
 vid: star_types
 description: 'Star types definition'
 weight: 0

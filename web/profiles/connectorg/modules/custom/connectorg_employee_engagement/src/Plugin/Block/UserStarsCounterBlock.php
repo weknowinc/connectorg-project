@@ -125,13 +125,12 @@ class UserStarsCounterBlock extends BlockBase implements ContainerFactoryPluginI
     $counters = $this->getCounters($user);
     $items = [];
     foreach ($this->getStarTypes() as $star_type) {
-      $icon = $this->getStarTypeIcon($star_type);
       // @todo implement template.
       $item = [
         '#type' => 'inline_template',
-        '#template' => '<div class="star-counter" title="{{ star_type_name }}"><div class="circle-wrapper"><div class="circle" style="background-image: url({{ icon }})"></div><div class="counter-value">{{ counter }}</div></div></div>',
+        '#template' => '<div class="star-counter" title="{{ star_type_name }}"><div class="circle-wrapper"><div class="circle" style="background-color: {{ color }}"></div><div class="counter-value">{{ counter }}</div></div></div>',
         '#context' => [
-          'icon' => $icon,
+          'color' => $this->getStarTypeColor($star_type),
           'counter' => isset($counters[$star_type->id()]) ? $counters[$star_type->id()] : 0,
           'star_type_name' => $star_type->label(),
         ],
@@ -193,6 +192,14 @@ class UserStarsCounterBlock extends BlockBase implements ContainerFactoryPluginI
       $type_icon = ImageStyle::load('thumbnail')->buildUrl($type_icon);
     }
     return $type_icon;
+  }
+
+  protected function getStarTypeColor($star_type) {
+    $color = NULL;
+    if (!$star_type->get('field_color')->isEmpty()) {
+      $color = $star_type->get('field_color')->color;
+    }
+    return $color;
   }
 
   public function getCacheContexts() {

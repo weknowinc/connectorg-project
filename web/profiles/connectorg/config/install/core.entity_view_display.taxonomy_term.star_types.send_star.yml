@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.send_star
+    - field.field.taxonomy_term.star_types.field_color
     - field.field.taxonomy_term.star_types.field_image
     - image.style.thumbnail
     - taxonomy.vocabulary.star_types
@@ -35,4 +36,5 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-hidden: {  }
+hidden:
+  field_color: true

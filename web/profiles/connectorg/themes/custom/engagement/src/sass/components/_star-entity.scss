@@ -29,8 +29,15 @@
         width: 100px;
         height: 100px;
 
+        a,
+        a:hover,
+        a:visited {
+          text-decoration: none;
+        }
+
         img {
           border-radius: 100%;
+          border: 1px solid #f1eaea;
           width: 100%;
           height: 100%;
         }

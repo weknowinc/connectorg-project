@@ -2,9 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.star_types.field_color
     - field.field.taxonomy_term.star_types.field_image
     - taxonomy.vocabulary.star_types
   module:
+    - color_field
     - image
     - text
 id: taxonomy_term.star_types.default
@@ -19,6 +21,15 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_color:
+    weight: 2
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_image:
     weight: 0
     label: above

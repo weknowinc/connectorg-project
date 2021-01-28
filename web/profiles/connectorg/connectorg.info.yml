@@ -17,6 +17,7 @@ distribution:
 # Note: if there are more then one distributions within the profiles/ folder,
 # Drupal 8 will auto-select the one whose name goes first alphabethically.
 install:
+  - color_field
   - admin_toolbar
   - address
   - automated_cron
